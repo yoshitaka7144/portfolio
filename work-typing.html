@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="css/myStyle.css" media="all" rel="stylesheet" type="text/css" />
+    <title>YOSHITAKA NAGAI ポートフォリオ</title>
+</head>
+<body>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-sm navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">Yoshitaka Nagai</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav text-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#about">プロフィール</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#skill">スキル</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#certification">資格</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#work">作成物</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html#contact">問い合わせ</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <div class="row">
+                <p class="title">タイピング練習webアプリ</p>
+                <img class="img-fluid" src="img/typing/3.jpg" alt="">
+            </div>
+            <div id="description" class="row section justify-content-center">
+                <div class="col-12">
+                    <p class="text-bold">ページURL</p>
+                    <p class="text-normal"><a href="https://yoshitaka7144.github.io/typing" target="_blank" rel="noopener noreferrer">https://yoshitaka7144.github.io/typing</a></p>
+
+                    <p class="text-bold">Github</p>
+                    <p class="text-normal"><a href="https://github.com/yoshitaka7144/typing" target="_blank" rel="noopener noreferrer">https://github.com/yoshitaka7144/typing</a></p>
+
+                    <p class="text-bold">目的</p>
+                    <ul class="text-normal">
+                        <li>Blazor WebAssemblyを使用した簡単なwebアプリケーション作成</li>
+                        <li>C#、簡単なデザイン（HTML、CSS）のプログラミング勉強の為</li>
+                        <li><a href="https://www.e-typing.ne.jp/" target="_blank" rel="noopener noreferrer">e-typing</a>様のデザインや大まかな仕様を参考、真似て作成</li>
+                    </ul>
+
+                    <p class="text-bold">制作期間</p>
+                    <p class="text-normal">約一週間</p>
+
+                    <p class="text-bold">制作ツール等</p>
+                    <p class="text-normal">Visual Studio 2019（C# Blazor WebAssemblyアプリプロジェクト）</p>
+
+                    <p class="text-bold">参考サイト等</p>
+                    <p class="text-normal">
+                        e-typing<br>
+                        <a href="https://www.e-typing.ne.jp/" target="_blank" rel="noopener noreferrer">https://www.e-typing.ne.jp/</a><br>
+                        Blazored Modal<br>
+                        <a href="https://github.com/Blazored/Modal" target="_blank" rel="noopener noreferrer">https://github.com/Blazored/Modal</a><br>
+                        Blazorで作成したウェブサイトをGitHub Pagesで公開する<br>
+                        <a href="https://qiita.com/nobu17/items/116a0d1c949885e21d70" target="_blank" rel="noopener noreferrer">https://qiita.com/nobu17/items/116a0d1c949885e21d70</a>
+                    </p>
+
+                    <p class="text-bold">作品紹介、使用方法</p>
+                    <p class="text-normal">
+                        Blazor WebAssemblyを使用して作成したタイピング練習webアプリケーションです。
+                    </p>
+                    <p class="text-normal-bold">初期画面</p>
+                    <p class="text-center"><img class="img-fluid" src="img/typing/1.jpg" alt=""></p>
+                    <p class="text-normal">ジャンルを選択するとスタート画面へ進みます。（モーダルウィンドウが開かれます。）</p>
+                    
+                    <p class="text-normal-bold">スタート画面</p>
+                    <p class="text-center"><img class="img-fluid" src="img/typing/2.jpg" alt=""></p>
+                    <p class="text-normal">①：クリックするとタイピング画面に進みます。</p>
+                    <p class="text-normal">②：警告音のON/OFFを選択します。</p>
+                    <p class="text-normal">③：出題される問題数を設定します。</p>
+
+                    <p class="text-normal-bold">タイピング画面</p>
+                    <p class="text-center"><img class="img-fluid" src="img/typing/3.jpg" alt=""></p>
+                    <p class="text-normal">何かしらのキーを押下で問題がスタートします。</p>
+                    <p class="text-center"><img class="img-fluid" src="img/typing/4.jpg" alt=""></p>
+                    <p class="text-normal">①：問題文が表示されます。</p>
+                    <p class="text-normal">②：読み（ひらがな）が表示されます。</p>
+                    <p class="text-normal">③：アルファベット（入力キー）が表示されます。入力済みの文字は色付きで表示されます。</p>
+                    <p class="text-normal">④：次に入力するキーが色付きで表示されます。</p>
+                    <p class="text-normal">⑤：入力キーに対応する指が色付きで表示されます。</p>
+
+                    <p class="text-normal-bold">結果表示画面</p>
+                    <p class="text-center"><img class="img-fluid" src="img/typing/5.jpg" alt=""></p>
+                    <p class="text-normal">①：問題終了までに経過した時間が表示されます。</p>
+                    <p class="text-normal">②：合計の入力数が表示されます。</p>
+                    <p class="text-normal">③：１分あたりの入力文字数が表示されます。</p>
+                    <p class="text-normal">④：入力ミス回数が表示されます。</p>
+                    <p class="text-normal">⑤：入力ミスが多かったキーの上位３つが表示されます。</p>
+                    <p class="text-normal">⑥：スタート画面に戻ります。</p>
+                    <p class="text-normal">⑦：モーダルウィンドウを閉じて初期画面に戻ります。</p>
+
+                    <p class="text-bold">感想、反省点等</p>
+                    <p class="text-normal">Blazor WebAssemblyの利用方法の学習に時間を割いてしまい、タイピング機能部分やデザインへの時間配分が少なくなってしまいました。以下の項目を次回タイピングサイトを作成する際には改善したいです。</p>
+                    <ul class="text-normal">
+                        <li>複数の入力方法がある文字（'zi'と'ji'等）の対応</li>
+                        <li>自分なりのデザイン</li>
+                        <li>データベースを使用し、問題の追加、削除等の編集画面の作成</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <p class="text-normal text-center"><a href="index.html#work">作成物一覧へ戻る</a></p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div id="copyright" class="row justify-content-center align-items-center">
+                <div class="col-12 text-center">
+                    <span>&copy;YOSHITAKA NAGAI</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type='text/javascript' src="js/script.js"></script>
+</body>
+</html>

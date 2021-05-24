@@ -1,0 +1,200 @@
+body {
+    font-family: "Montserrat","Helvetica Neue",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+main{
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+header{
+    
+}
+
+#top{
+    height: 450px;
+}
+
+#top-title {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+#top-subtitle {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.section{
+    background-color: #f7f7f7;
+    border-radius: 15px;
+    margin: 30px 0;
+    padding: 0 10px;
+}
+
+.title {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 30px 0;
+    text-align: center;
+}
+
+/*作成物*/
+#work-pills-tab{
+    margin-bottom: 25px;
+    font-size: 20px;
+    justify-content: center;
+}
+
+.work-img{
+    margin-bottom: 7px;
+}
+
+.work-name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+  
+.work-info {
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+/*スキル*/
+#skill-pills-tab{
+    margin-bottom: 25px;
+    font-size: 20px;
+    justify-content: center;
+}
+
+.skill-title{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.skill-star{
+    font-size: 18px;
+    color: rgba(255, 136, 0, 0.76);
+}
+
+.skill-info{
+    font-size: 16px;
+    margin-bottom: 50px;
+}
+
+.skill-box{
+    display: flex;
+    justify-content: center;
+}
+
+.skill-img{
+    width: 65px;
+    margin-right: 20px;    
+}
+
+/*資格*/
+.certification-item{
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+/*プロフィール*/
+.profile-img{
+    margin-bottom: 40px;
+}
+
+.profile-text{
+    font-size: 16px;
+}
+
+/*お問い合わせ*/
+.contact-font{
+    font-size: 18px;
+}
+
+#github-icon{
+    width: 20px;
+    height: 18px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+footer{
+    background-color: #33333342;
+}
+
+#copyright{
+    height: 60px;
+}
+
+/*作品ページ*/
+.text-bold{
+    border-bottom: 1px solid #ddd;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+.text-bold:nth-child(1){
+    margin-top: 10px;
+}
+
+.text-normal{
+    font-size: 16px;
+}
+
+.text-normal-bold{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/**/
+@media (max-width: 767px) {
+    #top-title {
+        font-size: 30px;
+    }
+
+    #top-subtitle {
+        font-size: 16px;
+    }
+
+    .title {
+        font-size: 25px;
+    }
+
+    #skill-pills-tab{
+        font-size: 16px;
+    }
+
+    .skill-info{
+        font-size: 14px;
+    }
+
+    #work-pills-tab{
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 575px) {
+    .profile-text{
+        font-size: 12px;
+    }
+
+    #skill-pills-tab{
+        font-size: 12px;
+    }
+
+    .text-small{
+        padding: .5rem 3px;
+    }
+
+    #work-pills-tab{
+        font-size: 12px;
+    }
+}
