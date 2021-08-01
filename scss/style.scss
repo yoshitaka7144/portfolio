@@ -1,0 +1,90 @@
+/*----------------------------------------------
+
+共通
+
+----------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Hiragino Kaku Gothic ProN";
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/*----------------------------------------------
+
+ヘッダー
+
+----------------------------------------------*/
+.header-container {
+  background-color: rgb(71, 109, 179);
+
+  .header {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+    height: 60px;
+
+    #logo {
+      a {
+        line-height: 60px;
+        padding: 0 20px;
+        color: burlywood;
+        display: block;
+        font-size: 24px;
+        font-weight: bold;
+      }
+    }
+
+    #pc-nav {
+      margin: 0 0 0 auto;
+      a {
+        line-height: 60px;
+        padding: 0 25px;
+        color: white;
+        display: block;
+      }
+      ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+      }
+    }
+
+    #sp-nav {
+      display: none;
+    }
+  }
+}
+
+/*----------------------------------------------
+
+フッター
+
+----------------------------------------------*/
+.footer-container {
+  margin-top: auto;
+  background-color: rgb(141, 146, 146);
+
+  .footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+    height: 60px;
+
+    .copyright {
+      font-size: 18px;
+      text-align: center;
+    }
+  }
+}
