@@ -5,7 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>YOSHITAKA NAGAI ポートフォリオ</title>
+  <link rel="stylesheet" href="fontawesome/css/all.min.css">
   <link rel="stylesheet" href="./css/style.css">
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="./js/headerMenu.js"></script>
 </head>
 
 <body>
@@ -13,30 +16,105 @@
     <div class="header-container">
       <div class="header">
         <div id="logo">
-          <a href="./">YOSHITAKA NAGAI</a>
+          <a href="./">Yoshitaka Nagai</a>
         </div>
         <nav id="pc-nav">
           <ul>
-            <li><a href="#">test1</a></li>
-            <li><a href="#">test2</a></li>
-            <li><a href="#">test3</a></li>
+            <li><a href="#">プロフィール</a></li>
+            <li><a href="#">スキル</a></li>
+            <li><a href="#">資格</a></li>
+            <li><a href="#">制作物</a></li>
+            <li><a href="#">問い合わせ</a></li>
           </ul>
         </nav>
         <nav id="sp-nav">
           <ul>
-            <li><a href="#">test1</a></li>
-            <li><a href="#">test2</a></li>
-            <li><a href="#">test3</a></li>
+            <li><a href="#">プロフィール</a></li>
+            <li><a href="#">スキル</a></li>
+            <li><a href="#">資格</a></li>
+            <li><a href="#">制作物</a></li>
+            <li><a href="#">問い合わせ</a></li>
+            <li><span><i class="fas fa-times"></i>閉じる</span></li>
           </ul>
         </nav>
         <div id="hamburger">
           <span></span>
         </div>
       </div>
+
+    </div>
+    <div id="top">
+      <p class="top-title">YOSHITAKA NAGAI</p>
+      <p class="top-subtitle">PORTFOLIO</p>
     </div>
     <div class="main-container">
-      <div class="top"></div>
-
+      <div id="profile" class="menu">
+        <p class="menu-title">PROFILE</p>
+      </div>
+      <div id="skill" class="menu">
+        <p class="menu-title">SKILL</p>
+        <div class="skill-contents">
+          <div class="skill-item">
+            <img class="item-img" src="./img/dotnet.svg" alt="">
+            <div class="item-description">
+              <p>VB.NET</p>
+              <p>★★★☆☆</p>
+              <p>実務経験：2年</p>
+            </div>
+          </div>
+          <div class="skill-item">
+            <img class="item-img" src="./img/java.svg" alt="">
+            <div class="item-description">
+              <p>Java</p>
+              <p>★★☆☆☆</p>
+              <p>実務経験：1年</p>
+            </div>
+          </div>
+          <div class="skill-item">
+            <img class="item-img" src="./img/javascript.svg" alt="">
+            <div class="item-description">
+              <p>Javascript</p>
+              <p>★☆☆☆☆</p>
+              <p>実務経験：半年</p>
+            </div>
+          </div>
+          <div class="skill-item">
+            <img class="item-img" src="./img/html-5.svg" alt="">
+            <div class="item-description">
+              <p>HTML</p>
+              <p>★☆☆☆☆</p>
+              <p>実務経験：半年</p>
+            </div>
+          </div>
+          <div class="skill-item">
+            <img class="item-img" src="./img/PHP-logo.svg" alt="">
+            <div class="item-description">
+              <p>PHP</p>
+              <p>★☆☆☆☆</p>
+              <p>実務経験：無し</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="certification" class="menu">
+        <p class="menu-title">CERTIFICATION</p>
+        <ul>
+          <li>基本情報技術者</li>
+          <li>Oracle Certified Java Programmer, Silver SE 8</li>
+          <li>PHP5技術者認定初級</li>
+          <li>Ruby Association Certified Ruby Programmer Silver ver. 2.1</li>
+        </ul>
+      </div>
+      <div id="works" class="menu">
+        <p class="menu-title">WORKS</p>
+      </div>
+      <div id="contact" class="menu">
+        <p class="menu-title">CONTACT</p>
+        <p>お問い合わせはメールにてお願い致します。</p>
+        <p>mail:yoshitaka7144@gmail.com</p>
+        <p><a href="https://github.com/yoshitaka7144" target="_blank" rel="noopener noreferrer"><i
+              class="fab fa-github"></i>Githubアカウント</a></p>
+      </div>
     </div>
     <div class="footer-container">
       <div class="footer">
