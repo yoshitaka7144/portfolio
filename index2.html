@@ -11,11 +11,11 @@
   <script src="./js/headerMenu.js"></script>
   <script src="./js/showSkillArea.js"></script>
   <script src="./js/showWorksArea.js"></script>
+  <script src="./js/menuAnimation.js"></script>
 </head>
 
 <body>
   <div class="container">
-    
     <div class="header-container">
       <div class="header">
         <div id="logo">
@@ -44,14 +44,13 @@
           <span></span>
         </div>
       </div>
-
     </div>
     <div id="top">
       <p class="top-title">YOSHITAKA NAGAI</p>
       <p class="top-subtitle">PORTFOLIO</p>
     </div>
     <div class="main-container">
-      <div id="profile" class="menu">
+      <div id="profile" class="menu fadein">
         <p class="menu-title">PROFILE</p>
         <div class="profile-area">
           <div class="profile-img">
@@ -83,7 +82,7 @@
           </div>
         </div>
       </div>
-      <div id="skill" class="menu">
+      <div id="skill" class="menu fadein">
         <p class="menu-title">SKILL</p>
         <div class="skill-radio-area">
           <input type="radio" name="radio-skill" id="radio-languages" value="languages" autocomplete="off" checked>
@@ -217,7 +216,7 @@
           </div>
         </div>
       </div>
-      <div id="certification" class="menu">
+      <div id="certification" class="menu fadein">
         <p class="menu-title">CERTIFICATION</p>
         <ul>
           <li>基本情報技術者</li>
@@ -226,7 +225,7 @@
           <li>Ruby Association Certified Ruby Programmer Silver ver. 2.1</li>
         </ul>
       </div>
-      <div id="works" class="menu">
+      <div id="works" class="menu fadein">
         <p class="menu-title">WORKS</p>
         <div class="works-radio-area">
           <input type="radio" name="radio-works" id="radio-php" value="php" autocomplete="off" checked>
@@ -315,7 +314,7 @@
           </a>
         </div>
       </div>
-      <div id="contact" class="menu">
+      <div id="contact" class="menu fadein">
         <p class="menu-title">CONTACT</p>
         <p>お問い合わせはメールにてお願い致します。</p>
         <p>mail:yoshitaka7144@gmail.com</p>

@@ -255,7 +255,7 @@ i {
 #top {
   margin-top: 60px;
   padding: 40px;
-  height: 400px;
+  height: 500px;
   background-color: #2a2b29;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -304,6 +304,9 @@ i {
   margin: 15px 10px;
   padding: 15px;
   border-radius: 10px;
+  border: 1px solid #ccc;
+  -webkit-box-shadow: 0 2px 2px 0px rgba(0, 0, 0, 0.16), 0 0 1px 1px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 2px 2px 0px rgba(0, 0, 0, 0.16), 0 0 1px 1px rgba(0, 0, 0, 0.08);
   background-color: white;
 }
 
@@ -548,7 +551,7 @@ i {
   width: 30%;
   margin: 10px;
   padding: 15px;
-  border-radius: 5px;
+  border-radius: 6px;
   border: 1px solid #ccc;
   -webkit-box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
           box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
@@ -582,6 +585,22 @@ i {
 
 .main-container #contact {
   text-align: center;
+}
+
+.fadein {
+  opacity: 0;
+  -webkit-transform: translate(0, 50px);
+          transform: translate(0, 50px);
+  -webkit-transition: opacity 1600ms, -webkit-transform 1600ms;
+  transition: opacity 1600ms, -webkit-transform 1600ms;
+  transition: opacity 1600ms, transform 1600ms;
+  transition: opacity 1600ms, transform 1600ms, -webkit-transform 1600ms;
+}
+
+.fadein.scrollin {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
 }
 
 /*----------------------------------------------

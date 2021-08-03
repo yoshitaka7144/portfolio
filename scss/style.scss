@@ -204,8 +204,6 @@ i {
   }
 }
 
-
-
 /*----------------------------------------------
 
 トップ
@@ -214,7 +212,7 @@ i {
 #top {
   margin-top: 60px;
   padding: 40px;
-  height: 400px;
+  height: 500px;
   background-color: rgb(42, 43, 41);
   display: flex;
   flex-direction: column;
@@ -251,6 +249,8 @@ i {
     margin: 15px 10px;
     padding: 15px;
     border-radius: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 2px 0px rgba(0, 0, 0, 0.16),0 0 1px 1px rgba(0, 0, 0, 0.08);
     background-color: rgb(255, 255, 255);
 
     .menu-title {
@@ -428,7 +428,7 @@ i {
       justify-content: space-between;
       align-items: center;
 
-      &::after{
+      &::after {
         content: "";
         display: block;
         width: 30%;
@@ -443,7 +443,7 @@ i {
         width: 30%;
         margin: 10px;
         padding: 15px;
-        border-radius: 5px;
+        border-radius: 6px;
         border: 1px solid #ccc;
         box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
         position: relative;
@@ -473,7 +473,7 @@ i {
     }
 
     #works-csharp,
-    #works-html{
+    #works-html {
       display: none;
     }
   }
@@ -482,6 +482,17 @@ i {
   #contact {
     text-align: center;
   }
+}
+
+.fadein {
+  opacity: 0;
+  transform: translate(0, 50px);
+  transition: opacity 1600ms, transform 1600ms;
+}
+
+.fadein.scrollin {
+  opacity: 1;
+  transform: translate(0, 0);
 }
 
 /*----------------------------------------------
