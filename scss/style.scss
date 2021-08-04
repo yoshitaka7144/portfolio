@@ -17,6 +17,7 @@ a {
 
 p,
 li,
+label,
 table {
   font-size: 18px;
   color: rgba(0, 0, 0, 0.7);
@@ -36,7 +37,7 @@ i {
 }
 
 .btn {
-  padding: 15px;
+  padding: 10px;
   margin: 10px;
   color: white;
   display: inline-block;
@@ -77,7 +78,7 @@ i {
 }
 
 .btn-github {
-  background-color: #7385ff;
+  background-color: #a264e4e6;
   box-shadow: 2px 2px #3b2e88;
 }
 
@@ -102,11 +103,14 @@ i {
     #logo {
       a {
         line-height: 60px;
-        padding: 0 20px;
+        padding: 0 15px;
         color: rgba(0, 0, 0, 0.9);
         display: block;
         font-size: 20px;
         font-weight: bold;
+        &:hover{
+          opacity: 0.7;
+        }
       }
     }
 
@@ -114,8 +118,11 @@ i {
       margin-left: auto;
       a {
         line-height: 60px;
-        padding: 0 20px;
+        padding: 0 15px;
         display: block;
+        &:hover{
+          opacity: 0.7;
+        }
       }
       ul {
         display: flex;
@@ -210,7 +217,7 @@ i {
 
 ----------------------------------------------*/
 #top {
-  margin-top: 60px;
+  margin: 60px 0 10px 0;
   padding: 40px;
   height: 500px;
   background-color: rgb(42, 43, 41);
@@ -246,11 +253,11 @@ i {
   // 共通
   .menu {
     width: 100%;
-    margin: 15px 10px;
+    margin: 10px;
     padding: 15px;
     border-radius: 10px;
     border: 1px solid #ccc;
-    box-shadow: 0 2px 2px 0px rgba(0, 0, 0, 0.16),0 0 1px 1px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 2px 0px rgba(0, 0, 0, 0.16), 0 0 1px 1px rgba(0, 0, 0, 0.08);
     background-color: rgb(255, 255, 255);
 
     .menu-title {
@@ -292,7 +299,7 @@ i {
           }
 
           tr:nth-child(odd) {
-            background-color: rgb(247, 238, 238);
+            background-color:#f1f8ff;
             th {
               border-top-left-radius: 5px;
               border-top-right-radius: 0px;
@@ -384,10 +391,21 @@ i {
     margin-left: auto;
     width: 38%;
     ul {
-      list-style: circle;
-      padding: 10px 35px;
+      list-style: none;
+      padding: 10px 20px 10px 40px;
+      position: relative;
+
       li {
         padding: 10px;
+
+        &::before {
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          content: "\f138";
+          position: absolute;
+          left: 15px;
+          color: skyblue;
+        }
       }
     }
   }
@@ -426,7 +444,6 @@ i {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      align-items: center;
 
       &::after {
         content: "";
@@ -461,12 +478,20 @@ i {
         }
 
         .item-description {
+          text-align: center;
+
           p:nth-child(1) {
             font-weight: bold;
           }
+
           p:nth-child(2) {
+            font-size: 14px;
+            color: #2776b9;
           }
-          p:nth-child(2) {
+
+          p:nth-child(3) {
+            font-size: 14px;
+            color: #21b95a;
           }
         }
       }
@@ -481,6 +506,14 @@ i {
   // 問い合わせ
   #contact {
     text-align: center;
+    .contact-info {
+      padding: 30px 10px;
+      margin: 0 auto;
+      width: 75%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
   }
 }
 
@@ -501,7 +534,7 @@ i {
 
 ----------------------------------------------*/
 .footer-container {
-  margin-top: auto;
+  margin-top: 10px;
   background-color: rgb(141, 146, 146);
   width: 100%;
 
@@ -579,6 +612,10 @@ i {
     }
 
     #contact {
+      .contact-info{
+        width: 100%;
+        flex-direction: column;
+      }
     }
   }
 }
@@ -586,6 +623,7 @@ i {
 @media screen and (max-width: 480px) {
   p,
   li,
+  label,
   table {
     font-size: 16px;
   }
