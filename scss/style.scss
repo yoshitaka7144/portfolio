@@ -3,6 +3,8 @@
 共通
 
 ----------------------------------------------*/
+$link-color: rgb(64, 128, 224);
+
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +14,10 @@
 
 a {
   text-decoration: none;
-  color: rgba(0, 0, 0, 0.7);
+  color: $link-color;
+  &:hover{
+    opacity: 0.7;
+  }
 }
 
 p,
@@ -41,7 +46,7 @@ i {
   margin: 10px;
   color: white;
   display: inline-block;
-  border-radius: 5px;
+  border-radius: 30px;
   text-align: center;
   &:hover {
     opacity: 0.8;
@@ -116,17 +121,19 @@ i {
 
     #pc-nav {
       margin-left: auto;
-      a {
-        line-height: 60px;
-        padding: 0 15px;
-        display: block;
-        &:hover {
-          opacity: 0.7;
-        }
-      }
       ul {
         display: flex;
         list-style: none;
+
+        a {
+          line-height: 60px;
+          padding: 0 15px;
+          color: rgba(0, 0, 0, 0.5);
+          display: block;
+          &:hover {
+            opacity: 0.4;
+          }
+        }
       }
     }
 
@@ -219,7 +226,7 @@ i {
 #top {
   margin: 60px 0 10px 0;
   padding: 40px;
-  height: 500px;
+  height: 600px;
   background-color: rgb(42, 43, 41);
   display: flex;
   flex-direction: column;
@@ -294,10 +301,6 @@ i {
           th,
           td {
             padding: 10px 15px;
-
-            a{
-              //color: turquoise;
-            }
           }
           th {
             width: 20%;
@@ -343,7 +346,7 @@ i {
         padding: 5px 15px;
         margin: 10px;
         border-radius: 15px;
-        border: 2px solid #006dd9;
+        border: 2px solid #4492e0;
         text-align: center;
         cursor: pointer;
 
@@ -437,7 +440,7 @@ i {
         padding: 5px 15px;
         margin: 10px;
         border-radius: 15px;
-        border: 2px solid #006dd9;
+        border: 2px solid #4492e0;
         text-align: center;
         cursor: pointer;
 
@@ -578,7 +581,7 @@ i {
 
   #top {
     padding: 30px;
-    height: 350px;
+    height: 450px;
 
     .top-title {
       font-size: 40px;
@@ -610,10 +613,10 @@ i {
 
     #skill {
       width: 100%;
-      .skill-contents{
+      .skill-contents {
         flex-direction: column;
         flex-wrap: nowrap;
-        .skill-item{
+        .skill-item {
           width: 100%;
         }
       }
@@ -649,8 +652,8 @@ i {
   }
 
   #top {
-    padding: 10px;
-    height: 300px;
+    padding: 5px;
+    height: 350px;
 
     .top-title {
       font-size: 24px;
@@ -663,7 +666,7 @@ i {
 
   .main-container {
     .menu {
-      margin: 10px 5px !important;;
+      margin: 10px 5px !important;
       .menu-title {
         font-size: 20px;
         margin-bottom: 10px;

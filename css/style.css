@@ -14,7 +14,11 @@
 
 a {
   text-decoration: none;
-  color: rgba(0, 0, 0, 0.7);
+  color: #4080e0;
+}
+
+a:hover {
+  opacity: 0.7;
 }
 
 p,
@@ -48,7 +52,7 @@ i {
   margin: 10px;
   color: white;
   display: inline-block;
-  border-radius: 5px;
+  border-radius: 30px;
   text-align: center;
 }
 
@@ -137,21 +141,22 @@ i {
   margin-left: auto;
 }
 
-.header-container .header #pc-nav a {
-  line-height: 60px;
-  padding: 0 15px;
-  display: block;
-}
-
-.header-container .header #pc-nav a:hover {
-  opacity: 0.7;
-}
-
 .header-container .header #pc-nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   list-style: none;
+}
+
+.header-container .header #pc-nav ul a {
+  line-height: 60px;
+  padding: 0 15px;
+  color: rgba(0, 0, 0, 0.5);
+  display: block;
+}
+
+.header-container .header #pc-nav ul a:hover {
+  opacity: 0.4;
 }
 
 .header-container .header #sp-nav {
@@ -264,7 +269,7 @@ i {
 #top {
   margin: 60px 0 10px 0;
   padding: 40px;
-  height: 500px;
+  height: 600px;
   background-color: #2a2b29;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -417,7 +422,7 @@ i {
   padding: 5px 15px;
   margin: 10px;
   border-radius: 15px;
-  border: 2px solid #006dd9;
+  border: 2px solid #4492e0;
   text-align: center;
   cursor: pointer;
 }
@@ -525,7 +530,7 @@ i {
   padding: 5px 15px;
   margin: 10px;
   border-radius: 15px;
-  border: 2px solid #006dd9;
+  border: 2px solid #4492e0;
   text-align: center;
   cursor: pointer;
 }
@@ -686,7 +691,7 @@ i {
   }
   #top {
     padding: 30px;
-    height: 350px;
+    height: 450px;
   }
   #top .top-title {
     font-size: 40px;
@@ -741,8 +746,8 @@ i {
     font-size: 16px;
   }
   #top {
-    padding: 10px;
-    height: 300px;
+    padding: 5px;
+    height: 350px;
   }
   #top .top-title {
     font-size: 24px;

@@ -1,324 +1,354 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link href="css/myStyle.css" media="all" rel="stylesheet" type="text/css" />
-    <title>YOSHITAKA NAGAI ポートフォリオ</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YOSHITAKA NAGAI ポートフォリオ</title>
+  <link rel="stylesheet" href="fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="./js/headerMenu.js"></script>
+  <script src="./js/showSkillArea.js"></script>
+  <script src="./js/showWorksArea.js"></script>
+  <script src="./js/menuAnimation.js"></script>
 </head>
+
 <body>
-    <header class="sticky-top">
-        <nav class="navbar navbar-expand-sm navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Yoshitaka Nagai</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                    <ul class="navbar-nav text-center">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">プロフィール</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#skill">スキル</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#certification">資格</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#work">作成物</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">問い合わせ</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+  <div class="container">
+    <div class="header-container">
+      <div class="header">
+        <div id="logo">
+          <a href="./">Yoshitaka Nagai</a>
+        </div>
+        <nav id="pc-nav">
+          <ul>
+            <li><a href="#profile">プロフィール</a></li>
+            <li><a href="#skill">スキル</a></li>
+            <li><a href="#certification">資格</a></li>
+            <li><a href="#works">制作物</a></li>
+            <li><a href="#contact">お問い合わせ</a></li>
+          </ul>
         </nav>
-    </header>
-    <main>
-        <div class="container">
-            <div id="top" class="row align-items-center justify-content-center">
-                <div class="col-12 text-center">
-                    <p id="top-title">YOSHITAKA NAGAI</p>
-                    <p id="top-subtitle">PORTFOLIO</p>
-                </div>
-            </div>
-            <div id="about" class="section row justify-content-center">
-                <h2 class="title text-center">プロフィール</h2>
-                <div class="row justify-content-center">
-                    <div class="col-12 col-md-5 text-center">
-                        <p class="profile-img">
-                            <img class="" src="img/test.png" alt="">
-                        </p>
-                    </div>
-                    <div class="col-12 col-md-5">
-                        <p class="profile-text">氏名：ながい　よしたか</p>
-                        <p class="profile-text">年齢：30</p>
-                        <p class="profile-text">性別：男</p>
-                        <p class="profile-text">職歴：webプログラマー（2年） → 事務（３年） → 会社都合により退職（現在）</p>
-                        <p class="profile-text">主にJava、VB.NETの仕事をしていました。</p>
-                        
-                    </div>
-                </div>
-            </div>
-            <div id="skill" class="section row">
-                <h2 class="title">スキル</h2>
-                <ul class="nav nav-pills" id="skill-pills-tab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                       <a class="nav-link active" id="pills-language-tab" data-bs-toggle="pill" href="#pills-language" role="tab" aria-controls="pills-language" aria-selected="true">言語</a>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                       <a class="nav-link" id="pills-db-tab" data-bs-toggle="pill" href="#pills-db" role="tab" aria-controls="pills-db" aria-selected="false">DB</a>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link text-small" id="pills-framework-tab" data-bs-toggle="pill" href="#pills-framework" role="tab" aria-controls="pills-framework" aria-selected="false">フレームワーク</a>
-                     </li>
-                </ul>
-                <div class="tab-content" id="skill-pills-tabContent">
-                    <div class="tab-pane fade show active" id="pills-language" role="tabpanel" aria-labelledby="pills-language-tab">
-                        <div class="row">
-                            <div class="col-12 col-sm-6 col-md-4">
-                                <div class="skill-box">
-                                    <p class="skill-img"><img class="img-fluid" src="img/java.svg" alt=""></p>
-                                    <div>
-                                        <p class="skill-title">Java</p>
-                                        <p class="skill-star">★★★☆☆</p>
-                                        <p class="skill-info">実務経験：1年</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-4">
-                                <div class="skill-box">
-                                    <p class="skill-img"><img class="img-fluid" src="img/dotnet.svg" alt=""></p>
-                                    <div>
-                                        <p class="skill-title">VB.NET</p>
-                                        <p class="skill-star">★★★☆☆</p>
-                                        <p class="skill-info">実務経験：2年</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-4">
-                                <div class="skill-box">
-                                    <p class="skill-img"><img class="img-fluid" src="img/javascript.svg" alt=""></p>
-                                    <div>
-                                        <p class="skill-title">JavaScript</p>
-                                        <p class="skill-star">★★☆☆☆</p>
-                                        <p class="skill-info">実務経験：半年</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-4">
-                                <div class="skill-box">
-                                    <p class="skill-img"><img class="img-fluid" src="img/html-5.svg" alt=""></p>
-                                    <div>
-                                        <p class="skill-title">HTML</p>
-                                        <p class="skill-star">★☆☆☆☆</p>
-                                        <p class="skill-info">実務経験：半年</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-4">
-                                <div class="skill-box">
-                                    <p class="skill-img"><img class="img-fluid" src="img/PHP-logo.svg" alt=""></p>
-                                    <div>
-                                        <p class="skill-title">PHP</p>
-                                        <p class="skill-star">★☆☆☆☆</p>
-                                        <p class="skill-info">実務経験：無し</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-4">
-                                <div class="skill-box">
-                                    <p class="skill-img"><img class="img-fluid" src="img/ruby.svg" alt=""></p>
-                                    <div>
-                                        <p class="skill-title">Ruby</p>
-                                        <p class="skill-star">★☆☆☆☆</p>
-                                        <p class="skill-info">実務経験：無し</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-4">
-                                <div class="skill-box">
-                                    <p class="skill-img"><img class="img-fluid" src="img/c-sharp.svg" alt=""></p>
-                                    <div>
-                                        <p class="skill-title">C#</p>
-                                        <p class="skill-star">★☆☆☆☆</p>
-                                        <p class="skill-info">実務経験：無し</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="pills-db" role="tabpanel" aria-labelledby="pills-db-tab">
-                        <div class="row">
-                            <div class="col-12 col-sm-6 col-md-4">
-                                <div class="skill-box">
-                                    <p class="skill-img"><img class="img-fluid" src="img/access.svg" alt=""></p>
-                                    <div>
-                                        <p class="skill-title">Microsoft Access</p>
-                                        <p class="skill-star">★★☆☆☆</p>
-                                        <p class="skill-info">実務経験：2年</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6  col-md-4">
-                                <div class="skill-box">
-                                    <p class="skill-img"><img class="img-fluid" src="img/mysql.svg" alt=""></p>
-                                    <div>
-                                        <p class="skill-title">MySQL</p>
-                                        <p class="skill-star">★☆☆☆☆</p>
-                                        <p class="skill-info">実務経験：1年</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="pills-framework" role="tabpanel" aria-labelledby="pills-framework-tab">
-                        <div class="row">
-                            <div class="col-12 col-sm-6 col-md-4">
-                                <div class="skill-box">
-                                    <p class="skill-img"><img class="img-fluid" src="img/wicket-icon.svg" alt=""></p>
-                                    <div>
-                                        <p class="skill-title">Wicket</p>
-                                        <p class="skill-star">★★☆☆☆</p>
-                                        <p class="skill-info">実務経験：1年</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-4">
-                                <div class="skill-box">
-                                    <p class="skill-img"><img class="img-fluid" src="img/dotnet.svg" alt=""></p>
-                                    <div>
-                                        <p class="skill-title">.NET Flamework</p>
-                                        <p class="skill-star">★★☆☆☆</p>
-                                        <p class="skill-info">実務経験：2年</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-4">
-                                <div class="skill-box">
-                                    <p class="skill-img"><img class="img-fluid" src="img/blazor.svg" alt=""></p>
-                                    <div>
-                                        <p class="skill-title">Blazor</p>
-                                        <p class="skill-star">★☆☆☆☆</p>
-                                        <p class="skill-info">実務経験：無し</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="certification" class="section row text-center">
-                <h2 class="title">資格</h2>
-                <div class="col-12 col-sm-6 col-md-4">
-                    <p class="certification-item">基本情報技術者</p>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4">
-                    <p class="certification-item">Oracle Certified Java Programmer, Silver SE 8</p>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4">
-                    <p class="certification-item">PHP5技術者認定初級</p>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4">
-                    <p class="certification-item">Ruby Association Certified Ruby Programmer Silver ver. 2.1</p>
-                </div>
-                <div class="col-12 col-sm-6 col-md-4">
-                    <p class="certification-item">LPIC-1</p>
-                </div>
-            </div>
-            <div id="work" class="section row">
-                <h2 class="title">作成物</h2>
-                <ul class="nav nav-pills" id="work-pills-tab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                       <a class="nav-link active" id="pills-cs-tab" data-bs-toggle="pill" href="#pills-cs" role="tab" aria-controls="pills-cs" aria-selected="true">C#</a>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                       <a class="nav-link" id="pills-html-tab" data-bs-toggle="pill" href="#pills-html" role="tab" aria-controls="pills-html" aria-selected="false">HTML</a>
-                    </li>
-                </ul>
-                <div class="tab-content" id="work-pills-tabContent">
-                    <div class="tab-pane fade show active" id="pills-cs" role="tabpanel" aria-labelledby="pills-cs-tab">
-                        <div class="row">
-                            <div class="col-12 col-sm-6 col-md-4 text-center">
-                                <a href="work-prime.html">
-                                    <p class="work-img"><img class="img-fluid" src="img/work_prime.png" alt="" /></p>
-                                    <p class="work-name">素数取得</p>
-                                    <p class="work-info">コンソールアプリ</p>
-                                </a>
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-4 text-center">
-                                <a href="work-regex.html">
-                                    <p class="work-img"><img class="img-fluid" src="img/work_regex.png" alt="" /></p>
-                                    <p class="work-name">正規表現テスト</p>
-                                    <p class="work-info">WinFormsアプリ</p>
-                                </a>
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-4 text-center">
-                                <a href="work-rgb.html">
-                                    <p class="work-img"><img class="img-fluid" src="img/work_rgb.jpg" alt="" /></p>
-                                    <p class="work-name">カラーコード生成</p>
-                                    <p class="work-info">WPFアプリ</p>
-                                </a>
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-4 text-center">
-                                <a href="work-typing.html">
-                                    <p class="work-img"><img class="img-fluid" src="img/work_typing.png" alt="" /></p>
-                                    <p class="work-name">タイピング練習webアプリ</p>
-                                    <p class="work-info">Blazor WebAssembly</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane fade" id="pills-html" role="tabpanel" aria-labelledby="pills-html-tab">
-                        <div class="row">
-                            <div class="col-12 col-sm-6 col-md-4 text-center">
-                                <a href="work-portfolio.html">
-                                    <p class="work-img"><img class="img-fluid" src="img/work_portfolio.png" alt="" /></p>
-                                    <p class="work-name">ポートフォリオサイト</p>
-                                    <p class="work-info"></p>
-                                </a>
-                            </div>
-                            <div class="col-12 col-sm-6 col-md-4 text-center">
-                                <a href="work-typing.html">
-                                    <p class="work-img"><img class="img-fluid" src="img/work_typing.png" alt="" /></p>
-                                    <p class="work-name">タイピング練習webアプリ</p>
-                                    <p class="work-info">Blazor WebAssembly</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="contact" class="section row justify-content-center">
-                <h2 class="title">問い合わせ</h2>
-                <p class="text-center contact-font">お問い合わせはメールにてお願い致します。</p>
-                <div class="row justify-content-center">
-                    <div class="col-12 col-md-4 text-center">
-                        <p class="contact-font"><a href="https://github.com/yoshitaka7144" target="_blank" rel="noopener noreferrer"><img id="github-icon" src="img/github-icon.svg" alt="githubアイコン">Githubアカウント</a></p>
-                    </div>
-                    <div class="col-12 col-md-4 text-center">
-                        <p class="contact-font">yoshitaka7144@gmail.com</p>
-                    </div>
-                </div>
-            </div>
+        <nav id="sp-nav">
+          <ul>
+            <li><a href="#profile">プロフィール</a></li>
+            <li><a href="#skill">スキル</a></li>
+            <li><a href="#certification">資格</a></li>
+            <li><a href="#works">制作物</a></li>
+            <li><a href="#contact">お問い合わせ</a></li>
+            <li><span><i class="fas fa-times"></i>閉じる</span></li>
+          </ul>
+        </nav>
+        <div id="hamburger">
+          <span></span>
         </div>
-    </main>
-    <footer>
-        <div class="container">
-            <div id="copyright" class="row justify-content-center align-items-center">
-                <div class="col-12 text-center">
-                    <span>&copy;YOSHITAKA NAGAI</span>
-                </div>
-            </div>
+      </div>
+    </div>
+    <div id="top">
+      <p class="top-title">YOSHITAKA NAGAI</p>
+      <p class="top-subtitle">PORTFOLIO</p>
+    </div>
+    <div class="main-container">
+      <div id="profile" class="menu fadein">
+        <p class="menu-title">プロフィール</p>
+        <div class="profile-area">
+          <div class="profile-img">
+            <img src="./img/profile/profile.jpg" alt="">
+          </div>
+          <div class="profile-info">
+            <table class="profile-table">
+              <tr>
+                <th>名前</th>
+                <td>ながい　よしたか</td>
+              </tr>
+              <tr>
+                <th>性別</th>
+                <td>男</td>
+              </tr>
+              <tr>
+                <th>年齢</th>
+                <td>31</td>
+              </tr>
+              <tr>
+                <th>職歴</th>
+                <td>webプログラマー（2年）<i class="fas fa-arrow-right"></i>事務（3年）<i class="fas fa-arrow-right"></i>退職（現在）</td>
+              </tr>
+              <tr>
+                <th>一言</th>
+                <td>現在PHP勉強中です。<a href="#">単語帳アプリケーション</a>作成しました。</td>
+              </tr>
+            </table>
+          </div>
         </div>
-    </footer>
-    <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script type='text/javascript' src="js/script.js"></script>
+      </div>
+      <div id="certification" class="menu fadein">
+        <p class="menu-title">資格</p>
+        <div class="certification-list">
+          <ul>
+            <li>基本情報技術者</li>
+            <li>Oracle Certified Java Programmer, Silver SE 8</li>
+            <li>PHP5技術者認定初級</li>
+            <li>Ruby Association Certified Ruby Programmer Silver ver. 2.1</li>
+          </ul>
+        </div>
+      </div>
+      <div id="skill" class="menu fadein">
+        <p class="menu-title">スキル</p>
+        <div class="skill-radio-area">
+          <input type="radio" name="radio-skill" id="radio-languages" value="languages" autocomplete="off" checked>
+          <label for="radio-languages">言語</label>
+          <input type="radio" name="radio-skill" id="radio-framework" value="framework" autocomplete="off">
+          <label for="radio-framework">フレームワーク</label>
+          <input type="radio" name="radio-skill" id="radio-db" value="db" autocomplete="off">
+          <label for="radio-db">データベース</label>
+        </div>
+        <div id="skill-languages" class="skill-contents">
+          <div class="skill-item">
+            <img class="item-img" src="./img/skill/logo/dotnet.svg" alt="">
+            <div class="item-description">
+              <p>VB.NET</p>
+              <p>
+                <i class="fas fa-star fa-xs"></i>
+                <i class="fas fa-star fa-xs"></i>
+                <i class="fas fa-star-half-alt fa-xs"></i>
+                <i class="far fa-star fa-xs"></i>
+                <i class="far fa-star fa-xs"></i>
+              </p>
+              <p>実務経験：２年</p>
+              <p>基本的なコーディングは問題ありません。WindowsFormsアプリ作成の経験が多く、用途に合わせた既存コントロールのカスタマイズも可能です。</p>
+            </div>
+          </div>
+          <div class="skill-item">
+            <img class="item-img" src="./img/skill/logo/java.svg" alt="">
+            <div class="item-description">
+              <p>Java</p>
+              <p>
+                <i class="fas fa-star fa-xs"></i>
+                <i class="fas fa-star fa-xs"></i>
+                <i class="far fa-star fa-xs"></i>
+                <i class="far fa-star fa-xs"></i>
+                <i class="far fa-star fa-xs"></i>
+              </p>
+              <p>実務経験：１年</p>
+              <p>基本的なコーディングは問題ありません。使用経験があるフレームワークはWicketのみです。資格有り（Oracle Java Silver）。</p>
+            </div>
+          </div>
+          <div class="skill-item">
+            <img class="item-img" src="./img/skill/logo/javascript.svg" alt="">
+            <div class="item-description">
+              <p>JavaScript</p>
+              <p>
+                <i class="fas fa-star fa-xs"></i>
+                <i class="fas fa-star-half-alt fa-xs"></i>
+                <i class="far fa-star fa-xs"></i>
+                <i class="far fa-star fa-xs"></i>
+                <i class="far fa-star fa-xs"></i>
+              </p>
+              <p>実務経験：半年</p>
+              <p>リファレンスを確認することが多々ありますが、基本的なコードは問題なく書けると思います（jQueryも同様）。chart.jsを使用したグラフ作成経験有り。フレームワーク使用経験は無し。</p>
+            </div>
+          </div>
+          <div class="skill-item">
+            <img class="item-img" src="./img/skill/logo/html5_css3.png" alt="">
+            <div class="item-description">
+              <p>HTML / CSS</p>
+              <p>
+                <i class="fas fa-star fa-xs"></i>
+                <i class="fas fa-star-half-alt fa-xs"></i>
+                <i class="far fa-star fa-xs"></i>
+                <i class="far fa-star fa-xs"></i>
+                <i class="far fa-star fa-xs"></i>
+              </p>
+              <p>実務経験：半年</p>
+              <p>ログイン画面、モーダル画面、入力フォーム等のデザイン経験有り。使用エディタはVisual Studio Codeです。</p>
+            </div>
+          </div>
+          <div class="skill-item">
+            <img class="item-img" src="./img/skill/logo/PHP-logo.svg" alt="">
+            <div class="item-description">
+              <p>PHP</p>
+              <p>
+                <i class="fas fa-star fa-xs"></i>
+                <i class="far fa-star fa-xs"></i>
+                <i class="far fa-star fa-xs"></i>
+                <i class="far fa-star fa-xs"></i>
+                <i class="far fa-star fa-xs"></i>
+              </p>
+              <p>実務経験：無し</p>
+              <p>基本的な知識を書籍にて勉強、資格取得（PHP5技術者認定初級）。勉強の為、PHPを使用したwebアプリケーション作成しました<a href="#">（単語帳アプリケーション）</a>。フレームワークはLaravel勉強中。</p>
+            </div>
+          </div>
+          <div class="skill-item">
+            <img class="item-img" src="./img/skill/logo/c-sharp.svg" alt="">
+            <div class="item-description">
+              <p>C#</p>
+              <p>
+                <i class="fas fa-star fa-xs"></i>
+                <i class="far fa-star fa-xs"></i>
+                <i class="far fa-star fa-xs"></i>
+                <i class="far fa-star fa-xs"></i>
+                <i class="far fa-star fa-xs"></i>
+              </p>
+              <p>実務経験：無し</p>
+              <p>基本的な知識を書籍にて勉強、いくつか簡単なWindowsアプリケーションを作成しました。</p>
+            </div>
+          </div>
+        </div>
+        <div id="skill-framework" class="skill-contents">
+          <div class="skill-item">
+            <img class="item-img" src="./img/skill/logo/wicket-icon.svg" alt="">
+            <div class="item-description">
+              <p>Wicket</p>
+              <p>
+                <i class="fas fa-star fa-xs"></i>
+                <i class="fas fa-star-half-alt fa-xs"></i>
+                <i class="far fa-star fa-xs"></i>
+                <i class="far fa-star fa-xs"></i>
+                <i class="far fa-star fa-xs"></i>
+              </p>
+              <p>実務経験：１年</p>
+              <p>webアプリケーション作成経験有り。</p>
+            </div>
+          </div>
+          <div class="skill-item">
+            <img class="item-img" src="./img/skill/logo/LaravelLogo.svg" alt="">
+            <div class="item-description">
+              <p>Laravel</p>
+              <p>
+                <i class="fas fa-star fa-xs"></i>
+                <i class="far fa-star fa-xs"></i>
+                <i class="far fa-star fa-xs"></i>
+                <i class="far fa-star fa-xs"></i>
+                <i class="far fa-star fa-xs"></i>
+              </p>
+              <p>実務経験：無し</p>
+              <p>入門サイトやLaravel公式ページのドキュメントにて勉強しています。ログイン、CRUD機能があるwebアプリケーション<a href="">（タイピング練習アプリ）</a>を作成しました。</p>
+            </div>
+          </div>
+        </div>
+        <div id="skill-db" class="skill-contents">
+          <div class="skill-item">
+            <img class="item-img" src="./img/skill/logo/access.svg" alt="">
+            <div class="item-description">
+              <p>Access</p>
+              <p>
+                <i class="fas fa-star fa-xs"></i>
+                <i class="fas fa-star-half-alt fa-xs"></i>
+                <i class="far fa-star fa-xs"></i>
+                <i class="far fa-star fa-xs"></i>
+                <i class="far fa-star fa-xs"></i>
+              </p>
+              <p>実務経験：２年</p>
+              <p>基本的なSQLの記述は問題ありません。主にVB.NETでの開発で使用してましたが、エクセルVBAでの使用経験もあります。</p>
+            </div>
+          </div>
+          <div class="skill-item">
+            <img class="item-img" src="./img/skill/logo/mysql.svg" alt="">
+            <div class="item-description">
+              <p>MySQL</p>
+              <p>
+                <i class="fas fa-star fa-xs"></i>
+                <i class="far fa-star fa-xs"></i>
+                <i class="far fa-star fa-xs"></i>
+                <i class="far fa-star fa-xs"></i>
+                <i class="far fa-star fa-xs"></i>
+              </p>
+              <p>実務経験：１年</p>
+              <p>Java開発での使用経験有り。個人的にPHPの勉強の為使用しています。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="works" class="menu fadein">
+        <p class="menu-title">制作物</p>
+        <div class="works-radio-area">
+          <input type="radio" name="radio-works" id="radio-php" value="php" autocomplete="off" checked>
+          <label for="radio-php">PHP</label>
+          <input type="radio" name="radio-works" id="radio-csharp" value="csharp" autocomplete="off">
+          <label for="radio-csharp">C#</label>
+          <input type="radio" name="radio-works" id="radio-html" value="html" autocomplete="off">
+          <label for="radio-html">HTML</label>
+        </div>
+        <div id="works-php" class="works-contents">
+          <a class="works-item" href="./works_wordbook.html">
+            <img class="item-img" src="./img/works/thumbnail/" alt="">
+            <div class="item-description">
+              <p>単語帳アプリケーション</p>
+              <p></p>
+              <p>PHP JavaScript HTML</p>
+            </div>
+          </a>
+          <a class="works-item" href="./works_typing.html">
+            <img class="item-img" src="./img/works/thumbnail/" alt="">
+            <div class="item-description">
+              <p>タイピング練習アプリ</p>
+              <p>Laravel</p>
+              <p>PHP JavaScript HTML</p>
+            </div>
+          </a>
+        </div>
+        <div id="works-csharp" class="works-contents">
+          <a class="works-item" href="./works_prime.html">
+            <img class="item-img" src="./img/works/thumbnail/prime.png" alt="">
+            <div class="item-description">
+              <p>素数取得</p>
+              <p>コンソールアプリ</p>
+              <p>C#</p>
+            </div>
+          </a>
+          <a class="works-item" href="./works_regex.html">
+            <img class="item-img" src="./img/works/thumbnail/regex.png" alt="">
+            <div class="item-description">
+              <p>正規表現テスト</p>
+              <p>WinFormsアプリ</p>
+              <p>C#</p>
+            </div>
+          </a>
+          <a class="works-item" href="./works_rgb.html">
+            <img class="item-img" src="./img/works/thumbnail/rgb.jpg" alt="">
+            <div class="item-description">
+              <p>カラーコード生成</p>
+              <p>WPFアプリ</p>
+              <p>C#</p>
+            </div>
+          </a>
+          <a class="works-item" href="./works_typing.html">
+            <img class="item-img" src="./img/works/thumbnail/typing.png" alt="">
+            <div class="item-description">
+              <p>タイピング練習アプリ</p>
+              <p>Blazor WebAssembly</p>
+              <p>C# JavaScript html</p>
+            </div>
+          </a>
+        </div>
+        <div id="works-html" class="works-contents">
+          <a class="works-item" href="works_portfolio.html">
+            <img class="item-img" src="./img/works/thumbnail/portfolio.png" alt="">
+            <div class="item-description">
+              <p>ポートフォリオ</p>
+              <p></p>
+              <p>HTML JavaScript</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div id="contact" class="menu fadein">
+        <p class="menu-title">お問い合わせ</p>
+        <p>お問い合わせはメールにてお願い致します。</p>
+        <div class="contact-info">
+          <p><i class="fas fa-envelope fa-lg"></i>yoshitaka7144@gmail.com</p>
+          <a class="btn btn-github" href="https://github.com/yoshitaka7144" target="_blank" rel="noopener noreferrer"><i
+              class="fab fa-github fa-lg"></i>Githubアカウント</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-container">
+      <div class="footer">
+        <p class="copyright">&copy;YOSHITAKA NAGAI</p>
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>
