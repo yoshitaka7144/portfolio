@@ -108,7 +108,7 @@ i {
         display: block;
         font-size: 20px;
         font-weight: bold;
-        &:hover{
+        &:hover {
           opacity: 0.7;
         }
       }
@@ -120,7 +120,7 @@ i {
         line-height: 60px;
         padding: 0 15px;
         display: block;
-        &:hover{
+        &:hover {
           opacity: 0.7;
         }
       }
@@ -270,6 +270,7 @@ i {
 
   // プロフィール
   #profile {
+    width: 65%;
     .profile-area {
       display: flex;
       flex-direction: column;
@@ -293,13 +294,17 @@ i {
           th,
           td {
             padding: 10px 15px;
+
+            a{
+              //color: turquoise;
+            }
           }
           th {
             width: 20%;
           }
 
           tr:nth-child(odd) {
-            background-color:#f1f8ff;
+            background-color: #f1f8ff;
             th {
               border-top-left-radius: 5px;
               border-top-right-radius: 0px;
@@ -320,8 +325,6 @@ i {
 
   // スキル
   #skill {
-    width: 58%;
-
     .skill-radio-area {
       display: flex;
       justify-content: center;
@@ -354,27 +357,29 @@ i {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      align-items: center;
 
       .skill-item {
         display: flex;
         justify-content: center;
-        align-items: center;
         width: 50%;
-        margin: 10px 0;
+        margin: 20px 0;
 
         .item-img {
-          width: 60px;
-          height: 60px;
-          margin-right: 15px;
+          width: 75px;
+          height: 75px;
+          margin-right: 20px;
         }
 
         .item-description {
+          width: 60%;
           p:nth-child(1) {
             font-weight: bold;
           }
           p:nth-child(2) {
             color: darkorange;
+          }
+          p:nth-child(3) {
+            color: #21b95a;
           }
         }
       }
@@ -388,23 +393,25 @@ i {
 
   // 資格
   #certification {
+    width: 31%;
     margin-left: auto;
-    width: 38%;
-    ul {
-      list-style: none;
-      padding: 10px 20px 10px 40px;
-      position: relative;
+    .certification-list {
+      ul {
+        list-style: none;
+        padding: 10px 10px 10px 40px;
+        position: relative;
 
-      li {
-        padding: 10px;
+        li {
+          padding: 10px;
 
-        &::before {
-          font-family: "Font Awesome 5 Free";
-          font-weight: 900;
-          content: "\f138";
-          position: absolute;
-          left: 15px;
-          color: skyblue;
+          &::before {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f138";
+            position: absolute;
+            left: 15px;
+            color: skyblue;
+          }
         }
       }
     }
@@ -584,7 +591,7 @@ i {
 
   .main-container {
     .menu {
-      margin: 15px 10px;
+      margin: 15px 10px !important;
       .menu-title {
         font-size: 24px;
         margin-bottom: 15px;
@@ -592,14 +599,27 @@ i {
     }
 
     #profile {
+      width: 100%;
+      .profile-area {
+        .profile-img {
+        }
+        .profile-info {
+        }
+      }
     }
 
     #skill {
       width: 100%;
+      .skill-contents{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        .skill-item{
+          width: 100%;
+        }
+      }
     }
 
     #certification {
-      margin: 15px 10px;
       width: 100%;
     }
 
@@ -612,7 +632,7 @@ i {
     }
 
     #contact {
-      .contact-info{
+      .contact-info {
         width: 100%;
         flex-direction: column;
       }
@@ -643,7 +663,7 @@ i {
 
   .main-container {
     .menu {
-      margin: 10px 5px;
+      margin: 10px 5px !important;;
       .menu-title {
         font-size: 20px;
         margin-bottom: 10px;
@@ -689,7 +709,6 @@ i {
     }
 
     #certification {
-      margin: 10px 5px;
     }
 
     #works {
