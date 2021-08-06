@@ -11,11 +11,27 @@ window.onload = function () {
   });
 
   // アンカーリンク先の位置調整（ヘッダーの高さ分下げる）
-  var headerHeight = 60;
+  var headerHeight = $(".header-container").outerHeight();
+  var urlHash = location.hash;
+  // ページ外
+  if (urlHash) {
+    $('body,html').stop().scrollTop(0);
+    var target = $(urlHash);
+    // アニメーション設定の分ずれるのでクラスを消しておく
+    target.removeClass("fadein");
+
+    setTimeout(function () {
+      var position = target.offset().top - headerHeight;
+      $('body,html').animate({ scrollTop: position }, 1250);
+    }, 100);
+  }
+  // ページ内
   $("a[href^='#']").on("click", function () {
     var href = $(this).attr("href");
     var target = $((href == "#" || href == "") ? "html" : href);
     var position = target.offset().top - headerHeight;
-    $("html").animate({ scrollTop: position }, 1250);
-  })
+    $("body,html").animate({ scrollTop: position }, 1250);
+    
+  });
+
 }
