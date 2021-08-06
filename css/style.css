@@ -102,6 +102,25 @@ i {
           box-shadow: 2px 2px #3b2e88;
 }
 
+.header-margin {
+  margin-top: 60px !important;
+}
+
+.highlight-y {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(40%, transparent), color-stop(40%, yellow));
+  background: linear-gradient(transparent 40%, yellow 40%);
+}
+
+.highlight-b {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(40%, transparent), color-stop(40%, #6cf));
+  background: linear-gradient(transparent 40%, #6cf 40%);
+}
+
+.highlight-g {
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(40%, transparent), color-stop(40%, #6f6));
+  background: linear-gradient(transparent 40%, #6f6 40%);
+}
+
 /*----------------------------------------------
 
 ヘッダー
@@ -295,26 +314,6 @@ i {
 #top .top-subtitle {
   font-size: 24px;
   color: white;
-}
-
-.top-works-image {
-  width: 100%;
-  max-width: 1200px;
-  margin: 60px auto 15px auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.top-works-image img {
-  padding: 15px;
-  width: 50%;
 }
 
 /*----------------------------------------------
@@ -662,6 +661,10 @@ i {
   padding: 35px;
 }
 
+.main-container #works-introduction p {
+  word-wrap: break-word;
+}
+
 .main-container #works-introduction .headline {
   font-size: 28px;
   font-weight: bold;
@@ -670,20 +673,95 @@ i {
   border-bottom: 1px solid #e4e4e4;
 }
 
+.main-container #works-introduction .demo-img {
+  text-align: center;
+}
+
+.main-container #works-introduction .demo-img img {
+  width: 85%;
+}
+
+.main-container #works-introduction .purpose-list {
+  list-style: none;
+  padding: 10px 10px 10px 40px;
+  position: relative;
+}
+
+.main-container #works-introduction .purpose-list li {
+  padding: 10px;
+}
+
+.main-container #works-introduction .purpose-list li::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f02b";
+  position: absolute;
+  left: 15px;
+  color: #ffb03f;
+}
+
+.main-container #works-introduction .list {
+  list-style: none;
+  padding: 10px 10px 10px 40px;
+  position: relative;
+}
+
+.main-container #works-introduction .list li {
+  padding: 5px;
+}
+
+.main-container #works-introduction .list li::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f0da";
+  position: absolute;
+  left: 15px;
+  color: skyblue;
+}
+
+.main-container #works-introduction .list li ul {
+  list-style: none;
+  padding: 20px 0px 0px 40px;
+  position: relative;
+}
+
+.main-container #works-introduction .list li ul li {
+  padding: 5px;
+}
+
+.main-container #works-introduction .list li ul li::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f0da";
+  position: absolute;
+  left: 15px;
+  color: gray;
+}
+
 .fadein {
   opacity: 0;
   -webkit-transform: translate(0, 50px);
           transform: translate(0, 50px);
-  -webkit-transition: opacity 1600ms, -webkit-transform 1600ms;
-  transition: opacity 1600ms, -webkit-transform 1600ms;
-  transition: opacity 1600ms, transform 1600ms;
-  transition: opacity 1600ms, transform 1600ms, -webkit-transform 1600ms;
+  -webkit-transition: opacity 1500ms, -webkit-transform 1500ms;
+  transition: opacity 1500ms, -webkit-transform 1500ms;
+  transition: opacity 1500ms, transform 1500ms;
+  transition: opacity 1500ms, transform 1500ms, -webkit-transform 1500ms;
+}
+
+.fadein-normal {
+  opacity: 0;
+  -webkit-transition: opacity 1500ms;
+  transition: opacity 1500ms;
 }
 
 .fadein.scrollin {
   opacity: 1;
   -webkit-transform: translate(0, 0);
           transform: translate(0, 0);
+}
+
+.fadein-normal.scrollin {
+  opacity: 1;
 }
 
 /*----------------------------------------------
@@ -731,15 +809,6 @@ i {
   #top .top-subtitle {
     font-size: 22px;
   }
-  .top-works-image {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .top-works-image img {
-    width: 85%;
-  }
   .main-container .menu {
     margin: 15px 10px !important;
   }
@@ -776,6 +845,9 @@ i {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .main-container #works-introduction {
+    padding: 25px;
   }
 }
 
@@ -852,6 +924,9 @@ i {
   }
   .main-container #works .works-contents .works-item {
     width: 90%;
+  }
+  .main-container #works-introduction {
+    padding: 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */

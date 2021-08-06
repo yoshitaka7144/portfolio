@@ -6,7 +6,7 @@ $(function () {
   });
 
   function scroll_effect() {
-    $(".fadein").each(function () {
+    $(".fadein, .fadein-normal").each(function () {
       var elemPos = $(this).offset().top;
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();

@@ -4,6 +4,7 @@
 
 ----------------------------------------------*/
 $max-width: 1200px;
+$header-height: 60px;
 $link-color: rgb(64, 128, 224);
 
 * {
@@ -16,7 +17,7 @@ $link-color: rgb(64, 128, 224);
 a {
   text-decoration: none;
   color: $link-color;
-  &:hover{
+  &:hover {
     opacity: 0.7;
   }
 }
@@ -88,6 +89,22 @@ i {
   box-shadow: 2px 2px #3b2e88;
 }
 
+.header-margin {
+  margin-top: $header-height !important;
+}
+
+.highlight-y {
+  background: linear-gradient(transparent 40%, yellow 40%);
+}
+
+.highlight-b {
+  background: linear-gradient(transparent 40%, #6cf 40%);
+}
+
+.highlight-g {
+  background: linear-gradient(transparent 40%, #6f6 40%);
+}
+
 /*----------------------------------------------
 
 ヘッダー
@@ -104,11 +121,11 @@ i {
     display: flex;
     max-width: $max-width;
     margin: 0 auto;
-    height: 60px;
+    height: $header-height;
 
     #logo {
       a {
-        line-height: 60px;
+        line-height: $header-height;
         padding: 0 15px;
         color: rgba(0, 0, 0, 0.9);
         display: block;
@@ -127,7 +144,7 @@ i {
         list-style: none;
 
         a {
-          line-height: 60px;
+          line-height: $header-height;
           padding: 0 15px;
           color: rgba(0, 0, 0, 0.5);
           display: block;
@@ -183,7 +200,7 @@ i {
       display: none;
       position: relative;
       width: 30px;
-      height: 60px;
+      height: $header-height;
       margin: 0 15px 0 auto;
       span {
         position: absolute;
@@ -226,7 +243,7 @@ i {
 ----------------------------------------------*/
 // ポートフォリオメインページのトップ
 #top {
-  margin: 60px 0 10px 0;
+  margin: $header-height 0 10px 0;
   padding: 40px;
   height: 600px;
   background-color: rgb(42, 43, 41);
@@ -244,21 +261,6 @@ i {
   .top-subtitle {
     font-size: 24px;
     color: white;
-  }
-}
-
-// 制作物紹介ページのトップ
-.top-works-image{
-  width: 100%;
-  max-width: $max-width;
-  margin: 60px auto 15px auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  img{
-    padding: 15px;
-    width: 50%;
   }
 }
 
@@ -543,15 +545,84 @@ i {
     }
   }
 
-  // 制作物紹介ページ 
-  #works-introduction{
+  // 制作物紹介ページ
+  #works-introduction {
     padding: 35px;
-    .headline{
+
+    p{
+      word-wrap: break-word;
+    }
+
+    .headline {
       font-size: 28px;
       font-weight: bold;
       padding-bottom: 10px;
       margin: 15px 0;
       border-bottom: 1px solid rgb(228, 228, 228);
+    }
+
+    .demo-img {
+      text-align: center;
+      img {
+        width: 85%;
+      }
+    }
+
+    .purpose-list {
+      list-style: none;
+      padding: 10px 10px 10px 40px;
+      position: relative;
+
+      li {
+        padding: 10px;
+
+        &::before {
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          content: "\f02b";
+          position: absolute;
+          left: 15px;
+          color: #ffb03f;
+        }
+      }
+    }
+
+    .list {
+      list-style: none;
+      padding: 10px 10px 10px 40px;
+      position: relative;
+
+      li {
+        padding: 5px;
+
+        &::before {
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          content: "\f0da";
+          position: absolute;
+          left: 15px;
+          color: skyblue;
+        }
+
+        ul {
+          list-style: none;
+          padding: 20px 0px 0px 40px;
+          position: relative;
+
+          li {
+            padding: 5px;
+
+            &::before {
+              font-family: "Font Awesome 5 Free";
+              font-weight: 900;
+              content: "\f0da";
+              position: absolute;
+              left: 15px;
+              color: gray;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -559,12 +630,21 @@ i {
 .fadein {
   opacity: 0;
   transform: translate(0, 50px);
-  transition: opacity 1600ms, transform 1600ms;
+  transition: opacity 1500ms, transform 1500ms;
+}
+
+.fadein-normal {
+  opacity: 0;
+  transition: opacity 1500ms;
 }
 
 .fadein.scrollin {
   opacity: 1;
   transform: translate(0, 0);
+}
+
+.fadein-normal.scrollin {
+  opacity: 1;
 }
 
 /*----------------------------------------------
@@ -621,14 +701,6 @@ i {
     }
   }
 
-  .top-works-image{
-    flex-direction: column;
-
-    img{
-      width: 85%;
-    }
-  }
-
   .main-container {
     .menu {
       margin: 15px 10px !important;
@@ -676,6 +748,10 @@ i {
         width: 100%;
         flex-direction: column;
       }
+    }
+
+    #works-introduction {
+      padding: 25px;
     }
   }
 }
@@ -765,6 +841,10 @@ i {
           width: 90%;
         }
       }
+    }
+
+    #works-introduction {
+      padding: 20px;
     }
   }
 }
