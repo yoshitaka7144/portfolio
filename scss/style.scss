@@ -553,6 +553,10 @@ i {
       word-wrap: break-word;
     }
 
+    .link-prev{
+      text-align: center;
+    }
+
     .img-wrapper{
       display: flex;
       flex-direction: column;
@@ -563,18 +567,24 @@ i {
       }
     }
 
-    .headline {
+    .headline-large {
       font-size: 28px;
       font-weight: bold;
       padding-bottom: 10px;
-      margin: 15px 0;
+      margin: 20px 0;
       border-bottom: 1px solid rgb(228, 228, 228);
+    }
+
+    .headline-normal {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 18px 0;
     }
 
     .headline-small {
       font-size: 20px;
       font-weight: bold;
-      margin: 10px 0;
+      margin: 15px 0;
     }
 
     .purpose-list {
