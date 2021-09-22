@@ -9,7 +9,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "Hiragino Kaku Gothic ProN";
+  font-family: "メイリオ", sans-serif;
 }
 
 a {
@@ -668,6 +668,7 @@ i {
 
 .main-container #works-introduction .link-prev {
   text-align: center;
+  margin-top: 15px;
 }
 
 .main-container #works-introduction .img-wrapper {
@@ -691,9 +692,10 @@ i {
 .main-container #works-introduction .headline-large {
   font-size: 28px;
   font-weight: bold;
-  padding-bottom: 10px;
+  padding: 10px;
   margin: 20px 0;
-  border-bottom: 1px solid #e4e4e4;
+  background: #f4f4f4;
+  border-left: solid 6px #5bb7ae;
 }
 
 .main-container #works-introduction .headline-normal {

@@ -11,7 +11,7 @@ $link-color: rgb(64, 128, 224);
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Hiragino Kaku Gothic ProN";
+  font-family: "メイリオ", sans-serif;
 }
 
 a {
@@ -548,19 +548,20 @@ i {
   #works-introduction {
     padding: 35px;
 
-    p{
+    p {
       word-wrap: break-word;
     }
 
-    .link-prev{
+    .link-prev {
       text-align: center;
+      margin-top: 15px;
     }
 
-    .img-wrapper{
+    .img-wrapper {
       display: flex;
       flex-direction: column;
       align-items: center;
-      img{
+      img {
         width: 80%;
         margin: 15px 0;
       }
@@ -569,9 +570,10 @@ i {
     .headline-large {
       font-size: 28px;
       font-weight: bold;
-      padding-bottom: 10px;
+      padding: 10px;
       margin: 20px 0;
-      border-bottom: 1px solid rgb(228, 228, 228);
+      background: #f4f4f4;
+      border-left: solid 6px #5bb7ae;
     }
 
     .headline-normal {
@@ -864,8 +866,8 @@ i {
     #works-introduction {
       padding: 20px;
 
-      .img-wrapper{
-        img{
+      .img-wrapper {
+        img {
           width: 100%;
         }
       }
