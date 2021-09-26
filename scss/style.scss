@@ -544,8 +544,14 @@ i {
     }
   }
 
+  .works-wrapper {
+    display: flex;
+    align-items: flex-start;
+  }
+
   // 制作物紹介ページ
   #works-introduction {
+    width: 75%;
     padding: 35px;
 
     p {
@@ -641,6 +647,27 @@ i {
               color: gray;
             }
           }
+        }
+      }
+    }
+  }
+
+  #works-page-link {
+    width: 23%;
+    position: sticky;
+    top: 70px;
+    overflow-y: scroll;
+    height: 390px;
+    ul {
+      list-style: none;
+      padding: 3px 3px 3px 12px;
+      li {
+        font-size: 14px;
+        padding: 3px;
+        color: gray;
+        &:hover{
+          background-color: rgb(180, 179, 179);
+          color: white;
         }
       }
     }
@@ -771,7 +798,12 @@ i {
     }
 
     #works-introduction {
+      width: 100%;
       padding: 25px;
+    }
+
+    #works-page-link{
+      display: none;
     }
   }
 }
