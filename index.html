@@ -4,334 +4,100 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YOSHITAKA NAGAI ポートフォリオ</title>
-  <link rel="icon" href="img/favicon.ico">
+  <title>Portfolio</title>
+  <meta name="description" content="">
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
   <link rel="stylesheet" href="fontawesome/css/all.min.css">
-  <link rel="stylesheet" href="./css/style.css">
-  <script src="js/jquery-3.6.0.min.js"></script>
-  <script src="./js/headerMenu.js"></script>
-  <script src="./js/showSkillArea.js"></script>
-  <script src="./js/showWorksArea.js"></script>
-  <script src="./js/menuAnimation.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@800&family=Noto+Sans+JP&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/headerMenu.js"></script>
 </head>
 
 <body>
-  <div class="container">
-    <div class="header-container">
-      <div class="header">
-        <div id="logo">
-          <a href="./">Yoshitaka Nagai</a>
-        </div>
-        <nav id="pc-nav">
-          <ul>
-            <li><a href="#profile">プロフィール</a></li>
-            <li><a href="#skill">スキル</a></li>
-            <li><a href="#certification">資格</a></li>
-            <li><a href="#works">制作物</a></li>
-            <li><a href="#contact">お問い合わせ</a></li>
-          </ul>
-        </nav>
-        <nav id="sp-nav">
-          <ul>
-            <li><a href="#profile">プロフィール</a></li>
-            <li><a href="#skill">スキル</a></li>
-            <li><a href="#certification">資格</a></li>
-            <li><a href="#works">制作物</a></li>
-            <li><a href="#contact">お問い合わせ</a></li>
-            <li><span><i class="fas fa-times"></i>閉じる</span></li>
-          </ul>
-        </nav>
-        <div id="hamburger">
+  <header id="header">
+    <div class="header-inner wrapper">
+      <div class="logo">
+        <a href="index.html">YOSHITAKA NAGAI</a>
+      </div>
+      <nav id="pc-nav">
+        <ul class="menu-list">
+          <li><a href="#profile">profile</a></li>
+          <li><a href="#skills">skills</a></li>
+          <li><a href="#works">works</a></li>
+        </ul>
+      </nav>
+      <nav id="sp-nav">
+        <input type="checkbox" id="hamburger-menu">
+        <label for="hamburger-menu" id="hamburger-menu-icon">
           <span></span>
-        </div>
-      </div>
+          <span></span>
+          <span></span>
+        </label>
+        <ul class="menu-list">
+          <li><a href="#profile">profile</a></li>
+          <li><a href="#skills">skills</a></li>
+          <li><a href="#works">works</a></li>
+        </ul>
+      </nav>
     </div>
-    <div id="top">
-      <p class="top-title">YOSHITAKA NAGAI</p>
-      <p class="top-subtitle">PORTFOLIO</p>
+  </header>
+  <main>
+    <section id="top" class="section">
+      <p class="title">YOSHITAKA NAGAI</p>
+      <p class="sub-title">PORTFOLIO</p>
+    </section>
+    <section id="profile" class="section">
+      <div class="profile-inner section-inner wrapper">
+        <img src="img/profile/profile_icon.png" alt="プロフィール画像" class="icon-img">
+        <p class="name-text">YOSHITAKA NAGAI</p>
+        <p class="info-text">
+          テキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
+          テキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
+          テキストテキストテキストテキストテキストテキストテキストテキストテキスト
+        </p>
+        <div class="sns-icon">
+          <a href="" class="mail"><i class="fa-solid fa-envelope"></i></a>
+          <a href="" class="github"><i class="fa-brands fa-github"></i></a>
+          <a href="" class="twitter"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+      </div>
+    </section>
+    <section id="skills" class="section">
+      <div class="skills-inner section-inner wrapper">
+        <p class="section-title">Skills</p>
+        <div class="item-wrapper">
+          <div class="item"></div>
+          <div class="item"></div>
+          <div class="item"></div>
+          <div class="item"></div>
+          <div class="item"></div>
+          <div class="item"></div>
+          <div class="item"></div>
+        </div>
+      </div>
+    </section>
+    <section id="works" class="section">
+      <div class="works-inner section-inner wrapper">
+        <p class="section-title">Works</p>
+        <div class="item-wrapper">
+          <div class="item"></div>
+          <div class="item"></div>
+          <div class="item"></div>
+          <div class="item"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer id="footer">
+    <div class="footer-inner wrapper">
+      <a id="back-btn" href="#top"></a>
+      <p class="copyright"><i class="fa-solid fa-copyright"></i>YOSHITAKA NAGAI</p>
     </div>
-    <div class="main-container">
-      <div id="profile" class="menu fadein">
-        <p class="menu-title">プロフィール</p>
-        <div class="profile-area">
-          <div class="profile-img">
-            <img src="./img/profile/profile_icon.png" alt="">
-          </div>
-          <div class="profile-info">
-            <table class="profile-table">
-              <tr>
-                <th>名前</th>
-                <td>ながい　よしたか</td>
-              </tr>
-              <tr>
-                <th>性別</th>
-                <td>男</td>
-              </tr>
-              <tr>
-                <th>年齢</th>
-                <td>31</td>
-              </tr>
-              <tr>
-                <th>職歴</th>
-                <td>webプログラマー（2年）<i class="fas fa-arrow-right"></i>事務（3年）<i class="fas fa-arrow-right"></i>退職（現在）</td>
-              </tr>
-              <tr>
-                <th>一言</th>
-                <td>現在PHP、Laravel、Vue勉強中です。<a href="./works_typing_training.html">タイピング練習アプリ</a>作成しました。</td>
-              </tr>
-            </table>
-          </div>
-        </div>
-      </div>
-      <div id="certification" class="menu fadein">
-        <p class="menu-title">資格</p>
-        <div class="certification-list">
-          <ul>
-            <li>基本情報技術者</li>
-            <li>Oracle Certified Java Programmer, Silver SE 8</li>
-            <li>PHP5技術者認定初級</li>
-            <li>Ruby Association Certified Ruby Programmer Silver ver. 2.1</li>
-            <li>HTML5プロフェッショナル認定 レベル1</li>
-          </ul>
-        </div>
-      </div>
-      <div id="skill" class="menu fadein">
-        <p class="menu-title">スキル</p>
-        <div class="skill-radio-area">
-          <input type="radio" name="radio-skill" id="radio-languages" value="languages" autocomplete="off" checked>
-          <label for="radio-languages">言語</label>
-          <input type="radio" name="radio-skill" id="radio-framework" value="framework" autocomplete="off">
-          <label for="radio-framework">フレームワーク</label>
-          <input type="radio" name="radio-skill" id="radio-db" value="db" autocomplete="off">
-          <label for="radio-db">データベース</label>
-        </div>
-        <div id="skill-languages" class="skill-contents">
-          <div class="skill-item">
-            <img class="item-img" src="./img/skill/logo/dotnet.svg" alt="">
-            <div class="item-description">
-              <p>VB.NET</p>
-              <p>
-                <i class="fas fa-star fa-xs"></i>
-                <i class="fas fa-star fa-xs"></i>
-                <i class="fas fa-star-half-alt fa-xs"></i>
-                <i class="far fa-star fa-xs"></i>
-                <i class="far fa-star fa-xs"></i>
-              </p>
-              <p>実務経験：２年</p>
-              <p>基本的なコーディングは問題ありません。WindowsFormsアプリ作成の経験が多く、用途に合わせた既存コントロールのカスタマイズも可能です。</p>
-            </div>
-          </div>
-          <div class="skill-item">
-            <img class="item-img" src="./img/skill/logo/java.svg" alt="">
-            <div class="item-description">
-              <p>Java</p>
-              <p>
-                <i class="fas fa-star fa-xs"></i>
-                <i class="fas fa-star fa-xs"></i>
-                <i class="far fa-star fa-xs"></i>
-                <i class="far fa-star fa-xs"></i>
-                <i class="far fa-star fa-xs"></i>
-              </p>
-              <p>実務経験：１年</p>
-              <p>基本的なコーディングは問題ありません。使用経験があるフレームワークはWicketのみです。資格有り（Oracle Java Silver）。</p>
-            </div>
-          </div>
-          <div class="skill-item">
-            <img class="item-img" src="./img/skill/logo/javascript.svg" alt="">
-            <div class="item-description">
-              <p>JavaScript</p>
-              <p>
-                <i class="fas fa-star fa-xs"></i>
-                <i class="fas fa-star-half-alt fa-xs"></i>
-                <i class="far fa-star fa-xs"></i>
-                <i class="far fa-star fa-xs"></i>
-                <i class="far fa-star fa-xs"></i>
-              </p>
-              <p>実務経験：半年</p>
-              <p>リファレンスを確認することが多々ありますが、基本的なコーディングは問題ありません（jQueryも同様）。chart.jsを使用したグラフ作成経験有り。フレームワーク使用経験は無し。Vue.js勉強中。</p>
-            </div>
-          </div>
-          <div class="skill-item">
-            <img class="item-img" src="./img/skill/logo/html5_css3.png" alt="">
-            <div class="item-description">
-              <p>HTML / CSS</p>
-              <p>
-                <i class="fas fa-star fa-xs"></i>
-                <i class="fas fa-star-half-alt fa-xs"></i>
-                <i class="far fa-star fa-xs"></i>
-                <i class="far fa-star fa-xs"></i>
-                <i class="far fa-star fa-xs"></i>
-              </p>
-              <p>実務経験：半年</p>
-              <p>ログイン画面、モーダル画面、入力フォーム画面等の作成経験有り。使用エディタはVisual Studio Codeです。関連資格有り（HTML5プロフェッショナル認定 レベル1）。</p>
-            </div>
-          </div>
-          <div class="skill-item">
-            <img class="item-img" src="./img/skill/logo/PHP-logo.svg" alt="">
-            <div class="item-description">
-              <p>PHP</p>
-              <p>
-                <i class="fas fa-star fa-xs"></i>
-                <i class="far fa-star fa-xs"></i>
-                <i class="far fa-star fa-xs"></i>
-                <i class="far fa-star fa-xs"></i>
-                <i class="far fa-star fa-xs"></i>
-              </p>
-              <p>実務経験：無し</p>
-              <p>基本的な知識を書籍にて勉強、資格取得（PHP5技術者認定初級）。勉強の為、PHPを使用したwebアプリケーション作成しました<a href="./works_wordbook.html">（単語帳アプリ）</a>。フレームワークはLaravel勉強中。</p>
-            </div>
-          </div>
-          <!-- <div class="skill-item">
-            <img class="item-img" src="./img/skill/logo/ruby.svg" alt="">
-            <div class="item-description">
-              <p>Ruby</p>
-              <p>
-                <i class="fas fa-star-half-alt fa-xs"></i>
-                <i class="far fa-star fa-xs"></i>
-                <i class="far fa-star fa-xs"></i>
-                <i class="far fa-star fa-xs"></i>
-                <i class="far fa-star fa-xs"></i>
-              </p>
-              <p>実務経験：無し</p>
-              <p>基本的な知識を書籍にて勉強、資格取得（Ruby Association Certified Ruby Programmer Silver ver. 2.1）。</p>
-            </div>
-          </div> -->
-          <!-- <div class="skill-item">
-            <img class="item-img" src="./img/skill/logo/c-sharp.svg" alt="">
-            <div class="item-description">
-              <p>C#</p>
-              <p>
-                <i class="fas fa-star fa-xs"></i>
-                <i class="far fa-star fa-xs"></i>
-                <i class="far fa-star fa-xs"></i>
-                <i class="far fa-star fa-xs"></i>
-                <i class="far fa-star fa-xs"></i>
-              </p>
-              <p>実務経験：無し</p>
-              <p>基本的な知識を書籍にて勉強、いくつか簡単なWindowsアプリケーションを作成しました。</p>
-            </div>
-          </div> -->
-        </div>
-        <div id="skill-framework" class="skill-contents">
-          <div class="skill-item">
-            <img class="item-img" src="./img/skill/logo/wicket-icon.svg" alt="">
-            <div class="item-description">
-              <p>Wicket</p>
-              <p>
-                <i class="fas fa-star fa-xs"></i>
-                <i class="fas fa-star-half-alt fa-xs"></i>
-                <i class="far fa-star fa-xs"></i>
-                <i class="far fa-star fa-xs"></i>
-                <i class="far fa-star fa-xs"></i>
-              </p>
-              <p>実務経験：１年</p>
-              <p>webアプリケーション作成経験有り。</p>
-            </div>
-          </div>
-          <div class="skill-item">
-            <img class="item-img" src="./img/skill/logo/LaravelLogo.svg" alt="">
-            <div class="item-description">
-              <p>Laravel</p>
-              <p>
-                <i class="fas fa-star fa-xs"></i>
-                <i class="far fa-star fa-xs"></i>
-                <i class="far fa-star fa-xs"></i>
-                <i class="far fa-star fa-xs"></i>
-                <i class="far fa-star fa-xs"></i>
-              </p>
-              <p>実務経験：無し</p>
-              <p>入門サイトやLaravel公式ページのドキュメントにて勉強しています。Laravelを使用した<a href="./works_typing_training.html">タイピング練習アプリ</a>を作成しました。</p>
-            </div>
-          </div>
-        </div>
-        <div id="skill-db" class="skill-contents">
-          <div class="skill-item">
-            <img class="item-img" src="./img/skill/logo/access.svg" alt="">
-            <div class="item-description">
-              <p>Access</p>
-              <p>
-                <i class="fas fa-star fa-xs"></i>
-                <i class="fas fa-star-half-alt fa-xs"></i>
-                <i class="far fa-star fa-xs"></i>
-                <i class="far fa-star fa-xs"></i>
-                <i class="far fa-star fa-xs"></i>
-              </p>
-              <p>実務経験：２年</p>
-              <p>基本的なSQLの記述は問題ありません。主にVB.NETでの開発で使用してましたが、エクセルVBAでの使用経験もあります。</p>
-            </div>
-          </div>
-          <div class="skill-item">
-            <img class="item-img" src="./img/skill/logo/mysql.svg" alt="">
-            <div class="item-description">
-              <p>MySQL</p>
-              <p>
-                <i class="fas fa-star fa-xs"></i>
-                <i class="far fa-star fa-xs"></i>
-                <i class="far fa-star fa-xs"></i>
-                <i class="far fa-star fa-xs"></i>
-                <i class="far fa-star fa-xs"></i>
-              </p>
-              <p>実務経験：１年</p>
-              <p>Java開発での使用経験有り。個人的にPHPの勉強の為使用しています。</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="works" class="menu fadein">
-        <p class="menu-title">制作物</p>
-        <div class="works-radio-area">
-          <input type="radio" name="radio-works" id="radio-php" value="php" autocomplete="off" checked>
-          <label for="radio-php">PHP</label>
-          <!-- <input type="radio" name="radio-works" id="radio-csharp" value="csharp" autocomplete="off">
-          <label for="radio-csharp">C#</label> -->
-          <input type="radio" name="radio-works" id="radio-html" value="html" autocomplete="off">
-          <label for="radio-html">HTML</label>
-        </div>
-        <div id="works-php" class="works-contents">
-          <a class="works-item" href="./works_wordbook.html">
-            <img class="item-img" src="./img/works/thumbnail/wordbook.gif" alt="">
-            <div class="item-description">
-              <p>単語帳アプリ</p>
-              <p></p>
-              <p>PHP JavaScript HTML</p>
-            </div>
-          </a>
-          <a class="works-item" href="./works_typing_training.html">
-            <img class="item-img" src="./img/works/thumbnail/typing.gif" alt="">
-            <div class="item-description">
-              <p>タイピング練習アプリ</p>
-              <p>Laravel Vue</p>
-              <p>PHP JavaScript HTML</p>
-            </div>
-          </a>
-        </div>
-        <div id="works-html" class="works-contents">
-          <a class="works-item" href="works_portfolio.html">
-            <img class="item-img" src="./img/works/thumbnail/portfolio.png" alt="">
-            <div class="item-description">
-              <p>ポートフォリオ</p>
-              <p></p>
-              <p>HTML JavaScript</p>
-            </div>
-          </a>
-        </div>
-      </div>
-      <div id="contact" class="menu fadein">
-        <p class="menu-title">お問い合わせ</p>
-        <p>お問い合わせはメールにてお願い致します。</p>
-        <div class="contact-info">
-          <p><i class="fas fa-envelope fa-lg"></i>yoshitaka7144@gmail.com</p>
-          <a class="btn btn-github" href="https://github.com/yoshitaka7144" target="_blank" rel="noopener noreferrer"><i
-              class="fab fa-github fa-lg"></i>Githubアカウント</a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-container">
-      <div class="footer">
-        <p class="copyright">&copy;YOSHITAKA NAGAI</p>
-      </div>
-    </div>
-  </div>
+  </footer>
 </body>
 
 </html>

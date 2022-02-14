@@ -1,96 +1,40 @@
-/*----------------------------------------------
+@charset "UTF-8";
 
-共通
+html {
+  font-size: 100%;
+  font-family: "Noto Sans JP", sans-serif;
+  scroll-behavior: smooth;
+}
 
-----------------------------------------------*/
-$max-width: 1200px;
-$header-height: 60px;
-$link-color: rgb(64, 128, 224);
+body {
+  font-size: 1rem;
+  color: #383e45;
+}
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "メイリオ", sans-serif;
+ul {
+  list-style: none;
 }
 
 a {
   text-decoration: none;
-  color: $link-color;
-  &:hover {
-    opacity: 0.7;
+  color: #383e45;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-inner {
+  padding: 60px 15px;
+
+  .section-title {
+    font-family: "Dosis", sans-serif;
+    font-size: 3.3rem;
+    text-align: center;
+    letter-spacing: 0.3rem;
+    margin-bottom: 25px;
   }
-}
-
-p,
-li,
-label,
-table {
-  font-size: 18px;
-  color: rgba(0, 0, 0, 0.7);
-  margin-bottom: 5px;
-}
-
-i {
-  margin-right: 5px;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  width: 100%;
-  background-color: rgb(238, 237, 237);
-}
-
-.btn {
-  padding: 10px;
-  margin: 10px;
-  color: white;
-  display: inline-block;
-  border-radius: 30px;
-  text-align: center;
-  &:hover {
-    opacity: 0.8;
-  }
-  &:active {
-    position: relative;
-    top: 2px;
-    left: 2px;
-    box-shadow: none;
-  }
-  &:disabled {
-    opacity: 0.3;
-  }
-}
-
-.btn-green {
-  background-color: #5dca88;
-  box-shadow: 2px 2px #1a7940;
-}
-
-.btn-blue {
-  background-color: #60d0e4;
-  box-shadow: 2px 2px #0a7b8f;
-}
-
-.btn-red {
-  background-color: #f06363;
-  box-shadow: 2px 2px #9b1111;
-}
-
-.btn-gray {
-  background-color: #999595;
-  box-shadow: 2px 2px #504e4e;
-}
-
-.btn-github {
-  background-color: #a264e4e6;
-  box-shadow: 2px 2px #3b2e88;
-}
-
-.header-margin {
-  margin-top: $header-height !important;
 }
 
 .highlight-y {
@@ -105,51 +49,46 @@ i {
   background: linear-gradient(transparent 40%, #6f6 40%);
 }
 
-/*----------------------------------------------
-
-ヘッダー
-
-----------------------------------------------*/
-.header-container {
-  background-color: rgb(215, 219, 226);
+/************************************************
+ヘッダー header
+************************************************/
+$header-height: 70px;
+$hamburger-menu-color: #5a90fd;
+#header {
+  background-color: white;
+  height: $header-height;
+  width: 100%;
+  display: flex;
+  align-items: center;
   position: fixed;
   top: 0;
-  width: 100%;
-  z-index: 200;
+  z-index: 5;
 
-  .header {
+  .header-inner {
     display: flex;
-    max-width: $max-width;
-    margin: 0 auto;
-    height: $header-height;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 15px;
 
-    #logo {
+    .logo {
       a {
-        line-height: $header-height;
-        padding: 0 15px;
-        color: rgba(0, 0, 0, 0.9);
         display: block;
-        font-size: 20px;
+        font-size: 1.5rem;
         font-weight: bold;
-        &:hover {
-          opacity: 0.7;
-        }
       }
     }
 
     #pc-nav {
-      margin-left: auto;
-      ul {
+      .menu-list {
         display: flex;
-        list-style: none;
-
-        a {
-          line-height: $header-height;
-          padding: 0 15px;
-          color: rgba(0, 0, 0, 0.5);
-          display: block;
-          &:hover {
-            opacity: 0.4;
+        li {
+          a {
+            display: block;
+            padding: 10px 20px;
+            &:hover {
+              opacity: 0.7;
+            }
           }
         }
       }
@@ -157,750 +96,436 @@ i {
 
     #sp-nav {
       display: none;
-      z-index: 100;
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100vh;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.8);
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      ul {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        list-style: none;
-        text-align: center;
-        width: 80%;
-        padding: 10px;
-        border-radius: 5px;
+
+      #hamburger-menu {
+        display: none;
+
+        &:checked {
+          + #hamburger-menu-icon {
+            span {
+              position: absolute;
+              top: 50%;
+              &:nth-of-type(1) {
+                transform: translateY(-50%) rotate(45deg);
+              }
+
+              &:nth-of-type(2) {
+                transform: translateY(-50%) rotate(135deg);
+              }
+
+              &:nth-of-type(3) {
+                transform: scale(0);
+              }
+            }
+          }
+          ~ .menu-list {
+            right: 0;
+          }
+        }
       }
-      li {
-        padding: 10px;
-        width: 100%;
-        a,
+
+      #hamburger-menu-icon {
+        display: block;
+        position: relative;
+        width: 50px;
+        height: 50px;
+        padding: 15px;
+        border-radius: 50%;
+        background-color: $hamburger-menu-color;
+        cursor: pointer;
+        z-index: 100;
+
         span {
           display: block;
-          padding: 15px;
-          font-size: 16px;
-          color: white;
-          cursor: pointer;
-          &:hover {
-            opacity: 0.4;
+          height: 3px;
+          background-color: #ffffff;
+          transition: transform 0.5s;
+
+          &:nth-of-type(1) {
+            width: 20px;
+            margin-bottom: 5px;
+          }
+
+          &:nth-of-type(2) {
+            width: 20px;
+            margin-bottom: 5px;
+          }
+
+          &:nth-of-type(3) {
+            width: 15px;
           }
         }
       }
-    }
 
-    #hamburger {
-      display: none;
-      position: relative;
-      width: 30px;
-      height: $header-height;
-      margin: 0 15px 0 auto;
-      span {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        display: block;
-        width: 100%;
-        height: 2px;
-        background-color: rgba(58, 58, 58, 0.9);
-        transform: translateY(-50%);
-      }
-      &::before {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 25%;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background-color: rgba(58, 58, 58, 0.9);
-      }
-      &::after {
-        content: "";
-        display: block;
-        position: absolute;
-        bottom: 25%;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background-color: rgba(58, 58, 58, 0.9);
-      }
-    }
-  }
-}
-
-/*----------------------------------------------
-
-トップ
-
-----------------------------------------------*/
-// ポートフォリオメインページのトップ
-#top {
-  margin: $header-height 0 10px 0;
-  padding: 40px;
-  height: 600px;
-  background-color: rgb(73, 73, 72);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  .top-title {
-    font-size: 60px;
-    color: white;
-    font-weight: bold;
-  }
-
-  .top-subtitle {
-    font-size: 24px;
-    color: white;
-  }
-}
-
-/*----------------------------------------------
-
-メインコンテンツ
-
-----------------------------------------------*/
-.main-container {
-  width: 100%;
-  max-width: $max-width;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-
-  // 共通
-  .menu {
-    width: 100%;
-    margin: 10px;
-    padding: 15px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 2px 0px rgba(0, 0, 0, 0.16), 0 0 1px 1px rgba(0, 0, 0, 0.08);
-    background-color: rgb(255, 255, 255);
-
-    .menu-title {
-      font-size: 28px;
-      font-weight: bold;
-      text-align: center;
-      margin-bottom: 15px;
-    }
-  }
-
-  // プロフィール
-  #profile {
-    width: 65%;
-    .profile-area {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-
-      .profile-img {
-        margin: 15px 0;
-        img {
-          width: 230px;
-          height: 230px;
-        }
-      }
-
-      .profile-info {
-        width: 100%;
-        .profile-table {
-          margin: 0 auto;
-          border-collapse: collapse;
-
-          th,
-          td {
-            padding: 10px 15px;
-          }
-          th {
-            width: 20%;
-          }
-
-          tr:nth-child(odd) {
-            background-color: #f1f8ff;
-            th {
-              border-top-left-radius: 5px;
-              border-top-right-radius: 0px;
-              border-bottom-left-radius: 5px;
-              border-bottom-right-radius: 0px;
-            }
-            td {
-              border-top-left-radius: 0px;
-              border-top-right-radius: 5px;
-              border-bottom-left-radius: 0px;
-              border-bottom-right-radius: 5px;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  // スキル
-  #skill {
-    .skill-radio-area {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      input {
-        display: none;
-        &:checked + label {
-          background-color: #50b2eb;
-          color: white;
-        }
-      }
-
-      label {
-        display: inline-block;
-        padding: 5px 15px;
-        margin: 10px;
-        border-radius: 15px;
-        border: 2px solid #4492e0;
-        text-align: center;
-        cursor: pointer;
-
-        &:hover {
-          background-color: rgb(229, 234, 241);
-        }
-      }
-    }
-
-    .skill-contents {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-
-      .skill-item {
-        display: flex;
-        justify-content: center;
-        width: 50%;
-        margin: 20px 0;
-
-        .item-img {
-          width: 75px;
-          height: 75px;
-          margin-right: 20px;
-        }
-
-        .item-description {
-          width: 60%;
-          p:nth-child(1) {
-            font-weight: bold;
-          }
-          p:nth-child(2) {
-            color: darkorange;
-          }
-          p:nth-child(3) {
-            color: #21b95a;
-          }
-        }
-      }
-    }
-
-    #skill-framework,
-    #skill-db {
-      display: none;
-    }
-  }
-
-  // 資格
-  #certification {
-    width: 31%;
-    margin-left: auto;
-    .certification-list {
-      ul {
-        list-style: none;
-        padding: 10px 10px 10px 40px;
-        position: relative;
+      .menu-list {
+        position: fixed;
+        width: 200px;
+        height: 100vh;
+        padding-top: 80px;
+        top: 0;
+        right: -200px;
+        background-color: $hamburger-menu-color;
+        transition: right 0.5s;
+        z-index: 10;
 
         li {
-          padding: 10px;
+          a {
+            display: block;
+            padding: 15px;
+            color: white;
+            font-size: 1.3rem;
+            text-align: center;
+            transition: 0.5s;
 
-          &::before {
-            font-family: "Font Awesome 5 Free";
-            font-weight: 900;
-            content: "\f138";
-            position: absolute;
-            left: 15px;
-            color: skyblue;
+            &:hover {
+              background-color: #7ca7fd;
+            }
           }
         }
       }
     }
   }
+}
 
-  // 制作物
-  #works {
-    .works-radio-area {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+/************************************************
+メイン main
+************************************************/
+main {
+  margin-top: $header-height;
+}
 
-      input {
-        display: none;
-        &:checked + label {
-          background-color: #50b2eb;
-          color: white;
-        }
-      }
+/************************************************
+トップ top
+************************************************/
+#top {
+  width: 100%;
+  height: 50vh;
+  background-image: url("../img/top/top.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
 
-      label {
-        display: inline-block;
-        padding: 5px 15px;
-        margin: 10px;
-        border-radius: 15px;
-        border: 2px solid #4492e0;
-        text-align: center;
-        cursor: pointer;
-
-        &:hover {
-          background-color: rgb(229, 234, 241);
-        }
-      }
-    }
-
-    .works-contents {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-
-      &::after {
-        content: "";
-        display: block;
-        width: 30%;
-        height: 0;
-      }
-
-      .works-item {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 30%;
-        margin: 10px;
-        padding: 15px;
-        border-radius: 6px;
-        border: 1px solid #ccc;
-        box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
-        position: relative;
-        top: 0;
-        transition: top 0.3s, box-shadow 0.3s;
-
-        &:hover {
-          top: -8px;
-          box-shadow: 0 0 2px 3px rgba(0, 0, 0, 0.08);
-        }
-
-        .item-img {
-          width: 100%;
-          margin-bottom: 10px;
-        }
-
-        .item-description {
-          text-align: center;
-
-          p:nth-child(1) {
-            font-weight: bold;
-          }
-
-          p:nth-child(2) {
-            font-size: 14px;
-            color: #2776b9;
-          }
-
-          p:nth-child(3) {
-            font-size: 14px;
-            color: #21b95a;
-          }
-        }
-      }
-    }
-
-    #works-csharp,
-    #works-html {
-      display: none;
-    }
+  .title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    white-space: nowrap;
   }
 
-  // 問い合わせ
-  #contact {
-    text-align: center;
-    .contact-info {
-      padding: 30px 10px;
-      margin: 0 auto;
-      width: 75%;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-    }
+  .sub-title {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
   }
+}
 
-  .works-wrapper {
+/************************************************
+プロフィール profile
+************************************************/
+$icon-img-width: 140px;
+$icon-img-height: 140px;
+#profile {
+  height: calc(50vh - #{$header-height});
+  background-color: white;
+  .profile-inner {
     display: flex;
-    align-items: flex-start;
-  }
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-top: calc(#{$icon-img-height} / 2);
 
-  // 制作物紹介ページ
-  #works-introduction {
-    width: 75%;
-    padding: 35px;
-
-    p {
-      word-wrap: break-word;
+    .icon-img {
+      position: absolute;
+      top: calc(#{$icon-img-height} / 2 * -1);
+      left: 50%;
+      transform: translateX(-50%);
+      width: $icon-img-width;
+      height: $icon-img-height;
+      border-radius: 50%;
+      object-fit: cover;
     }
 
-    .link-prev {
-      text-align: center;
-      margin-top: 15px;
-    }
-
-    .img-wrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      img {
-        width: 80%;
-        margin: 15px 0;
-      }
-    }
-
-    .headline-large {
-      font-size: 28px;
-      font-weight: bold;
-      padding: 10px;
-      margin: 20px 0;
-      background: #f4f4f4;
-      border-left: solid 6px #5bb7ae;
-    }
-
-    .headline-normal {
-      font-size: 24px;
-      font-weight: bold;
-      margin: 18px 0;
-    }
-
-    .headline-small {
-      font-size: 20px;
-      font-weight: bold;
+    .name-text {
+      font-size: 1.4rem;
       margin: 15px 0;
     }
 
-    .purpose-list {
-      list-style: none;
-      padding: 10px 10px 10px 40px;
-      position: relative;
-
-      li {
-        padding: 10px;
-
-        &::before {
-          font-family: "Font Awesome 5 Free";
-          font-weight: 900;
-          content: "\f02b";
-          position: absolute;
-          left: 15px;
-          color: #ffb03f;
-        }
-      }
+    .info-text {
+      font-size: 1rem;
+      margin-bottom: 15px;
     }
 
-    .list {
-      list-style: none;
-      padding: 10px 10px 10px 40px;
-      position: relative;
+    .sns-icon {
+      display: flex;
+      a {
+        display: block;
+        cursor: pointer;
+        position: relative;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        margin-right: 20px;
 
-      li {
-        padding: 5px;
-
-        &::before {
-          font-family: "Font Awesome 5 Free";
-          font-weight: 900;
-          content: "\f0da";
-          position: absolute;
-          left: 15px;
-          color: skyblue;
+        &:last-of-type {
+          margin-right: 0;
         }
 
-        ul {
-          list-style: none;
-          padding: 20px 0px 0px 40px;
-          position: relative;
+        &:hover {
+          opacity: 0.7;
+        }
 
-          li {
-            padding: 5px;
+        &.mail {
+          background-color: #5a90fd;
+        }
+        &.twitter {
+          background-color: rgb(29, 155, 240);
+        }
 
-            &::before {
-              font-family: "Font Awesome 5 Free";
-              font-weight: 900;
-              content: "\f0da";
-              position: absolute;
-              left: 15px;
-              color: gray;
-            }
+        i {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 1.4rem;
+          color: white;
+          &.fa-github {
+            color: #383e45;
+            font-size: 2.4rem;
           }
         }
       }
     }
   }
+}
 
-  #works-page-link {
-    width: 23%;
-    position: sticky;
-    top: 70px;
-    overflow-y: scroll;
-    height: 390px;
-    ul {
-      list-style: none;
-      padding: 3px 3px 3px 12px;
-      li {
-        font-size: 14px;
-        padding: 3px;
-        color: gray;
-        &:hover{
-          background-color: rgb(180, 179, 179);
-          color: white;
+/************************************************
+スキル skills
+************************************************/
+$skill-item-margin: 15px;
+#skills {
+  background-color: #f1f1f1;
+  .skills-inner {
+    .section-title {
+      color: #00adee;
+    }
+
+    .item-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      .item {
+        width: calc(100% / 4 - #{$skill-item-margin} * 2);
+        height: 200px;
+        border-radius: 15px;
+        margin: $skill-item-margin;
+        background-color: white;
+      }
+    }
+  }
+}
+
+/************************************************
+制作物 works
+************************************************/
+$work-item-margin: 15px;
+#works {
+  background-color: #00adee;
+  .works-inner {
+    .section-title {
+      color: white;
+    }
+
+    .item-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      .item {
+        width: calc(100% / 2 - #{$work-item-margin} * 2);
+        height: 200px;
+        border-radius: 15px;
+        margin: $work-item-margin;
+        background-color: white;
+      }
+    }
+  }
+}
+
+/************************************************
+フッター footer
+************************************************/
+$footer-height: 70px;
+#footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3b3b3b;
+  height: $footer-height;
+  .footer-inner {
+    position: relative;
+    #back-btn{
+      cursor: pointer;
+      display: block;
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #6fbcbf;
+      opacity: 0.9;
+      &:hover{
+        opacity: 0.7;
+      }
+      &::before{
+        content: "";
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        width: 25%;
+        height: 25%;
+        border-top: 3px solid white;
+        border-left: 3px solid white;
+      }
+      &::after{
+        content: "";
+        position: absolute;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        width: 25%;
+        height: 25%;
+        border-top: 3px solid white;
+        border-left: 3px solid white;
+      }
+    }
+    .copyright {
+      font-size: 0.8rem;
+      color: white;
+      .fa-copyright {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+/************************************************
+メディアクエリ
+************************************************/
+@media screen and (max-width: 1024px) {
+  /************************************************
+  スキル skills
+  ************************************************/
+  #skills {
+    .skills-inner {
+      .item-wrapper {
+        .item {
+          width: calc(100% / 3 - #{$skill-item-margin} * 2);
         }
       }
     }
   }
 }
 
-.fadein {
-  opacity: 0;
-  transform: translate(0, 50px);
-  transition: opacity 1500ms, transform 1500ms;
-}
+@media screen and (max-width: 599px) {
+  /************************************************
+  ヘッダー header
+  ************************************************/
+  #header {
+    .header-inner {
+      .logo {
+        a {
+          font-size: 1rem;
+        }
+      }
 
-.fadein-normal {
-  opacity: 0;
-  transition: opacity 1500ms;
-}
-
-.fadein.scrollin {
-  opacity: 1;
-  transform: translate(0, 0);
-}
-
-.fadein-normal.scrollin {
-  opacity: 1;
-}
-
-/*----------------------------------------------
-
-フッター
-
-----------------------------------------------*/
-.footer-container {
-  margin-top: 10px;
-  background-color: rgb(141, 146, 146);
-  width: 100%;
-
-  .footer {
-    max-width: $max-width;
-    margin: 0 auto;
-    padding: 15px;
-    height: 60px;
-
-    .copyright {
-      font-size: 18px;
-      text-align: center;
-    }
-  }
-}
-
-/*----------------------------------------------
-
-レスポンシブ
-
-----------------------------------------------*/
-@media screen and (max-width: 767px) {
-  .header-container {
-    .header {
       #pc-nav {
         display: none;
       }
 
-      #hamburger {
+      #sp-nav {
         display: block;
       }
     }
   }
 
+  /************************************************
+  トップ top
+  ************************************************/
   #top {
-    padding: 30px;
-    height: 450px;
+    height: calc(100vh - #{$header-height});
 
-    .top-title {
-      font-size: 40px;
+    .title {
+      font-size: 2rem;
     }
 
-    .top-subtitle {
-      font-size: 22px;
+    .sub-title {
+      top: 55%;
+      font-size: 1rem;
     }
   }
 
-  .main-container {
-    .menu {
-      margin: 15px 10px !important;
-      .menu-title {
-        font-size: 24px;
-        margin-bottom: 15px;
-      }
-    }
-
-    #profile {
-      width: 100%;
-      .profile-area {
-        .profile-img {
-        }
-        .profile-info {
+  /************************************************
+  スキル skills
+  ************************************************/
+  #skills {
+    .skills-inner {
+      .item-wrapper {
+        .item {
+          width: calc(100% / 2 - #{$skill-item-margin} * 2);
         }
       }
     }
+  }
 
-    #skill {
-      width: 100%;
-      .skill-contents {
+  /************************************************
+  制作物 works
+  ************************************************/
+  #works {
+    .works-inner {
+      .item-wrapper {
+        align-items: center;
         flex-direction: column;
         flex-wrap: nowrap;
-        .skill-item {
-          width: 100%;
+        .item {
+          width: calc(90% - #{$work-item-margin} * 2);
         }
       }
-    }
-
-    #certification {
-      width: 100%;
-    }
-
-    #works {
-      .works-contents {
-        .works-item {
-          width: 45%;
-        }
-      }
-    }
-
-    #contact {
-      .contact-info {
-        width: 100%;
-        flex-direction: column;
-      }
-    }
-
-    #works-introduction {
-      width: 100%;
-      padding: 25px;
-    }
-
-    #works-page-link{
-      display: none;
     }
   }
+
+  /************************************************
+  フッター footer
+  ************************************************/
+  #footer {
+    .footer-inner {
+      #back-btn{
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+
 }
 
-@media screen and (max-width: 480px) {
-  p,
-  li,
-  label,
-  table {
-    font-size: 16px;
-  }
-
-  #top {
-    padding: 5px;
-    height: 350px;
-
-    .top-title {
-      font-size: 24px;
-    }
-
-    .top-subtitle {
-      font-size: 18px;
-    }
-  }
-
-  .main-container {
-    .menu {
-      margin: 10px 5px !important;
-      .menu-title {
-        font-size: 20px;
-        margin-bottom: 10px;
-      }
-    }
-
-    #profile {
-      .profile-area {
-        .profile-info {
-          .profile-table {
-            th,
-            td {
-              width: 100%;
-              display: block;
-              text-align: center;
-            }
-
-            tr:nth-child(4) td,
-            tr:nth-child(5) td {
-              text-align: left;
-            }
-          }
-        }
-      }
-    }
-
-    #skill {
-      .skill-radio-area {
-        flex-direction: column;
-        label {
-          width: 70%;
-        }
-      }
-
-      .skill-contents {
+@media screen and (max-width: 399px) {
+  /************************************************
+  スキル skills
+  ************************************************/
+  #skills {
+    .skills-inner {
+      .item-wrapper {
+        align-items: center;
         flex-direction: column;
         flex-wrap: nowrap;
-
-        .skill-item {
-          width: 100%;
-        }
-      }
-    }
-
-    #certification {
-    }
-
-    #works {
-      .works-radio-area {
-        flex-direction: column;
-        label {
-          width: 70%;
-        }
-      }
-      .works-contents {
-        flex-direction: column;
-        flex-wrap: nowrap;
-        .works-item {
-          width: 90%;
-        }
-      }
-    }
-
-    #works-introduction {
-      padding: 20px;
-
-      .img-wrapper {
-        img {
-          width: 100%;
+        .item {
+          width: calc(90% - #{$skill-item-margin} * 2);
         }
       }
     }

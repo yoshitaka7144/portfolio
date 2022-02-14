@@ -1,37 +1,21 @@
 // ヘッダーメニュー用js
 window.onload = function () {
-  // ハンバーガーメニュー
-  $("#hamburger").on("click", function () {
-    $("#sp-nav").css("display", "flex");
+  // メニューリンクをクリックしたときメニューを閉じる
+  document.querySelectorAll("#sp-nav > .menu-list > li > a").forEach(menu => {
+    menu.addEventListener("click", closeSpNavMenu);
   });
 
-  // メニュー項目クリック後メニューを閉じる
-  $("#sp-nav > ul > li > a, #sp-nav > ul > li > span").on("click", function () {
-    $("#sp-nav").css("display", "none");
+  // メニュー以外の要素クリック時にメニューを閉じる
+  document.addEventListener("click", e => {
+    if(!e.target.closest("#sp-nav")){
+      closeSpNavMenu();
+    }
   });
 
-  // アンカーリンク先の位置調整（ヘッダーの高さ分下げる）
-  var headerHeight = $(".header-container").outerHeight();
-  var urlHash = location.hash;
-  // ページ外
-  if (urlHash) {
-    $('body,html').stop().scrollTop(0);
-    var target = $(urlHash);
-    // アニメーション設定の分ずれるのでクラスを消しておく
-    target.removeClass("fadein");
-
-    setTimeout(function () {
-      var position = target.offset().top - headerHeight;
-      $('body,html').animate({ scrollTop: position }, 1250);
-    }, 100);
+  /**
+   * ナビメニューを閉じる
+   */
+  function closeSpNavMenu() {
+    document.getElementById("hamburger-menu").checked = false;
   }
-  // ページ内
-  $("a[href^='#']").on("click", function () {
-    var href = $(this).attr("href");
-    var target = $((href == "#" || href == "") ? "html" : href);
-    var position = target.offset().top - headerHeight;
-    $("body,html").animate({ scrollTop: position }, 1250);
-    
-  });
-
 }
