@@ -419,11 +419,11 @@ main {
   height: 50px;
   border-radius: 50%;
   background-color: #6fbcbf;
-  opacity: 0.9;
+  visibility: hidden;
 }
 
 #footer .footer-inner #back-btn:hover {
-  opacity: 0.7;
+  background-color: #6fbcbfc4;
 }
 
 #footer .footer-inner #back-btn::before {
