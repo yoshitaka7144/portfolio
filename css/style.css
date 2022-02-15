@@ -6,7 +6,7 @@ html {
 
 body {
   font-size: 1rem;
-  color: #383e45;
+  color: #6d6f70;
 }
 
 ul {
@@ -15,7 +15,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: #383e45;
+  color: #6d6f70;
 }
 
 .wrapper {
@@ -54,7 +54,7 @@ a {
 ヘッダー header
 ************************************************/
 #header {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.7);
   height: 70px;
   width: 100%;
   display: -webkit-box;
@@ -84,8 +84,14 @@ a {
 
 #header .header-inner .logo a {
   display: block;
-  font-size: 1.5rem;
+  font-family: "Dosis", sans-serif;
+  font-size: 1.6rem;
   font-weight: bold;
+  line-height: 70px;
+}
+
+#header .header-inner .logo a:hover {
+  opacity: 0.7;
 }
 
 #header .header-inner #pc-nav .menu-list {
@@ -96,7 +102,7 @@ a {
 
 #header .header-inner #pc-nav .menu-list li a {
   display: block;
-  padding: 0 20px;
+  padding: 0 15px;
   line-height: 70px;
   position: relative;
   overflow: hidden;
@@ -108,7 +114,7 @@ a {
   content: "";
   bottom: -3px;
   left: 0;
-  background-color: #232323;
+  background-color: #6d6f70;
   height: 3px;
   width: 100%;
   -webkit-transition: 0.2s;
@@ -162,9 +168,13 @@ a {
   height: 50px;
   padding: 15px;
   border-radius: 50%;
-  background-color: #5a90fd;
+  background-color: #6fbcbf;
   cursor: pointer;
   z-index: 100;
+}
+
+#header .header-inner #sp-nav #hamburger-menu-icon:hover {
+  opacity: 0.7;
 }
 
 #header .header-inner #sp-nav #hamburger-menu-icon span {
@@ -198,7 +208,7 @@ a {
   padding-top: 80px;
   top: 0;
   right: -200px;
-  background-color: #5a90fd;
+  background-color: #6fbcbf;
   -webkit-transition: right 0.5s;
   transition: right 0.5s;
   z-index: 10;
@@ -215,7 +225,7 @@ a {
 }
 
 #header .header-inner #sp-nav .menu-list li a:hover {
-  background-color: #7ca7fd;
+  background-color: #9dc1c2;
 }
 
 /************************************************
@@ -230,7 +240,7 @@ main {
 ************************************************/
 #top {
   width: 100%;
-  height: 50vh;
+  height: calc(100vh - 70px);
   background-image: url("../img/top/top.jpg");
   background-size: cover;
   background-position: center;
@@ -243,6 +253,7 @@ main {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  font-family: "Dosis", sans-serif;
   font-size: 2.5rem;
   font-weight: bold;
   color: white;
@@ -255,6 +266,7 @@ main {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  font-family: "Dosis", sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
   color: white;
@@ -279,16 +291,10 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
-  padding-top: calc(140px / 2);
 }
 
 #profile .profile-inner .icon-img {
-  position: absolute;
-  top: calc(140px / 2 * -1);
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  display: block;
   width: 140px;
   height: 140px;
   border-radius: 50%;
@@ -331,11 +337,11 @@ main {
 }
 
 #profile .profile-inner .sns-icon a.mail {
-  background-color: #5a90fd;
+  background-color: #6fbcbf;
 }
 
 #profile .profile-inner .sns-icon a.twitter {
-  background-color: #1d9bf0;
+  background-color: #00adee;
 }
 
 #profile .profile-inner .sns-icon a i {
@@ -349,8 +355,53 @@ main {
 }
 
 #profile .profile-inner .sns-icon a i.fa-github {
-  color: #383e45;
+  color: #6d6f70;
   font-size: 2.4rem;
+}
+
+/************************************************
+資格 certification
+************************************************/
+#certification {
+  background-color: #00adee;
+}
+
+#certification .certification-inner .section-title {
+  color: white;
+}
+
+#certification .certification-inner .item-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#certification .certification-inner .item-list .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: calc(50% - 10px);
+  max-width: 550px;
+  height: 80px;
+  padding: 20px;
+  margin-bottom: 40px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  background-color: white;
+  border-left: 10px solid #6fbcbf;
+  border-radius: 0 10px 10px 0;
+}
+
+#certification .certification-inner .item-list .item:last-of-type {
+  margin-bottom: 0;
 }
 
 /************************************************
@@ -364,7 +415,7 @@ main {
   color: #00adee;
 }
 
-#skills .skills-inner .item-wrapper {
+#skills .skills-inner .item-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -372,7 +423,7 @@ main {
       flex-wrap: wrap;
 }
 
-#skills .skills-inner .item-wrapper .item {
+#skills .skills-inner .item-list .item {
   width: calc(100% / 4 - 15px * 2);
   height: 200px;
   border-radius: 15px;
@@ -391,7 +442,7 @@ main {
   color: white;
 }
 
-#works .works-inner .item-wrapper {
+#works .works-inner .item-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -399,7 +450,7 @@ main {
       flex-wrap: wrap;
 }
 
-#works .works-inner .item-wrapper .item {
+#works .works-inner .item-list .item {
   width: calc(100% / 2 - 15px * 2);
   height: 200px;
   border-radius: 15px;
@@ -485,14 +536,34 @@ main {
 ************************************************/
 @media screen and (max-width: 1024px) {
   /************************************************
+  資格 certification
+  ************************************************/
+  #certification .certification-inner .item-list {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  #certification .certification-inner .item-list .item {
+    width: 100%;
+  }
+  /************************************************
   スキル skills
   ************************************************/
-  #skills .skills-inner .item-wrapper .item {
+  #skills .skills-inner .item-list .item {
     width: calc(100% / 3 - 15px * 2);
   }
 }
 
 @media screen and (max-width: 599px) {
+  .section-inner .section-title {
+    font-size: 2.9rem;
+  }
   /************************************************
   ヘッダー header
   ************************************************/
@@ -508,9 +579,6 @@ main {
   /************************************************
   トップ top
   ************************************************/
-  #top {
-    height: calc(100vh - 70px);
-  }
   #top .title {
     font-size: 2rem;
   }
@@ -519,15 +587,26 @@ main {
     font-size: 1rem;
   }
   /************************************************
+  資格 certification
+  ************************************************/
+  #certification .certification-inner .section-title {
+    letter-spacing: 0.1rem;
+  }
+  #certification .certification-inner .item-list .item {
+    height: 60px;
+    font-size: 0.9rem;
+    margin-bottom: 30px;
+  }
+  /************************************************
   スキル skills
   ************************************************/
-  #skills .skills-inner .item-wrapper .item {
+  #skills .skills-inner .item-list .item {
     width: calc(100% / 2 - 15px * 2);
   }
   /************************************************
   制作物 works
   ************************************************/
-  #works .works-inner .item-wrapper {
+  #works .works-inner .item-list {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -538,7 +617,7 @@ main {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
-  #works .works-inner .item-wrapper .item {
+  #works .works-inner .item-list .item {
     width: calc(90% - 15px * 2);
   }
   /************************************************
@@ -554,7 +633,7 @@ main {
   /************************************************
   スキル skills
   ************************************************/
-  #skills .skills-inner .item-wrapper {
+  #skills .skills-inner .item-list {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -565,7 +644,7 @@ main {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
-  #skills .skills-inner .item-wrapper .item {
+  #skills .skills-inner .item-list .item {
     width: calc(90% - 15px * 2);
   }
 }

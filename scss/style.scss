@@ -7,7 +7,7 @@ html {
 
 body {
   font-size: 1rem;
-  color: #383e45;
+  color: #6d6f70;
 }
 
 ul {
@@ -16,7 +16,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: #383e45;
+  color: #6d6f70;
 }
 
 .wrapper {
@@ -52,9 +52,9 @@ a {
 ヘッダー header
 ************************************************/
 $header-height: 70px;
-$hamburger-menu-color: #5a90fd;
+$hamburger-menu-color: #6fbcbf;
 #header {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.7);
   height: $header-height;
   width: 100%;
   display: flex;
@@ -73,8 +73,13 @@ $hamburger-menu-color: #5a90fd;
     .logo {
       a {
         display: block;
-        font-size: 1.5rem;
+        font-family: "Dosis", sans-serif;
+        font-size: 1.6rem;
         font-weight: bold;
+        line-height: $header-height;
+        &:hover {
+          opacity: 0.7;
+        }
       }
     }
 
@@ -84,7 +89,7 @@ $hamburger-menu-color: #5a90fd;
         li {
           a {
             display: block;
-            padding: 0 20px;
+            padding: 0 15px;
             line-height: $header-height;
             position: relative;
             overflow: hidden;
@@ -95,7 +100,7 @@ $hamburger-menu-color: #5a90fd;
               content: "";
               bottom: -3px;
               left: 0;
-              background-color: #232323;
+              background-color: #6d6f70;
               height: 3px;
               width: 100%;
               transition: 0.2s;
@@ -103,7 +108,7 @@ $hamburger-menu-color: #5a90fd;
 
             &:hover {
               opacity: 0.8;
-              &::after{
+              &::after {
                 bottom: 0;
               }
             }
@@ -153,6 +158,10 @@ $hamburger-menu-color: #5a90fd;
         cursor: pointer;
         z-index: 100;
 
+        &:hover {
+          opacity: 0.7;
+        }
+
         span {
           display: block;
           height: 3px;
@@ -196,7 +205,7 @@ $hamburger-menu-color: #5a90fd;
             transition: 0.5s;
 
             &:hover {
-              background-color: #7ca7fd;
+              background-color: #9dc1c2;
             }
           }
         }
@@ -217,7 +226,7 @@ main {
 ************************************************/
 #top {
   width: 100%;
-  height: 50vh;
+  height: calc(100vh - #{$header-height});
   background-image: url("../img/top/top.jpg");
   background-size: cover;
   background-position: center;
@@ -228,6 +237,7 @@ main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-family: "Dosis", sans-serif;
     font-size: 2.5rem;
     font-weight: bold;
     color: white;
@@ -239,6 +249,7 @@ main {
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-family: "Dosis", sans-serif;
     font-size: 1.5rem;
     font-weight: bold;
     color: white;
@@ -257,14 +268,9 @@ $icon-img-height: 140px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
-    padding-top: calc(#{$icon-img-height} / 2);
 
     .icon-img {
-      position: absolute;
-      top: calc(#{$icon-img-height} / 2 * -1);
-      left: 50%;
-      transform: translateX(-50%);
+      display: block;
       width: $icon-img-width;
       height: $icon-img-height;
       border-radius: 50%;
@@ -301,10 +307,10 @@ $icon-img-height: 140px;
         }
 
         &.mail {
-          background-color: #5a90fd;
+          background-color: #6fbcbf;
         }
         &.twitter {
-          background-color: rgb(29, 155, 240);
+          background-color: #00adee;
         }
 
         i {
@@ -315,9 +321,44 @@ $icon-img-height: 140px;
           font-size: 1.4rem;
           color: white;
           &.fa-github {
-            color: #383e45;
+            color: #6d6f70;
             font-size: 2.4rem;
           }
+        }
+      }
+    }
+  }
+}
+
+/************************************************
+資格 certification
+************************************************/
+#certification {
+  background-color: #00adee;
+  .certification-inner {
+    .section-title {
+      color: white;
+    }
+    .item-list {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      .item {
+        display: flex;
+        align-items: center;
+        width: calc(50% - 10px);
+        max-width: 550px;
+        height: 80px;
+        padding: 20px;
+        margin-bottom: 40px;
+        font-size: 1.3rem;
+        font-weight: bold;
+        background-color: white;
+        border-left: 10px solid #6fbcbf;
+        border-radius: 0 10px 10px 0;
+
+        &:last-of-type {
+          margin-bottom: 0;
         }
       }
     }
@@ -335,7 +376,7 @@ $skill-item-margin: 15px;
       color: #00adee;
     }
 
-    .item-wrapper {
+    .item-list {
       display: flex;
       flex-wrap: wrap;
       .item {
@@ -360,7 +401,7 @@ $work-item-margin: 15px;
       color: white;
     }
 
-    .item-wrapper {
+    .item-list {
       display: flex;
       flex-wrap: wrap;
       .item {
@@ -438,11 +479,26 @@ $footer-height: 70px;
 ************************************************/
 @media screen and (max-width: 1024px) {
   /************************************************
+  資格 certification
+  ************************************************/
+  #certification {
+    .certification-inner {
+      .item-list {
+        align-items: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        .item {
+          width: 100%;
+        }
+      }
+    }
+  }
+  /************************************************
   スキル skills
   ************************************************/
   #skills {
     .skills-inner {
-      .item-wrapper {
+      .item-list {
         .item {
           width: calc(100% / 3 - #{$skill-item-margin} * 2);
         }
@@ -452,6 +508,12 @@ $footer-height: 70px;
 }
 
 @media screen and (max-width: 599px) {
+  .section-inner {
+    .section-title {
+      font-size: 2.9rem;
+    }
+  }
+
   /************************************************
   ヘッダー header
   ************************************************/
@@ -477,8 +539,6 @@ $footer-height: 70px;
   トップ top
   ************************************************/
   #top {
-    height: calc(100vh - #{$header-height});
-
     .title {
       font-size: 2rem;
     }
@@ -490,11 +550,29 @@ $footer-height: 70px;
   }
 
   /************************************************
+  資格 certification
+  ************************************************/
+  #certification {
+    .certification-inner {
+      .section-title {
+        letter-spacing: 0.1rem;
+      }
+      .item-list {
+        .item {
+          height: 60px;
+          font-size: 0.9rem;
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
+
+  /************************************************
   スキル skills
   ************************************************/
   #skills {
     .skills-inner {
-      .item-wrapper {
+      .item-list {
         .item {
           width: calc(100% / 2 - #{$skill-item-margin} * 2);
         }
@@ -507,7 +585,7 @@ $footer-height: 70px;
   ************************************************/
   #works {
     .works-inner {
-      .item-wrapper {
+      .item-list {
         align-items: center;
         flex-direction: column;
         flex-wrap: nowrap;
@@ -537,7 +615,7 @@ $footer-height: 70px;
   ************************************************/
   #skills {
     .skills-inner {
-      .item-wrapper {
+      .item-list {
         align-items: center;
         flex-direction: column;
         flex-wrap: nowrap;
