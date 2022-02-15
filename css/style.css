@@ -2,7 +2,6 @@
 html {
   font-size: 100%;
   font-family: "Noto Sans JP", sans-serif;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -97,11 +96,31 @@ a {
 
 #header .header-inner #pc-nav .menu-list li a {
   display: block;
-  padding: 10px 20px;
+  padding: 0 20px;
+  line-height: 70px;
+  position: relative;
+  overflow: hidden;
+}
+
+#header .header-inner #pc-nav .menu-list li a::after {
+  position: absolute;
+  display: block;
+  content: "";
+  bottom: -3px;
+  left: 0;
+  background-color: #232323;
+  height: 3px;
+  width: 100%;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 #header .header-inner #pc-nav .menu-list li a:hover {
-  opacity: 0.7;
+  opacity: 0.8;
+}
+
+#header .header-inner #pc-nav .menu-list li a:hover::after {
+  bottom: 0;
 }
 
 #header .header-inner #sp-nav {
@@ -245,7 +264,7 @@ main {
 プロフィール profile
 ************************************************/
 #profile {
-  height: calc(50vh - 70px);
+  min-height: calc(50vh - 70px);
   background-color: white;
 }
 

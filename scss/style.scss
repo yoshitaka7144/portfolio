@@ -3,7 +3,6 @@
 html {
   font-size: 100%;
   font-family: "Noto Sans JP", sans-serif;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -85,9 +84,28 @@ $hamburger-menu-color: #5a90fd;
         li {
           a {
             display: block;
-            padding: 10px 20px;
+            padding: 0 20px;
+            line-height: $header-height;
+            position: relative;
+            overflow: hidden;
+
+            &::after {
+              position: absolute;
+              display: block;
+              content: "";
+              bottom: -3px;
+              left: 0;
+              background-color: #232323;
+              height: 3px;
+              width: 100%;
+              transition: 0.2s;
+            }
+
             &:hover {
-              opacity: 0.7;
+              opacity: 0.8;
+              &::after{
+                bottom: 0;
+              }
             }
           }
         }
@@ -233,7 +251,7 @@ main {
 $icon-img-width: 140px;
 $icon-img-height: 140px;
 #profile {
-  height: calc(50vh - #{$header-height});
+  min-height: calc(50vh - #{$header-height});
   background-color: white;
   .profile-inner {
     display: flex;
@@ -368,7 +386,7 @@ $footer-height: 70px;
   height: $footer-height;
   .footer-inner {
     position: relative;
-    #back-btn{
+    #back-btn {
       cursor: pointer;
       display: block;
       position: fixed;
@@ -379,10 +397,10 @@ $footer-height: 70px;
       border-radius: 50%;
       background-color: #6fbcbf;
       visibility: hidden;
-      &:hover{
+      &:hover {
         background-color: #6fbcbfc4;
       }
-      &::before{
+      &::before {
         content: "";
         position: absolute;
         top: 40%;
@@ -393,7 +411,7 @@ $footer-height: 70px;
         border-top: 3px solid white;
         border-left: 3px solid white;
       }
-      &::after{
+      &::after {
         content: "";
         position: absolute;
         top: 65%;
@@ -505,13 +523,12 @@ $footer-height: 70px;
   ************************************************/
   #footer {
     .footer-inner {
-      #back-btn{
+      #back-btn {
         width: 40px;
         height: 40px;
       }
     }
   }
-
 }
 
 @media screen and (max-width: 399px) {
