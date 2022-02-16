@@ -18,6 +18,11 @@ a {
   color: #6d6f70;
 }
 
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
@@ -32,7 +37,7 @@ a {
   font-size: 3.3rem;
   text-align: center;
   letter-spacing: 0.3rem;
-  margin-bottom: 25px;
+  margin-bottom: 40px;
 }
 
 .highlight-y {
@@ -413,6 +418,7 @@ main {
 
 #skills .skills-inner .section-title {
   color: #00adee;
+  margin-bottom: 30px;
 }
 
 #skills .skills-inner .item-list {
@@ -424,11 +430,146 @@ main {
 }
 
 #skills .skills-inner .item-list .item {
-  width: calc(100% / 4 - 15px * 2);
-  height: 200px;
+  width: calc((100% - 2.5% * 2 * 4) / 4);
+  padding-top: calc((100% - 2.5% * 2 * 4) / 4);
+  margin: 2.5%;
   border-radius: 15px;
-  margin: 15px;
   background-color: white;
+  position: relative;
+}
+
+#skills .skills-inner .item-list .item .skill-circle {
+  position: absolute;
+  top: 7%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 50%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#skills .skills-inner .item-list .item .skill-circle .circle {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #6fbcbf;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#skills .skills-inner .item-list .item .skill-circle .circle::before, #skills .skills-inner .item-list .item .skill-circle .circle::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #d6d6d6;
+  -webkit-animation-duration: 1.8s;
+          animation-duration: 1.8s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#skills .skills-inner .item-list .item .skill-circle .circle::before {
+  left: -50%;
+  -webkit-transform-origin: right 50%;
+          transform-origin: right 50%;
+  z-index: 2;
+}
+
+#skills .skills-inner .item-list .item .skill-circle .circle::after {
+  left: 50%;
+  -webkit-transform-origin: left 50%;
+          transform-origin: left 50%;
+  z-index: 3;
+}
+
+#skills .skills-inner .item-list .item .skill-circle .circle .circle-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  background: white;
+  border-radius: 50%;
+  z-index: 4;
+}
+
+#skills .skills-inner .item-list .item .skill-circle .circle .circle-inner img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 55%;
+  height: 55%;
+  border-radius: 5px;
+}
+
+#skills .skills-inner .item-list .item .skill-circle .circle-75::before {
+  -webkit-animation-name: rotate-circle-left-25;
+          animation-name: rotate-circle-left-25;
+}
+
+#skills .skills-inner .item-list .item .skill-circle .circle-75::after {
+  -webkit-animation-name: rotate-circle-right-50;
+          animation-name: rotate-circle-right-50;
+}
+
+#skills .skills-inner .item-list .item .skill-circle .circle-62::before {
+  -webkit-animation-name: rotate-circle-left-12;
+          animation-name: rotate-circle-left-12;
+}
+
+#skills .skills-inner .item-list .item .skill-circle .circle-62::after {
+  -webkit-animation-name: rotate-circle-right-50;
+          animation-name: rotate-circle-right-50;
+}
+
+#skills .skills-inner .item-list .item .skill-circle .circle-50::after {
+  -webkit-animation-name: rotate-circle-right-50;
+          animation-name: rotate-circle-right-50;
+}
+
+#skills .skills-inner .item-list .item .skill-circle .circle-37::after {
+  -webkit-animation-name: rotate-circle-right-37;
+          animation-name: rotate-circle-right-37;
+}
+
+#skills .skills-inner .item-list .item .skill-circle .circle-25::after {
+  -webkit-animation-name: rotate-circle-right-25;
+          animation-name: rotate-circle-right-25;
+}
+
+#skills .skills-inner .item-list .item .skill-name {
+  position: absolute;
+  top: 62%;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+#skills .skills-inner .item-list .item .skill-remarks {
+  position: absolute;
+  top: 80%;
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
 }
 
 /************************************************
@@ -532,6 +673,174 @@ main {
 }
 
 /************************************************
+keyframes
+************************************************/
+@-webkit-keyframes rotate-circle-right-25 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    background: #d6d6d6;
+  }
+  25%,
+  100% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    background: #d6d6d6;
+  }
+}
+@keyframes rotate-circle-right-25 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    background: #d6d6d6;
+  }
+  25%,
+  100% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+    background: #d6d6d6;
+  }
+}
+
+@-webkit-keyframes rotate-circle-right-37 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    background: #d6d6d6;
+  }
+  37.5%,
+  100% {
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+    background: #d6d6d6;
+  }
+}
+
+@keyframes rotate-circle-right-37 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    background: #d6d6d6;
+  }
+  37.5%,
+  100% {
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+    background: #d6d6d6;
+  }
+}
+
+@-webkit-keyframes rotate-circle-right-50 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    background: #d6d6d6;
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    background: #d6d6d6;
+  }
+  50.01% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    background: #6fbcbf;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    background: #6fbcbf;
+  }
+}
+
+@keyframes rotate-circle-right-50 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    background: #d6d6d6;
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+    background: #d6d6d6;
+  }
+  50.01% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    background: #6fbcbf;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    background: #6fbcbf;
+  }
+}
+
+@-webkit-keyframes rotate-circle-left-25 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  75%,
+  100% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+}
+
+@keyframes rotate-circle-left-25 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  75%,
+  100% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+}
+
+@-webkit-keyframes rotate-circle-left-12 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  62.5%,
+  100% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+}
+
+@keyframes rotate-circle-left-12 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  62.5%,
+  100% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+}
+
+/************************************************
 メディアクエリ
 ************************************************/
 @media screen and (max-width: 1024px) {
@@ -556,7 +865,8 @@ main {
   スキル skills
   ************************************************/
   #skills .skills-inner .item-list .item {
-    width: calc(100% / 3 - 15px * 2);
+    width: calc((100% - 2.5% * 2 * 3) / 3);
+    padding-top: calc((100% - 2.5% * 2 * 3) / 3);
   }
 }
 
@@ -601,7 +911,14 @@ main {
   スキル skills
   ************************************************/
   #skills .skills-inner .item-list .item {
-    width: calc(100% / 2 - 15px * 2);
+    width: calc((100% - 2.5% * 2 * 2) / 2);
+    padding-top: calc((100% - 2.5% * 2 * 2) / 2);
+  }
+  #skills .skills-inner .item-list .item .skill-name {
+    font-size: 1rem;
+  }
+  #skills .skills-inner .item-list .item .skill-remarks {
+    font-size: 0.8rem;
   }
   /************************************************
   制作物 works
@@ -626,26 +943,6 @@ main {
   #footer .footer-inner #back-btn {
     width: 40px;
     height: 40px;
-  }
-}
-
-@media screen and (max-width: 399px) {
-  /************************************************
-  スキル skills
-  ************************************************/
-  #skills .skills-inner .item-list {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-  }
-  #skills .skills-inner .item-list .item {
-    width: calc(90% - 15px * 2);
   }
 }
 /*# sourceMappingURL=style.css.map */
