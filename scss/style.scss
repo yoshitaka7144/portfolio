@@ -387,11 +387,16 @@ $skills-item-margin: 2.5%;
       flex-wrap: wrap;
       .item {
         width: calc((100% - #{$skills-item-margin} * 2 * 4) / 4);
-        padding-top: calc((100% - #{$skills-item-margin} * 2 * 4) / 4);
         margin: $skills-item-margin;
         border-radius: 15px;
         background-color: white;
         position: relative;
+
+        &::before {
+          content: "";
+          display: block;
+          padding-top: 100%;
+        }
 
         .skill-circle {
           position: absolute;
@@ -457,7 +462,6 @@ $skills-item-margin: 2.5%;
                 transform: translate(-50%, -50%);
                 width: 55%;
                 height: 55%;
-                border-radius: 5px;
               }
             }
           }
@@ -522,7 +526,8 @@ $skills-item-margin: 2.5%;
 /************************************************
 制作物 works
 ************************************************/
-$work-item-margin: 15px;
+$works-item-margin: 4%;
+$works-item-img-ratio: 250 / 300;
 #works {
   background-color: #00adee;
   .works-inner {
@@ -534,11 +539,75 @@ $work-item-margin: 15px;
       display: flex;
       flex-wrap: wrap;
       .item {
-        width: calc(100% / 2 - #{$work-item-margin} * 2);
-        height: 200px;
-        border-radius: 15px;
-        margin: $work-item-margin;
+        width: calc((100% - #{$works-item-margin} * 2 * 2) / 2);
+        border-radius: 5px;
+        margin: $works-item-margin;
         background-color: white;
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+          content: "";
+          display: block;
+          padding-top: calc(100% * #{$works-item-img-ratio});
+        }
+
+        .link {
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+
+          &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            opacity: 0;
+            transition: 0.5s;
+            z-index: 2;
+          }
+
+          .title {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            display: block;
+            width: 100%;
+            text-align: center;
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: white;
+            opacity: 0;
+            transition: 0.5s;
+            z-index: 3;
+          }
+
+          .thumbnail {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+
+          &:hover{
+            &::before{
+              opacity: 0.7;
+            }
+            .title{
+              opacity: 1;
+            }
+          }
+        }
       }
     }
   }
@@ -702,7 +771,6 @@ keyframes
       .item-list {
         .item {
           width: calc((100% - #{$skills-item-margin} * 2 * 3) / 3);
-          padding-top: calc((100% - #{$skills-item-margin} * 2 * 3) / 3);
         }
       }
     }
@@ -777,7 +845,6 @@ keyframes
       .item-list {
         .item {
           width: calc((100% - #{$skills-item-margin} * 2 * 2) / 2);
-          padding-top: calc((100% - #{$skills-item-margin} * 2 * 2) / 2);
           .skill-name {
             font-size: 1rem;
           }
@@ -799,7 +866,14 @@ keyframes
         flex-direction: column;
         flex-wrap: nowrap;
         .item {
-          width: calc(90% - #{$work-item-margin} * 2);
+          max-width: 320px;
+          width: 100%;
+          margin: $works-item-margin 0;
+          .link{
+            .title{
+              font-size: 1.2rem;
+            }
+          }
         }
       }
     }

@@ -64,7 +64,7 @@ window.onload = function () {
         opacity: ["1", "0.5", "0"],
         visibility: ["visible", "hidden"],
       }, {
-        duration: 500,
+        duration: 300,
         fill: "forwards",
       });
     }
@@ -81,7 +81,7 @@ window.onload = function () {
         opacity: ["0", "0.5", "1"],
         visibility: ["hidden", "visible"],
       }, {
-        duration: 500,
+        duration: 300,
         fill: "forwards",
       });
     }
