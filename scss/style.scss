@@ -32,12 +32,23 @@ img {
 .section-inner {
   padding: 60px 15px;
 
-  .section-title {
-    font-family: "Dosis", sans-serif;
-    font-size: 3.3rem;
-    text-align: center;
-    letter-spacing: 0.3rem;
+  .heading {
     margin-bottom: 40px;
+    text-align: center;
+
+    .title {
+      display: inline-block;
+      font-family: "Dosis", sans-serif;
+      font-size: 3.3rem;
+      letter-spacing: 0.3rem;
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      margin-bottom: 5px;
+    }
+
+    .sub {
+      font-size: 1.1rem;
+    }
   }
 }
 
@@ -274,6 +285,12 @@ $icon-img-height: 140px;
     flex-direction: column;
     align-items: center;
 
+    .heading{
+      .title{
+        border-bottom-color: #6d6f70;
+      }
+    }
+
     .icon-img {
       display: block;
       width: $icon-img-width;
@@ -341,8 +358,14 @@ $icon-img-height: 140px;
 #certification {
   background-color: #00adee;
   .certification-inner {
-    .section-title {
-      color: white;
+    .heading{
+      .title{
+        color: white;
+        border-bottom-color: white;
+      }
+      .sub{
+        color: white;
+      }
     }
     .item-list {
       display: flex;
@@ -377,9 +400,15 @@ $skills-item-margin: 2.5%;
 #skills {
   background-color: #f1f1f1;
   .skills-inner {
-    .section-title {
-      color: #00adee;
+    .heading{
       margin-bottom: 30px;
+      .title{
+        color: #00adee;
+        border-bottom-color: #00adee;
+      }
+      .sub{
+        color: #00adee;
+      }
     }
 
     .item-list {
@@ -531,8 +560,15 @@ $works-item-img-ratio: 250 / 300;
 #works {
   background-color: #00adee;
   .works-inner {
-    .section-title {
-      color: white;
+    .heading{
+      margin-bottom: 30px;
+      .title{
+        color: white;
+        border-bottom-color: white;
+      }
+      .sub{
+        color: white;
+      }
     }
 
     .item-list {
@@ -599,11 +635,11 @@ $works-item-img-ratio: 250 / 300;
             height: 100%;
           }
 
-          &:hover{
-            &::before{
+          &:hover {
+            &::before {
               opacity: 0.7;
             }
-            .title{
+            .title {
               opacity: 1;
             }
           }
@@ -779,8 +815,10 @@ keyframes
 
 @media screen and (max-width: 599px) {
   .section-inner {
-    .section-title {
-      font-size: 2.9rem;
+    .heading {
+      .title{
+        font-size: 2.9rem;
+      }
     }
   }
 
@@ -791,7 +829,7 @@ keyframes
     .header-inner {
       .logo {
         a {
-          font-size: 1rem;
+          font-size: 1.1rem;
         }
       }
 
@@ -824,9 +862,12 @@ keyframes
   ************************************************/
   #certification {
     .certification-inner {
-      .section-title {
-        letter-spacing: 0.1rem;
+      .heading {
+        .title{
+          letter-spacing: 0.1rem;
+        }
       }
+
       .item-list {
         .item {
           height: 60px;
@@ -869,8 +910,8 @@ keyframes
           max-width: 320px;
           width: 100%;
           margin: $works-item-margin 0;
-          .link{
-            .title{
+          .link {
+            .title {
               font-size: 1.2rem;
             }
           }

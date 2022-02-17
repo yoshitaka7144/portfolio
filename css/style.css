@@ -32,12 +32,23 @@ img {
   padding: 60px 15px;
 }
 
-.section-inner .section-title {
+.section-inner .heading {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.section-inner .heading .title {
+  display: inline-block;
   font-family: "Dosis", sans-serif;
   font-size: 3.3rem;
-  text-align: center;
   letter-spacing: 0.3rem;
-  margin-bottom: 40px;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  margin-bottom: 5px;
+}
+
+.section-inner .heading .sub {
+  font-size: 1.1rem;
 }
 
 .highlight-y {
@@ -298,6 +309,10 @@ main {
           align-items: center;
 }
 
+#profile .profile-inner .heading .title {
+  border-bottom-color: #6d6f70;
+}
+
 #profile .profile-inner .icon-img {
   display: block;
   width: 140px;
@@ -371,7 +386,12 @@ main {
   background-color: #00adee;
 }
 
-#certification .certification-inner .section-title {
+#certification .certification-inner .heading .title {
+  color: white;
+  border-bottom-color: white;
+}
+
+#certification .certification-inner .heading .sub {
   color: white;
 }
 
@@ -416,9 +436,17 @@ main {
   background-color: #f1f1f1;
 }
 
-#skills .skills-inner .section-title {
-  color: #00adee;
+#skills .skills-inner .heading {
   margin-bottom: 30px;
+}
+
+#skills .skills-inner .heading .title {
+  color: #00adee;
+  border-bottom-color: #00adee;
+}
+
+#skills .skills-inner .heading .sub {
+  color: #00adee;
 }
 
 #skills .skills-inner .item-list {
@@ -583,7 +611,16 @@ main {
   background-color: #00adee;
 }
 
-#works .works-inner .section-title {
+#works .works-inner .heading {
+  margin-bottom: 30px;
+}
+
+#works .works-inner .heading .title {
+  color: white;
+  border-bottom-color: white;
+}
+
+#works .works-inner .heading .sub {
   color: white;
 }
 
@@ -940,14 +977,14 @@ keyframes
 }
 
 @media screen and (max-width: 599px) {
-  .section-inner .section-title {
+  .section-inner .heading .title {
     font-size: 2.9rem;
   }
   /************************************************
   ヘッダー header
   ************************************************/
   #header .header-inner .logo a {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
   #header .header-inner #pc-nav {
     display: none;
@@ -968,7 +1005,7 @@ keyframes
   /************************************************
   資格 certification
   ************************************************/
-  #certification .certification-inner .section-title {
+  #certification .certification-inner .heading .title {
     letter-spacing: 0.1rem;
   }
   #certification .certification-inner .item-list .item {
