@@ -4,14 +4,13 @@ window.addEventListener("load", function () {
   // ページ内リンク遷移処理
   const anchorLinks = document.querySelectorAll('a[href^="#"]');
   const anchorLinksArr = Array.prototype.slice.call(anchorLinks);
-  const header = document.querySelector('#header');
   anchorLinksArr.forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault();
       const targetId = link.hash;
       const targetElement = document.querySelector(targetId);
       const targetOffsetTop = window.pageYOffset + targetElement.getBoundingClientRect().top;
-      const headerHeight = header.offsetHeight;
+      const headerHeight = document.querySelector('#header').offsetHeight;
       const totalScrollAmount = targetOffsetTop - headerHeight;
       window.scroll({
         top: totalScrollAmount,

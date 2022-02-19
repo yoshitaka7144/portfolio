@@ -832,7 +832,7 @@ img {
   opacity: 0.7;
 }
 
-.introduction-container .sidebar {
+.introduction-container .sideNav {
   width: 22%;
   height: 300px;
   position: -webkit-sticky;
@@ -841,7 +841,7 @@ img {
   top: 70px;
 }
 
-.introduction-container .sidebar .nav-link-list li a {
+.introduction-container .sideNav .nav-link-list li a {
   display: block;
   height: 30px;
   line-height: 30px;
@@ -851,15 +851,15 @@ img {
   position: relative;
 }
 
-.introduction-container .sidebar .nav-link-list li a.sub {
+.introduction-container .sideNav .nav-link-list li a.sub {
   padding-left: 35px;
 }
 
-.introduction-container .sidebar .nav-link-list li a:hover {
+.introduction-container .sideNav .nav-link-list li a:hover {
   opacity: 0.7;
 }
 
-.introduction-container .sidebar .nav-link-list li a.on::before {
+.introduction-container .sideNav .nav-link-list li a::before {
   content: "";
   display: inline-block;
   position: absolute;
@@ -872,6 +872,13 @@ img {
   border-top: 5px solid transparent;
   border-left: 7px solid #6fbcbf;
   border-bottom: 5px solid transparent;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.introduction-container .sideNav .nav-link-list li a.scroll::before {
+  opacity: 1;
 }
 
 .introduction-container main {
@@ -879,7 +886,6 @@ img {
   background-color: white;
   border-radius: 10px;
   padding: 20px 30px;
-  margin-bottom: 20px;
 }
 
 .introduction-container main .article .heading-top {
@@ -901,6 +907,28 @@ img {
   text-align: left;
   font-size: 1.3rem;
   margin-bottom: 10px;
+}
+
+.introduction-container .works-list-link {
+  width: 100%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.introduction-container .works-list-link a {
+  color: #3aa0d3;
+}
+
+.introduction-container .works-list-link a:hover {
+  opacity: 0.7;
 }
 
 /************************************************
@@ -1177,6 +1205,73 @@ keyframes
   #footer .footer-inner #back-btn {
     width: 40px;
     height: 40px;
+  }
+  /************************************************
+  紹介ページ introduction-container
+  ************************************************/
+  .introduction-container .sideNav {
+    height: 300px;
+    position: fixed;
+    overflow-y: scroll;
+    top: 70px;
+    right: 100px;
+    display: none;
+  }
+  .introduction-container .sideNav .nav-link-list li a {
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 15px;
+    font-size: 0.9rem;
+    color: #3aa0d3;
+    position: relative;
+  }
+  .introduction-container .sideNav .nav-link-list li a.sub {
+    padding-left: 35px;
+  }
+  .introduction-container .sideNav .nav-link-list li a:hover {
+    opacity: 0.7;
+  }
+  .introduction-container .sideNav .nav-link-list li a::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-left: 7px solid #6fbcbf;
+    border-bottom: 5px solid transparent;
+    opacity: 0;
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+  }
+  .introduction-container .sideNav .nav-link-list li a.scroll::before {
+    opacity: 1;
+  }
+  .introduction-container main {
+    width: 100%;
+  }
+  .introduction-container main .article .heading-top {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  .introduction-container main .article .heading-section {
+    text-align: left;
+    font-size: 1.6rem;
+    padding: 12px;
+    background-color: #f1f1f1;
+    border-left: 8px solid #6fbcbf;
+    margin-bottom: 10px;
+  }
+  .introduction-container main .article .heading-sub-section {
+    text-align: left;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
   }
 }
 /*# sourceMappingURL=style.css.map */
