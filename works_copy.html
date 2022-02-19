@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <meta name="description" content="">
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <link rel="stylesheet" href="fontawesome/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@800&family=Noto+Sans+JP&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/common.js"></script>
+  <script src="js/worksIntroductionPage.js"></script>
+</head>
+
+<body>
+  <header id="header">
+    <div class="header-inner wrapper">
+      <h1 class="logo">
+        <a href="index.html">YOSHITAKA NAGAI</a>
+      </h1>
+      <nav id="pc-nav">
+        <ul class="menu-list">
+          <li><a href="index.html#profile">profile</a></li>
+          <li><a href="index.html#certification">certification</a></li>
+          <li><a href="index.html#skills">skills</a></li>
+          <li><a href="index.html#works">works</a></li>
+        </ul>
+      </nav>
+      <nav id="sp-nav">
+        <input type="checkbox" id="hamburger-menu">
+        <label for="hamburger-menu" id="hamburger-menu-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <ul class="menu-list">
+          <li><a href="index.html#profile">profile</a></li>
+          <li><a href="index.html#certification">certification</a></li>
+          <li><a href="index.html#skills">skills</a></li>
+          <li><a href="index.html#works">works</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="introduction-container wrapper">
+    <div class="bread-crumb-list">
+      <ul itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a itemprop="item" href="index.html">
+            <span itemprop="name">HOME</span>
+          </a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a itemprop="item" href="#">
+            <span itemprop="name">カテゴリー名</span>
+          </a>
+          <meta itemprop="position" content="2" />
+        </li>
+      </ul>
+    </div>
+    <main>
+      <article class="article">
+        <h2 class="heading-top">タイトル</h2>
+        <h3 id="summary" class="heading-section">概要</h3>
+        <h3 id="public-url" class="heading-section">公開URL</h3>
+        <h3 id="purpose" class="heading-section">目的</h3>
+        <h3 id="language" class="heading-section">使用言語</h3>
+        <h3 id="framework" class="heading-section">フレームワーク</h3>
+        <h3 id="plug-in" class="heading-section">ライブラリ、プラグイン等</h3>
+        <h3 id="development-environment" class="heading-section">開発環境</h3>
+        <h3 id="function" class="heading-section">機能一覧</h3>
+        <h4 id="aiueo" class="heading-sub-section">あいうえお</h4>
+        <h3 id="table-definition" class="heading-section">テーブル定義書</h3>
+        <h3 id="how-to-use" class="heading-section">使用方法</h3>
+        <h3 id="after" class="heading-section">作り終えて</h3>
+        <h3 id="reference" class="heading-section">参考サイト</h3>
+        <h3 id="link" class="heading-section">リンク</h3>
+      </article>
+    </main>
+    <div class="sidebar">
+      <ul class="nav-link-list">
+        <li><a href="#summary">概要</a></li>
+        <li><a href="#public-url">公開URL</a></li>
+        <li><a href="#purpose">目的</a></li>
+        <li><a href="#language">使用言語</a></li>
+        <li><a href="#framework">フレームワーク</a></li>
+        <li><a href="#plug-in">プラグイン等</a></li>
+        <li><a href="#development-environment">開発環境</a></li>
+        <li><a href="#function">機能一覧</a></li>
+        <li><a href="#aiueo" class="sub">あいうえお</a></li>
+        <li><a href="#table-definition">テーブル定義書</a></li>
+        <li><a href="#how-to-use">使用方法</a></li>
+        <li><a href="#after">作り終えて</a></li>
+        <li><a href="#reference">参考サイト</a></li>
+        <li><a href="#link">リンク</a></li>
+      </ul>
+    </div>
+  </div>
+  <footer id="footer">
+    <div class="footer-inner wrapper">
+      <p class="copyright"><i class="fa-solid fa-copyright"></i>YOSHITAKA NAGAI</p>
+    </div>
+    <button id="scroll-to-top-btn"></button>
+  </footer>
+</body>
+
+</html>

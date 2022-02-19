@@ -7,6 +7,7 @@ html {
 body {
   font-size: 1rem;
   color: #6d6f70;
+  background-color: #f1f1f1;
 }
 
 ul {
@@ -70,7 +71,7 @@ img {
 ヘッダー header
 ************************************************/
 #header {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: white;
   height: 70px;
   width: 100%;
   display: -webkit-box;
@@ -247,7 +248,7 @@ img {
 /************************************************
 メイン main
 ************************************************/
-main {
+#main {
   margin-top: 70px;
 }
 
@@ -723,11 +724,16 @@ main {
   height: 70px;
 }
 
-#footer .footer-inner {
-  position: relative;
+#footer .footer-inner .copyright {
+  font-size: 0.8rem;
+  color: white;
 }
 
-#footer .footer-inner #back-btn {
+#footer .footer-inner .copyright .fa-copyright {
+  margin-right: 5px;
+}
+
+#footer #scroll-to-top-btn {
   cursor: pointer;
   display: block;
   position: fixed;
@@ -740,11 +746,11 @@ main {
   visibility: hidden;
 }
 
-#footer .footer-inner #back-btn:hover {
+#footer #scroll-to-top-btn:hover {
   background-color: #6fbcbfc4;
 }
 
-#footer .footer-inner #back-btn::before {
+#footer #scroll-to-top-btn::before {
   content: "";
   position: absolute;
   top: 40%;
@@ -757,7 +763,7 @@ main {
   border-left: 3px solid white;
 }
 
-#footer .footer-inner #back-btn::after {
+#footer #scroll-to-top-btn::after {
   content: "";
   position: absolute;
   top: 65%;
@@ -770,13 +776,131 @@ main {
   border-left: 3px solid white;
 }
 
-#footer .footer-inner .copyright {
-  font-size: 0.8rem;
-  color: white;
+/************************************************
+紹介ページ introduction-container
+************************************************/
+.introduction-container {
+  margin-top: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 15px;
 }
 
-#footer .footer-inner .copyright .fa-copyright {
-  margin-right: 5px;
+.introduction-container .bread-crumb-list {
+  width: 100%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.introduction-container .bread-crumb-list ul li {
+  display: inline;
+}
+
+.introduction-container .bread-crumb-list ul li:after {
+  content: "";
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-top: 3px solid #6fbcbf;
+  border-right: 3px solid #6fbcbf;
+  -webkit-transform: translateY(-2px) rotate(45deg);
+          transform: translateY(-2px) rotate(45deg);
+  margin: 0 5px;
+}
+
+.introduction-container .bread-crumb-list ul li:last-of-type::after {
+  content: "";
+  display: none;
+}
+
+.introduction-container .bread-crumb-list ul li a {
+  color: #3aa0d3;
+}
+
+.introduction-container .bread-crumb-list ul li a:hover {
+  opacity: 0.7;
+}
+
+.introduction-container .sidebar {
+  width: 22%;
+  height: 300px;
+  position: -webkit-sticky;
+  position: sticky;
+  overflow-y: scroll;
+  top: 70px;
+}
+
+.introduction-container .sidebar .nav-link-list li a {
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 15px;
+  font-size: 0.9rem;
+  color: #3aa0d3;
+  position: relative;
+}
+
+.introduction-container .sidebar .nav-link-list li a.sub {
+  padding-left: 35px;
+}
+
+.introduction-container .sidebar .nav-link-list li a:hover {
+  opacity: 0.7;
+}
+
+.introduction-container .sidebar .nav-link-list li a.on::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-left: 7px solid #6fbcbf;
+  border-bottom: 5px solid transparent;
+}
+
+.introduction-container main {
+  width: 75%;
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px 30px;
+  margin-bottom: 20px;
+}
+
+.introduction-container main .article .heading-top {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.introduction-container main .article .heading-section {
+  text-align: left;
+  font-size: 1.6rem;
+  padding: 12px;
+  background-color: #f1f1f1;
+  border-left: 8px solid #6fbcbf;
+  margin-bottom: 10px;
+}
+
+.introduction-container main .article .heading-sub-section {
+  text-align: left;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
 }
 
 /************************************************

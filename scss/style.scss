@@ -8,6 +8,7 @@ html {
 body {
   font-size: 1rem;
   color: #6d6f70;
+  background-color: #f1f1f1;
 }
 
 ul {
@@ -70,7 +71,7 @@ img {
 $header-height: 70px;
 $hamburger-menu-color: #6fbcbf;
 #header {
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: white;
   height: $header-height;
   width: 100%;
   display: flex;
@@ -233,7 +234,7 @@ $hamburger-menu-color: #6fbcbf;
 /************************************************
 メイン main
 ************************************************/
-main {
+#main {
   margin-top: $header-height;
 }
 
@@ -285,8 +286,8 @@ $icon-img-height: 140px;
     flex-direction: column;
     align-items: center;
 
-    .heading{
-      .title{
+    .heading {
+      .title {
         border-bottom-color: #6d6f70;
       }
     }
@@ -358,12 +359,12 @@ $icon-img-height: 140px;
 #certification {
   background-color: #00adee;
   .certification-inner {
-    .heading{
-      .title{
+    .heading {
+      .title {
         color: white;
         border-bottom-color: white;
       }
-      .sub{
+      .sub {
         color: white;
       }
     }
@@ -400,13 +401,13 @@ $skills-item-margin: 2.5%;
 #skills {
   background-color: #f1f1f1;
   .skills-inner {
-    .heading{
+    .heading {
       margin-bottom: 30px;
-      .title{
+      .title {
         color: #00adee;
         border-bottom-color: #00adee;
       }
-      .sub{
+      .sub {
         color: #00adee;
       }
     }
@@ -560,13 +561,13 @@ $works-item-img-ratio: 250 / 300;
 #works {
   background-color: #00adee;
   .works-inner {
-    .heading{
+    .heading {
       margin-bottom: 30px;
-      .title{
+      .title {
         color: white;
         border-bottom-color: white;
       }
-      .sub{
+      .sub {
         color: white;
       }
     }
@@ -660,49 +661,171 @@ $footer-height: 70px;
   background-color: #3b3b3b;
   height: $footer-height;
   .footer-inner {
-    position: relative;
-    #back-btn {
-      cursor: pointer;
-      display: block;
-      position: fixed;
-      bottom: 10px;
-      right: 10px;
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background-color: #6fbcbf;
-      visibility: hidden;
-      &:hover {
-        background-color: #6fbcbfc4;
-      }
-      &::before {
-        content: "";
-        position: absolute;
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%, -50%) rotate(45deg);
-        width: 25%;
-        height: 25%;
-        border-top: 3px solid white;
-        border-left: 3px solid white;
-      }
-      &::after {
-        content: "";
-        position: absolute;
-        top: 65%;
-        left: 50%;
-        transform: translate(-50%, -50%) rotate(45deg);
-        width: 25%;
-        height: 25%;
-        border-top: 3px solid white;
-        border-left: 3px solid white;
-      }
-    }
     .copyright {
       font-size: 0.8rem;
       color: white;
       .fa-copyright {
         margin-right: 5px;
+      }
+    }
+  }
+
+  #scroll-to-top-btn {
+    cursor: pointer;
+    display: block;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #6fbcbf;
+    visibility: hidden;
+    &:hover {
+      background-color: #6fbcbfc4;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      width: 25%;
+      height: 25%;
+      border-top: 3px solid white;
+      border-left: 3px solid white;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 65%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      width: 25%;
+      height: 25%;
+      border-top: 3px solid white;
+      border-left: 3px solid white;
+    }
+  }
+}
+
+/************************************************
+紹介ページ introduction-container
+************************************************/
+$link-color: rgb(58, 160, 211);
+.introduction-container {
+  margin-top: $header-height;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 15px;
+
+  .bread-crumb-list {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+
+    ul {
+      li {
+        display: inline;
+
+        &:after {
+          content: "";
+          display: inline-block;
+          width: 9px;
+          height: 9px;
+          border-top: 3px solid #6fbcbf;
+          border-right: 3px solid #6fbcbf;
+          transform: translateY(-2px) rotate(45deg);
+          margin: 0 5px;
+        }
+
+        &:last-of-type::after {
+          content: "";
+          display: none;
+        }
+
+        a {
+          color: $link-color;
+          &:hover{
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+  }
+
+  .sidebar {
+    width: 22%;
+    height: 300px;
+    position: sticky;
+    overflow-y: scroll;
+    top: $header-height;
+
+    .nav-link-list {
+      li {
+        a {
+          display: block;
+          height: 30px;
+          line-height: 30px;
+          padding-left: 15px;
+          font-size: 0.9rem;
+          color: $link-color;
+          position: relative;
+
+          &.sub {
+            padding-left: 35px;
+          }
+
+          &:hover{
+            opacity: 0.7;
+          }
+
+          &.on::before{
+            content: "";
+            display: inline-block;
+            position: absolute;
+            top:50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-top: 5px solid transparent;
+            border-left: 7px solid #6fbcbf;
+            border-bottom: 5px solid transparent;
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    width: 75%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px 30px;
+    margin-bottom: 20px;
+    .article {
+      .heading-top {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+
+      .heading-section {
+        text-align: left;
+        font-size: 1.6rem;
+        padding: 12px;
+        background-color: #f1f1f1;
+        border-left: 8px solid #6fbcbf;
+        margin-bottom: 10px;
+      }
+
+      .heading-sub-section {
+        text-align: left;
+        font-size: 1.3rem;
+        margin-bottom: 10px;
       }
     }
   }
@@ -816,7 +939,7 @@ keyframes
 @media screen and (max-width: 599px) {
   .section-inner {
     .heading {
-      .title{
+      .title {
         font-size: 2.9rem;
       }
     }
@@ -863,7 +986,7 @@ keyframes
   #certification {
     .certification-inner {
       .heading {
-        .title{
+        .title {
           letter-spacing: 0.1rem;
         }
       }
