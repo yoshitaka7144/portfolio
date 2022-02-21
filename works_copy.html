@@ -67,24 +67,162 @@
     </div>
     <main>
       <article class="article">
-        <h2 id="article-top" class="heading-top">タイトル</h2>
-        <h3 id="summary" class="heading-section">概要</h3>
-        <h3 id="public-url" class="heading-section">公開URL</h3>
-        <h3 id="purpose" class="heading-section">目的</h3>
-        <h3 id="language" class="heading-section">使用言語</h3>
-        <h3 id="framework" class="heading-section">フレームワーク</h3>
-        <h3 id="plug-in" class="heading-section">ライブラリ、プラグイン等</h3>
-        <h3 id="development-environment" class="heading-section">開発環境</h3>
-        <h3 id="function" class="heading-section">機能一覧</h3>
-        <h4 id="aiueo" class="heading-sub-section">あいうえお</h4>
-        <h3 id="table-definition" class="heading-section">テーブル定義書</h3>
-        <h3 id="how-to-use" class="heading-section">使用方法</h3>
-        <h3 id="after" class="heading-section">作り終えて</h3>
-        <h3 id="reference" class="heading-section">参考サイト</h3>
-        <h3 id="link" class="heading-section">リンク</h3>
+        <h2 id="article-top" class="heading-top">タイピング練習アプリ</h2>
+        <div class="article-header">
+          <time class="modified-time" datetime="2021-09-23"><i
+              class="fa-solid fa-clock-rotate-left"></i>2021.09.23</time>
+          <ul class="category-info-list">
+            <li>Vue.js</li>
+            <li>Laravel</li>
+          </ul>
+        </div>
+        <img class="top-img" src="img/works/typing/demo.gif" alt="">
+        <section id="summary">
+          <h3 class="heading-section">概要</h3>
+          <p>タイピング練習webアプリケーションです。</p>
+          <p>問題作成、履歴データ閲覧も可能です。</p>
+          <p>PCでの実行、閲覧を想定して作成しています。</p>
+        </section>
+        <section id="public-url">
+          <h3 class="heading-section">公開URL</h3>
+          <p><a href="https://typing.mikanbako.jp" target="_blank"
+              rel="noopener noreferrer">https://typing.mikanbako.jp</a>
+          </p>
+        </section>
+        <section id="purpose">
+          <h3 class="heading-section">目的</h3>
+          <p>以下の点から今回アプリケーションの作成に至りました。</p>
+          <ul class="list purpose-list">
+            <li><span class="highlight-y">フレームワーク</span>を使用したアプリケーションの作成</li>
+            <li>PHP、<span class="highlight-y">Laravel</span>の勉強</li>
+            <li>Laravelの認証機能を使用、カスタマイズする</li>
+            <li>繰り返し遊ぶことのできるアプリケーションの作成<span class="highlight-y"></span></li>
+            <li>Vueを使用したSPAの作成</li>
+            <li>タイピングが遅いから鍛えたい</li>
+          </ul>
+        </section>
+        <section id="language">
+          <h3 class="heading-section">使用言語</h3>
+          <ul class="list normal-list">
+            <li>PHP</li>
+            <li>Javascript</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>MySQL</li>
+          </ul>
+        </section>
+        <section id="framework">
+          <h3 class="heading-section">フレームワーク</h3>
+          <ul class="list normal-list">
+            <li>Laravel@6.20.32</li>
+            <li>Vue@2.6.14</li>
+          </ul>
+        </section>
+        <section id="plug-in">
+          <h3 class="heading-section">ライブラリ、プラグイン等</h3>
+          <ul class="list normal-list">
+            <li>vue-router@3.5.2</li>
+            <li>vuex@3.6.2</li>
+            <li>chart.js@2.9.3</li>
+            <li>vue-chartjs@3.5.1</li>
+            <li>chartjs-plugin-datalabels@1.0.0</li>
+            <li>vue-js-modal@2.0.1</li>
+          </ul>
+        </section>
+        <section id="development-environment">
+          <h3 class="heading-section">開発環境</h3>
+          <ul class="list normal-list">
+            <li>Windows10</li>
+            <li>XAMPP</li>
+            <li>Visual Studio Code</li>
+            <li>git(SourceTree使用)</li>
+          </ul>
+        </section>
+        <section id="function">
+          <h3 class="heading-section">機能一覧</h3>
+          <ul class="list normal-list">
+            <li>トップ画面</li>
+            <ul class="list sub-list">
+              <li>会員メニュー</li>
+              <li>タイピングメニュー</li>
+              <li>履歴データ</li>
+            </ul>
+            <li>ログイン/新規登録画面</li>
+            <ul class="list sub-list">
+              <li>ログイン</li>
+              <li>新規ユーザー登録</li>
+            </ul>
+            <li>問題編集画面</li>
+            <ul class="list sub-list">
+              <li>データ一覧表示</li>
+              <li>作成</li>
+              <li>編集</li>
+              <li>削除</li>
+              <li>タイピングテスト</li>
+            </ul>
+            <li>タイピング画面</li>
+            <ul class="list sub-list">
+              <li>待機画面</li>
+              <li>タイピング</li>
+              <li>結果表示</li>
+            </ul>
+          </ul>
+        </section>
+        <section id="table-definition">
+          <h3 class="heading-section">テーブル定義書</h3>
+          <p><a
+              href="https://docs.google.com/spreadsheets/d/1kVXoGfiHeqIjOmaL_yGdpNlI5RM-VdwZH-dEmz2TPb0/edit?usp=sharing"
+              target="_blank" rel="noopener noreferrer">テーブル定義書（Googleスプレッドシート）</a></p>
+        </section>
+        <section id="how-to-use">
+          <h3 class="heading-section">使用方法</h3>
+          <h4 id="aiueo" class="heading-sub-section">あいうえお</h4>
+        </section>
+        <section id="after">
+          <h3 class="heading-section">作り終えて</h3>
+          <ul class="list normal-list">
+            <li>本来の目的であるLaravelの勉強よりも、VueとJavascriptの勉強、SPAの勉強に時間を使ってしまった。</li>
+            <li>フロントエンドをVueで作成した為、LaravelでのBladeテンプレートの使い方をほとんど勉強できていない。</li>
+            <li>もっと適切なデザインを勉強したいと思った。</li>
+            <li>タイピングのキー入力判定が思っていたより複雑でした。参考にさせていただいたアルゴリズムに改変を加えたがまだ抜けがある。</li>
+            <li>本番環境へのデプロイだけに2日程時間を使ってしまった。サーバー構築の勉強になりました。
+            </li>
+          </ul>
+        </section>
+        <section id="reference">
+          <h3 class="heading-section">参考サイト</h3>
+          <p><a href="https://crieit.net/posts/dc0eb0f0a74f6e15e362e1f384d28f0d" target="_blank"
+              rel="noopener noreferrer">柔軟な入力方法に対応したタイピングゲームの作り方</a>
+          </p>
+          <p>キー入力判定アルゴリズムを参考、改変させていただきました。</p>
+          <p><a href="https://developer.yahoo.co.jp/webapi/jlp/furigana/v2/furigana.html" target="_blank"
+              rel="noopener noreferrer">Yahoo ルビ振りWebAPI</a>
+          </p>
+          <p>問題登録時に問題からふりがなとローマ字を生成する為に使用しました。</p>
+          <p><a href="https://www.hypertextcandy.com/vue-laravel-tutorial-introduction/" target="_blank"
+              rel="noopener noreferrer">Vue + Vue Router + Vuex + Laravelで写真共有アプリを作ろう</a>
+          </p>
+          <p>Laravel +
+            Vueのアプリケーションの作成方法を勉強させていただきました。</p>
+          <p><a href="https://qiita.com/minato-naka/items/2d2def4d66ec88dc3ca2" target="_blank"
+              rel="noopener noreferrer">Vue.js + LaravelでシンプルなSPA構築チュートリアル</a>
+          </p>
+          <p>Laravel +
+            VueのSPA作成方法を勉強させていただきました。</p>
+          <p><a href="https://qiita.com/panyayan311/items/859a8529d1aec24afbfc" target="_blank"
+              rel="noopener noreferrer">UbuntuのLAMP環境にLaravelをデプロイ</a>
+          </p>
+          <p>Laravelのデプロイ方法を参考にさせていただきました。</p>
+        </section>
+        <section id="link">
+          <h3 class="heading-section">リンク</h3>
+          <p><a href="https://github.com/yoshitaka7144/TypingTraining" target="_blank"
+              rel="noopener noreferrer">Githubリポジトリ</a>
+          </p>
+        </section>
       </article>
     </main>
-    <div class="sideNav">
+    <div class="side-nav">
       <ul class="nav-link-list">
         <li><a href="#article-top">TOP</a></li>
         <li><a href="#summary">概要</a></li>
@@ -95,9 +233,9 @@
         <li><a href="#plug-in">プラグイン等</a></li>
         <li><a href="#development-environment">開発環境</a></li>
         <li><a href="#function">機能一覧</a></li>
-        <li><a href="#aiueo" class="sub">あいうえお</a></li>
         <li><a href="#table-definition">テーブル定義書</a></li>
         <li><a href="#how-to-use">使用方法</a></li>
+        <li><a href="#aiueo" class="sub">あいうえお</a></li>
         <li><a href="#after">作り終えて</a></li>
         <li><a href="#reference">参考サイト</a></li>
         <li><a href="#link">リンク</a></li>

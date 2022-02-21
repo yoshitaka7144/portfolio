@@ -18,6 +18,9 @@ ul {
 a {
   text-decoration: none;
   color: #6d6f70;
+  &:hover{
+    opacity: 0.7;
+  }
 }
 
 img {
@@ -637,6 +640,7 @@ $works-item-img-ratio: 250 / 300;
           }
 
           &:hover {
+            opacity: 1;
             &::before {
               opacity: 0.7;
             }
@@ -756,7 +760,7 @@ $link-color: rgb(58, 160, 211);
     }
   }
 
-  .sideNav {
+  .side-nav {
     width: 22%;
     height: 300px;
     position: sticky;
@@ -812,15 +816,30 @@ $link-color: rgb(58, 160, 211);
     border-radius: 10px;
     padding: 20px 30px;
     .article {
+      section {
+        margin-bottom: 15px;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+
+      a {
+        color: $link-color;
+      }
+
+      p{
+        line-height: 1.7;
+      }
+
       .heading-top {
         text-align: center;
-        font-size: 2rem;
+        font-size: 1.6rem;
         margin-bottom: 20px;
       }
 
       .heading-section {
         text-align: left;
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         padding: 12px;
         background-color: #f1f1f1;
         border-left: 8px solid #6fbcbf;
@@ -829,8 +848,80 @@ $link-color: rgb(58, 160, 211);
 
       .heading-sub-section {
         text-align: left;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         margin-bottom: 10px;
+      }
+
+      .article-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+
+        .modified-time {
+          color: #a8aabc;
+          i {
+            margin-right: 3px;
+          }
+        }
+
+        .category-info-list {
+          display: flex;
+          li {
+            padding: 7px;
+            margin-right: 5px;
+            border-radius: 5px;
+            background-color: #6fbcbf;
+            color: white;
+            font-size: 0.9rem;
+
+            &:last-of-type {
+              margin-right: 0px;
+            }
+          }
+        }
+      }
+
+      .top-img {
+        margin-bottom: 20px;
+      }
+
+      .list {
+        padding: 10px 10px 10px 40px;
+        li {
+          padding: 10px;
+          position: relative;
+
+          &::before {
+            font-size: 1rem;
+            position: absolute;
+            top: 50%;
+            left: -20px;
+            transform: translateY(-50%);
+          }
+        }
+
+        &.normal-list {
+          li::before {
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            content: "\f0da";
+            color: #6fbcbf;
+          }
+        }
+
+        &.purpose-list {
+          li::before {
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            content: "\f058";
+            color: #ffb03f;
+          }
+        }
+
+        &.sub-list{
+          padding: 0px 10px 0px 30px;
+        }
       }
     }
   }
@@ -1079,79 +1170,43 @@ keyframes
   紹介ページ introduction-container
   ************************************************/
   .introduction-container {
-    .sideNav {
-      height: 300px;
-      position: fixed;
-      overflow-y: scroll;
-      top: $header-height;
-      right: 100px;
+    .side-nav {
       display: none;
-
-      .nav-link-list {
-        li {
-          a {
-            display: block;
-            height: 30px;
-            line-height: 30px;
-            padding-left: 15px;
-            font-size: 0.9rem;
-            color: $link-color;
-            position: relative;
-
-            &.sub {
-              padding-left: 35px;
-            }
-
-            &:hover {
-              opacity: 0.7;
-            }
-
-            &::before {
-              content: "";
-              display: inline-block;
-              position: absolute;
-              top: 50%;
-              left: 0;
-              transform: translateY(-50%);
-              width: 0;
-              height: 0;
-              border-top: 5px solid transparent;
-              border-left: 7px solid #6fbcbf;
-              border-bottom: 5px solid transparent;
-              opacity: 0;
-              transition: opacity 0.2s;
-            }
-
-            &.scroll::before {
-              opacity: 1;
-            }
-          }
-        }
-      }
     }
 
     main {
       width: 100%;
+      padding: 15px;
       .article {
         .heading-top {
-          text-align: center;
-          font-size: 2rem;
-          margin-bottom: 20px;
+          font-size: 1.3rem;
         }
 
         .heading-section {
-          text-align: left;
-          font-size: 1.6rem;
-          padding: 12px;
-          background-color: #f1f1f1;
-          border-left: 8px solid #6fbcbf;
-          margin-bottom: 10px;
+          font-size: 1.2rem;
+          padding: 9px;
         }
 
         .heading-sub-section {
-          text-align: left;
-          font-size: 1.3rem;
-          margin-bottom: 10px;
+          font-size: 1rem;
+        }
+
+        .article-header {
+          .modified-time {
+            font-size: 0.8rem;
+          }
+
+          .category-info-list {
+            li {
+              padding: 5px;
+              margin-right: 3px;
+              font-size: 0.8rem;
+
+              &:last-of-type {
+                margin-right: 0px;
+              }
+            }
+          }
         }
       }
     }

@@ -33,7 +33,7 @@ window.addEventListener("load", function () {
           item.classList.remove("scroll");
         });
         document.querySelector(".nav-link-list li a[href='#" + targetLinkList[i].id + "']").classList.add("scroll");
-        document.querySelector(".sideNav").scrollTop = targetLinkList[i].navLinkOffset;
+        document.querySelector(".side-nav").scrollTop = targetLinkList[i].navLinkOffset;
       } else {
         break;
       }

@@ -19,6 +19,10 @@ a {
   color: #6d6f70;
 }
 
+a:hover {
+  opacity: 0.7;
+}
+
 img {
   max-width: 100%;
   vertical-align: bottom;
@@ -699,6 +703,10 @@ img {
   height: 100%;
 }
 
+#works .works-inner .item-list .item .link:hover {
+  opacity: 1;
+}
+
 #works .works-inner .item-list .item .link:hover::before {
   opacity: 0.7;
 }
@@ -832,7 +840,7 @@ img {
   opacity: 0.7;
 }
 
-.introduction-container .sideNav {
+.introduction-container .side-nav {
   width: 22%;
   height: 300px;
   position: -webkit-sticky;
@@ -841,7 +849,7 @@ img {
   top: 70px;
 }
 
-.introduction-container .sideNav .nav-link-list li a {
+.introduction-container .side-nav .nav-link-list li a {
   display: block;
   height: 30px;
   line-height: 30px;
@@ -851,15 +859,15 @@ img {
   position: relative;
 }
 
-.introduction-container .sideNav .nav-link-list li a.sub {
+.introduction-container .side-nav .nav-link-list li a.sub {
   padding-left: 35px;
 }
 
-.introduction-container .sideNav .nav-link-list li a:hover {
+.introduction-container .side-nav .nav-link-list li a:hover {
   opacity: 0.7;
 }
 
-.introduction-container .sideNav .nav-link-list li a::before {
+.introduction-container .side-nav .nav-link-list li a::before {
   content: "";
   display: inline-block;
   position: absolute;
@@ -877,7 +885,7 @@ img {
   transition: opacity 0.2s;
 }
 
-.introduction-container .sideNav .nav-link-list li a.scroll::before {
+.introduction-container .side-nav .nav-link-list li a.scroll::before {
   opacity: 1;
 }
 
@@ -888,15 +896,31 @@ img {
   padding: 20px 30px;
 }
 
+.introduction-container main .article section {
+  margin-bottom: 15px;
+}
+
+.introduction-container main .article section:last-of-type {
+  margin-bottom: 0;
+}
+
+.introduction-container main .article a {
+  color: #3aa0d3;
+}
+
+.introduction-container main .article p {
+  line-height: 1.7;
+}
+
 .introduction-container main .article .heading-top {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.6rem;
   margin-bottom: 20px;
 }
 
 .introduction-container main .article .heading-section {
   text-align: left;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   padding: 12px;
   background-color: #f1f1f1;
   border-left: 8px solid #6fbcbf;
@@ -905,8 +929,88 @@ img {
 
 .introduction-container main .article .heading-sub-section {
   text-align: left;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin-bottom: 10px;
+}
+
+.introduction-container main .article .article-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 0;
+}
+
+.introduction-container main .article .article-header .modified-time {
+  color: #a8aabc;
+}
+
+.introduction-container main .article .article-header .modified-time i {
+  margin-right: 3px;
+}
+
+.introduction-container main .article .article-header .category-info-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.introduction-container main .article .article-header .category-info-list li {
+  padding: 7px;
+  margin-right: 5px;
+  border-radius: 5px;
+  background-color: #6fbcbf;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.introduction-container main .article .article-header .category-info-list li:last-of-type {
+  margin-right: 0px;
+}
+
+.introduction-container main .article .top-img {
+  margin-bottom: 20px;
+}
+
+.introduction-container main .article .list {
+  padding: 10px 10px 10px 40px;
+}
+
+.introduction-container main .article .list li {
+  padding: 10px;
+  position: relative;
+}
+
+.introduction-container main .article .list li::before {
+  font-size: 1rem;
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.introduction-container main .article .list.normal-list li::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f0da";
+  color: #6fbcbf;
+}
+
+.introduction-container main .article .list.purpose-list li::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f058";
+  color: #ffb03f;
+}
+
+.introduction-container main .article .list.sub-list {
+  padding: 0px 10px 0px 30px;
 }
 
 .introduction-container .works-list-link {
@@ -1209,69 +1313,33 @@ keyframes
   /************************************************
   紹介ページ introduction-container
   ************************************************/
-  .introduction-container .sideNav {
-    height: 300px;
-    position: fixed;
-    overflow-y: scroll;
-    top: 70px;
-    right: 100px;
+  .introduction-container .side-nav {
     display: none;
-  }
-  .introduction-container .sideNav .nav-link-list li a {
-    display: block;
-    height: 30px;
-    line-height: 30px;
-    padding-left: 15px;
-    font-size: 0.9rem;
-    color: #3aa0d3;
-    position: relative;
-  }
-  .introduction-container .sideNav .nav-link-list li a.sub {
-    padding-left: 35px;
-  }
-  .introduction-container .sideNav .nav-link-list li a:hover {
-    opacity: 0.7;
-  }
-  .introduction-container .sideNav .nav-link-list li a::before {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    width: 0;
-    height: 0;
-    border-top: 5px solid transparent;
-    border-left: 7px solid #6fbcbf;
-    border-bottom: 5px solid transparent;
-    opacity: 0;
-    -webkit-transition: opacity 0.2s;
-    transition: opacity 0.2s;
-  }
-  .introduction-container .sideNav .nav-link-list li a.scroll::before {
-    opacity: 1;
   }
   .introduction-container main {
     width: 100%;
+    padding: 15px;
   }
   .introduction-container main .article .heading-top {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: 1.3rem;
   }
   .introduction-container main .article .heading-section {
-    text-align: left;
-    font-size: 1.6rem;
-    padding: 12px;
-    background-color: #f1f1f1;
-    border-left: 8px solid #6fbcbf;
-    margin-bottom: 10px;
+    font-size: 1.2rem;
+    padding: 9px;
   }
   .introduction-container main .article .heading-sub-section {
-    text-align: left;
-    font-size: 1.3rem;
-    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+  .introduction-container main .article .article-header .modified-time {
+    font-size: 0.8rem;
+  }
+  .introduction-container main .article .article-header .category-info-list li {
+    padding: 5px;
+    margin-right: 3px;
+    font-size: 0.8rem;
+  }
+  .introduction-container main .article .article-header .category-info-list li:last-of-type {
+    margin-right: 0px;
   }
 }
 /*# sourceMappingURL=style.css.map */
