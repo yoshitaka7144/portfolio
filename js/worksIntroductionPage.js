@@ -12,7 +12,6 @@ window.addEventListener("load", function () {
       navLinkOffset: navLinkOffset,
     });
   });
-  // 
   targetLinkList.sort((a, b) => a.offset - b.offset);
 
   // ページ読み込み時にサイドナビを連動

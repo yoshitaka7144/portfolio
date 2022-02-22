@@ -18,7 +18,7 @@ ul {
 a {
   text-decoration: none;
   color: #6d6f70;
-  &:hover{
+  &:hover {
     opacity: 0.7;
   }
 }
@@ -734,7 +734,7 @@ $link-color: rgb(58, 160, 211);
       li {
         display: inline;
 
-        &:after {
+        &::before {
           content: "";
           display: inline-block;
           width: 9px;
@@ -745,9 +745,16 @@ $link-color: rgb(58, 160, 211);
           margin: 0 5px;
         }
 
-        &:last-of-type::after {
+        &:first-of-type::before {
           content: "";
-          display: none;
+          font-family: "Font Awesome 6 Free";
+          font-weight: 900;
+          content: "\f015";
+          color: #6fbcbf;
+          border-top: none;
+          border-right: none;
+          transform: translateY(-2px);
+          margin: 0 13px 0 0;
         }
 
         a {
@@ -762,7 +769,7 @@ $link-color: rgb(58, 160, 211);
 
   .side-nav {
     width: 22%;
-    height: 300px;
+    height: 350px;
     position: sticky;
     overflow-y: scroll;
     top: $header-height;
@@ -771,15 +778,16 @@ $link-color: rgb(58, 160, 211);
       li {
         a {
           display: block;
-          height: 30px;
-          line-height: 30px;
-          padding-left: 15px;
+          padding: 5px 0 5px 15px;
           font-size: 0.9rem;
           color: $link-color;
           position: relative;
 
           &.sub {
-            padding-left: 35px;
+            padding: 5px 0 5px 35px;
+          }
+          &.sub-sub {
+            padding: 5px 0 5px 55px;
           }
 
           &:hover {
@@ -814,7 +822,7 @@ $link-color: rgb(58, 160, 211);
     width: 75%;
     background-color: white;
     border-radius: 10px;
-    padding: 20px 30px;
+    padding: 20px 40px;
     .article {
       section {
         margin-bottom: 15px;
@@ -823,40 +831,28 @@ $link-color: rgb(58, 160, 211);
         }
       }
 
+      p {
+        line-height: 2;
+      }
+
       a {
         color: $link-color;
       }
 
-      p{
-        line-height: 1.7;
+      img {
+        margin: 5px 0;
       }
 
-      .heading-top {
-        text-align: center;
-        font-size: 1.6rem;
-        margin-bottom: 20px;
-      }
-
-      .heading-section {
-        text-align: left;
-        font-size: 1.4rem;
-        padding: 12px;
-        background-color: #f1f1f1;
-        border-left: 8px solid #6fbcbf;
-        margin-bottom: 10px;
-      }
-
-      .heading-sub-section {
-        text-align: left;
-        font-size: 1.2rem;
-        margin-bottom: 10px;
+      .top-img {
+        margin: 0;
       }
 
       .article-header {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         align-items: center;
         padding: 10px 0;
+        margin-bottom: 10px;
 
         .modified-time {
           color: #a8aabc;
@@ -864,32 +860,58 @@ $link-color: rgb(58, 160, 211);
             margin-right: 3px;
           }
         }
+      }
 
-        .category-info-list {
-          display: flex;
-          li {
-            padding: 7px;
-            margin-right: 5px;
-            border-radius: 5px;
-            background-color: #6fbcbf;
-            color: white;
-            font-size: 0.9rem;
+      .heading-top {
+        text-align: center;
+        font-size: 1.6rem;
+        font-weight: bold;
+        margin-bottom: 25px;
+      }
 
-            &:last-of-type {
-              margin-right: 0px;
-            }
-          }
+      .heading-section {
+        text-align: left;
+        font-size: 1.4rem;
+        font-weight: bold;
+        padding: 12px;
+        background-color: #f1f1f1;
+        border-left: 6px solid #6fbcbf;
+        margin: 25px -20px 25px -20px;
+      }
+
+      .heading-sub-section {
+        text-align: left;
+        font-size: 1.2rem;
+        font-weight: bold;
+        padding: 6px 12px;
+        margin: 15px 0px;
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          border-radius: 3px;
+          width: 6px;
+          height: 100%;
+          background-color: #6fbcbf;
         }
       }
 
-      .top-img {
-        margin-bottom: 20px;
+      .heading-sub-sub-section {
+        display: inline-block;
+        text-align: left;
+        font-size: 1rem;
+        font-weight: bold;
+        padding: 8px 0px;
+        margin: 10px 0px;
+        border-bottom: 2px dotted #6d6f70;
       }
 
       .list {
-        padding: 10px 10px 10px 40px;
+        padding: 0px 10px 0px 20px;
         li {
-          padding: 10px;
+          padding: 10px 0;
           position: relative;
 
           &::before {
@@ -899,6 +921,10 @@ $link-color: rgb(58, 160, 211);
             left: -20px;
             transform: translateY(-50%);
           }
+        }
+
+        &.sub-list {
+          margin-left: 5px;
         }
 
         &.normal-list {
@@ -911,16 +937,16 @@ $link-color: rgb(58, 160, 211);
         }
 
         &.purpose-list {
+          padding: 0px 10px 0px 40px;
+          border-radius: 10px;
+          background: repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
           li::before {
+            left: -25px;
             font-family: "Font Awesome 6 Free";
             font-weight: 900;
             content: "\f058";
-            color: #ffb03f;
+            color: #6fbcbf;
           }
-        }
-
-        &.sub-list{
-          padding: 0px 10px 0px 30px;
         }
       }
     }
@@ -928,16 +954,16 @@ $link-color: rgb(58, 160, 211);
 
   .works-list-link {
     width: 100%;
-    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 15px 0;
 
     a {
-      color: $link-color;
-      &:hover {
-        opacity: 0.7;
-      }
+      padding: 10px 15px;
+      background-color: #00adee;
+      color: white;
+      border-radius: 10px;
     }
   }
 }
@@ -1170,6 +1196,12 @@ keyframes
   紹介ページ introduction-container
   ************************************************/
   .introduction-container {
+    padding: 0;
+
+    .bread-crumb-list{
+      margin-left: 15px;
+    }
+
     .side-nav {
       display: none;
     }
@@ -1185,27 +1217,16 @@ keyframes
         .heading-section {
           font-size: 1.2rem;
           padding: 9px;
+          margin: 20px 0;
         }
 
         .heading-sub-section {
-          font-size: 1rem;
+          font-size: 1.1rem;
         }
 
         .article-header {
           .modified-time {
             font-size: 0.8rem;
-          }
-
-          .category-info-list {
-            li {
-              padding: 5px;
-              margin-right: 3px;
-              font-size: 0.8rem;
-
-              &:last-of-type {
-                margin-right: 0px;
-              }
-            }
           }
         }
       }
