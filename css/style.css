@@ -990,6 +990,10 @@ img {
 }
 
 .introduction-container main .article .heading-sub-sub-section {
+  display: block;
+}
+
+.introduction-container main .article .heading-sub-sub-section span {
   display: inline-block;
   text-align: left;
   font-size: 1rem;
@@ -1026,6 +1030,31 @@ img {
   font-weight: 900;
   content: "\f0da";
   color: #6fbcbf;
+}
+
+.introduction-container main .article .list.number-list {
+  padding: 0px 10px 0px 40px;
+  counter-reset: my-counter;
+}
+
+.introduction-container main .article .list.number-list li::before {
+  content: counter(my-counter);
+  counter-increment: my-counter;
+  background-color: #6fbcbf;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 18px;
+  width: 18px;
+  color: #ffffff;
+  font-size: 0.7rem;
+  position: absolute;
+  top: 50%;
+  left: -25px;
 }
 
 .introduction-container main .article .list.purpose-list {

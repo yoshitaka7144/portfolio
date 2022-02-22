@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <meta name="description" content="">
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <link rel="stylesheet" href="fontawesome/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@800&family=Noto+Sans+JP&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/common.js"></script>
+  <script src="js/worksIntroductionPage.js"></script>
+</head>
+
+<body>
+  <header id="header">
+    <div class="header-inner wrapper">
+      <h1 class="logo">
+        <a href="index.html">YOSHITAKA NAGAI</a>
+      </h1>
+      <nav id="pc-nav">
+        <ul class="menu-list">
+          <li><a href="index.html#profile">profile</a></li>
+          <li><a href="index.html#certification">certification</a></li>
+          <li><a href="index.html#skills">skills</a></li>
+          <li><a href="index.html#works">works</a></li>
+        </ul>
+      </nav>
+      <nav id="sp-nav">
+        <input type="checkbox" id="hamburger-menu">
+        <label for="hamburger-menu" id="hamburger-menu-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <ul class="menu-list">
+          <li><a href="index.html#profile">profile</a></li>
+          <li><a href="index.html#certification">certification</a></li>
+          <li><a href="index.html#skills">skills</a></li>
+          <li><a href="index.html#works">works</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="introduction-container wrapper">
+    <div class="bread-crumb-list">
+      <ul itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a itemprop="item" href="index.html">
+            <span itemprop="name">HOME</span>
+          </a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a itemprop="item" href="works-num-typing.html">
+            <span itemprop="name">数字タイピング</span>
+          </a>
+          <meta itemprop="position" content="2" />
+        </li>
+      </ul>
+    </div>
+    <main>
+      <article class="article">
+        <h2 id="article-top" class="heading-top">数字タイピング</h2>
+        <div class="article-header">
+          <time class="modified-time" datetime="2022-02-12"><i
+              class="fa-solid fa-clock-rotate-left"></i>2022.02.12</time>
+        </div>
+        <img class="top-img" src="img/works/numTyping/demo.gif" alt="">
+        <section id="summary">
+          <h3 class="heading-section">概要</h3>
+          <p>数字キーのタイピング練習アプリケーションです。</p>
+          <p>PCから閲覧、キーボードを使用して実行することを想定して作成しています。</p>
+        </section>
+        <section id="public-url">
+          <h3 class="heading-section">公開URL</h3>
+          <p><a href="https://numtyping.mikanbako.jp" target="_blank"
+              rel="noopener noreferrer">https://numtyping.mikanbako.jp</a>
+          </p>
+          <p><a href="https://github.com/yoshitaka7144/TypingTraining" target="_blank"
+              rel="noopener noreferrer">Githubリポジトリ</a>
+          </p>
+        </section>
+        <section id="purpose">
+          <h3 class="heading-section">目的</h3>
+          <p>以下の点から今回アプリケーションの作成に至りました。</p>
+          <ul class="list purpose-list">
+            <li><span class="highlight-y">JavaScript</span>の勉強（jQUeryを使用しない）</li>
+            <li>ゲーム感覚でタイピング練習できるアプリケーション作成</li>
+            <li>数字キーを正確に速くタイピングできるように鍛えたい</li>
+          </ul>
+        </section>
+        <section id="language">
+          <h3 class="heading-section">使用言語</h3>
+          <ul class="list normal-list">
+            <li>Javascript</li>
+            <li>HTML</li>
+            <li>CSS</li>
+          </ul>
+        </section>
+        <section id="development-environment">
+          <h3 class="heading-section">開発環境</h3>
+          <ul class="list normal-list">
+            <li>Windows10</li>
+            <li>Visual Studio Code</li>
+            <li>git(SourceTree使用)</li>
+          </ul>
+        </section>
+        <section id="function">
+          <h3 class="heading-section">機能一覧</h3>
+          <ul class="list normal-list">
+            <li>トップ画面</li>
+            <li>設定画面</li>
+            <li>問題画面</li>
+            <ul class="list sub-list">
+              <li>数値モード</li>
+              <li>計算モード</li>
+              <li>もぐらたたきモード</li>
+            </ul>
+            <li>結果画面</li>
+        </section>
+        <section id="how-to-use">
+          <h3 class="heading-section">使用方法</h3>
+          <h4 id="top-window" class="heading-sub-section">トップ画面</h4>
+          <img src="img/works/numTyping/top_pc.PNG" alt="">
+          <p>数値、計算、もぐらたたきの3つのモードへの切替、各モードの説明テキスト、キーボードと対応指が表示されます。</p>
+
+          <h4 id="setting" class="heading-sub-section">設定画面</h4>
+          <img src="img/works/numTyping/setting.PNG" alt="">
+          <h5 id="setting-common" class="heading-sub-sub-section"><span>共通</span></h5>
+          <p>
+            各モード共通の設定項目として「サウンド」、「時間制限(秒)」があります。サウンドはミスタイプ時の音、もぐらたたきモードの叩く音の有無を設定できます。時間制限は全モードでの時間制限タイマーの有無、時間の秒数を設定できます。
+          </p>
+          <h5 id="setting-num" class="heading-sub-sub-section"><span>数値 計算</span></h5>
+          <p>
+            数値、計算モードにて、「問題数」、「タイピングナビ」、「苦手キー」を設定できます。「問題数」はクリアまでの問題数を設定できます。「タイピングナビ」はタイピングすべきキーの表示と対応する指の表示の有無を設定できます。「苦手キー」は設定したキーが問題に含まれるように設定できます。
+          </p>
+          <h5 id="setting-mole" class="heading-sub-sub-section"><span>もぐらたたき</span></h5>
+          <p>
+            もぐらたたきモードにて、「クリア回数」、「もぐら出現間隔」、「もぐら滞在時間」を設定できます。「クリア回数」はクリアまでのもぐらのたたく回数を設定できます。「もぐら出現間隔」、「もぐら滞在時間」は5段階で長さを選択できます。
+          </p>
+
+          <h4 id="question" class="heading-sub-section">問題画面</h4>
+          <h5 id="question-num" class="heading-sub-sub-section"><span>数値モード</span></h5>
+          <img src="img/works/numTyping/question-1.gif" alt="">
+          <p>6桁までの正 or 負の整数が表示されます。表示された通りに数字キーまたはマイナスキーをタイピングして下さい。設定した問題数が終了すると結果画面が表示されます</p>
+          <p>タイピングナビが設定されている場合はタイピングキーと対応指がオレンジ色になります。</p>
+          <p>時間制限が設定されている場合はタイマーが表示され、タイマーの数値が0になると強制的に結果画面が表示されます。</p>
+          <h5 id="question-calc" class="heading-sub-sub-section"><span>計算モード</span></h5>
+          <img src="img/works/numTyping/question-2.gif" alt="">
+          <p>3桁までの足し算と引き算、2桁までの掛け算の計算問題が表示されます。計算結果をタイピングして下さい。設定した問題数が終了すると結果画面が表示されます。</p>
+          <p>タイピングナビが設定されている場合はタイピングキーと対応指がオレンジ色になります。</p>
+          <p>時間制限が設定されている場合はタイマーが表示され、タイマーの数値が0になると強制的に結果画面が表示されます。</p>
+          <h5 id="question-mole" class="heading-sub-sub-section"><span>もぐらたたきモード</span></h5>
+          <img src="img/works/numTyping/question-3.gif" alt="">
+          <p>
+            0~9までの数値がもぐらたたきのように出現します。出現している時にタイピングすることでもぐらたたき成功判定となります。別のキーをタイピングまたは数値が消えてしまったら失敗判定となります。叩いた回数が設定したクリア回数に達すると結果画面が表示されます。
+          </p>
+          <p>時間制限が設定されている場合はタイマーが表示され、タイマーの数値が0になると強制的に結果画面が表示されます。</p>
+
+          <h4 id="result" class="heading-sub-section">結果画面</h4>
+          <h5 id="result-num" class="heading-sub-sub-section"><span>数値 計算モード</span></h5>
+          <img src="img/works/numTyping/result-12.png" alt="">
+          <ul class="list number-list">
+            <li>WPM：1分間あたりの正解タイプ数 </li>
+            <li>正解タイプ数/総数：正しくタイピングした数と出題された問題の総タイピング数</li>
+            <li>ミスタイプ数：ミス判定されたタイピング数</li>
+            <li>正答率（%）：正解タイプ数 / (正解タイプ数 + ミスタイプ数) * 100 (※小数点以下切り捨て)</li>
+            <li>ミスキーTOP3：ミスした回数が多い順に3つ表示</li>
+            <li>ランク：スコアに応じたランク(S~F)</li>
+            <li>スコア：(正答率 - ((1 - (正解タイプ数 / 総数)) * 100) ) * (WPM / 300) (※小数点以下切り捨て、最大100、最小0)</li>
+            <li>もう一回ボタン：もう一回同じモードで問題を開始</li>
+            <li>戻るボタン：トップ画面へ戻る</li>
+            <li>ミスキー：ミスした回数が多いほど濃く、少ないと薄い赤色で表示</li>
+          </ul>
+          <h5 id="result-mole" class="heading-sub-sub-section"><span>もぐらたたきモード</span></h5>
+          <img src="img/works/numTyping/result-3.png" alt="">
+          <ul class="list number-list">
+            <li>もぐら出現数：もぐらが出現した数</li>
+            <li>叩けた数：もぐら出現時に正しくタイピングした数</li>
+            <li>逃げられた数：もぐらが逃げてしまった数</li>
+            <li>撃破率（%）：叩けた数 / もぐら出現数 * 100 (※小数点以下切り捨て)</li>
+            <li>ミスタイプ数：ミス判定されたタイピング数</li>
+            <li>ランク：スコアに応じたランク(S~F)</li>
+            <li>スコア：撃破率 - ミスタイプ数 (※最大100、最小0)</li>
+            <li>もう一回ボタン：もう一回同じモードで問題を開始</li>
+            <li>戻るボタン：トップ画面へ戻る</li>
+          </ul>
+        </section>
+        <section id="after">
+          <h3 class="heading-section">作り終えて</h3>
+          <ul class="list normal-list">
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </section>
+        <section id="reference">
+          <h3 class="heading-section">参考サイト</h3>
+          <p><a href="https://tedate.jp/coding/edit-class-that-has-specific-name-by-javascript" target="_blank"
+              rel="noopener noreferrer">素のjavaScriptで、特定の名前や接頭辞を含むclassを判定して削除する方法[ js ]</a>
+          <p>クラス名の前方一致での削除方法を参考にさせていただきました。</p>
+          <p><a href="https://qiita.com/ymgd-a/items/f82a6708746949960fc4" target="_blank"
+              rel="noopener noreferrer">JSで値変更を検知したい-3（配列・Proxy編）</a>
+          </p>
+          <p>値変更の検知、監視できる処理作成の為に参考にさせていただきました。</p>
+          <p><a href="https://monohibi.com/posts/css-animationend-event" target="_blank"
+              rel="noopener noreferrer">CSSのアニメーション終了後にイベントを実行する</a>
+          </p>
+          <p>同じアニメーションをキータイプのタイミングで実行させる処理の為に参考にさせていただきました。</p>
+          <p><a href="https://www.irasutoya.com/" target="_blank" rel="noopener noreferrer">いらすとや</a>
+          </p>
+          <p>数値（0～9）画像、もぐらたたきの穴画像、ピコピコハンマー画像利用させていただきました。</p>
+          <p><a href="https://soundeffect-lab.info/" target="_blank" rel="noopener noreferrer">効果音ラボ</a>
+          </p>
+          <p>ミスタイプ音、ピコピコハンマー叩き音を利用させていただきました。</p>
+
+        </section>
+      </article>
+    </main>
+    <div class="side-nav">
+      <ul class="nav-link-list">
+        <li><a href="#article-top">TOP</a></li>
+        <li><a href="#summary">概要</a></li>
+        <li><a href="#public-url">公開URL</a></li>
+        <li><a href="#purpose">目的</a></li>
+        <li><a href="#language">使用言語</a></li>
+        <li><a href="#development-environment">開発環境</a></li>
+        <li><a href="#function">機能一覧</a></li>
+        <li><a href="#how-to-use">使用方法</a></li>
+        <li><a href="#top-window" class="sub">トップ画面</a></li>
+        <li><a href="#setting" class="sub">設定画面</a></li>
+        <li><a href="#setting-common" class="sub-sub">共通</a></li>
+        <li><a href="#setting-num" class="sub-sub">数値 計算</a></li>
+        <li><a href="#setting-mole" class="sub">もぐらたたき</a></li>
+        <li><a href="#question" class="sub">問題画面</a></li>
+        <li><a href="#question-num" class="sub-sub">数値モード</a></li>
+        <li><a href="#question-calc" class="sub-sub">計算モード</a></li>
+        <li><a href="#question-mole" class="sub-sub">もぐらたたきモード</a></li>
+        <li><a href="#result" class="sub">結果画面</a></li>
+        <li><a href="#result-num" class="sub-sub">数値 計算モード</a></li>
+        <li><a href="#result-mole" class="sub-sub">もぐらたたきモード</a></li>
+        <li><a href="#after">作り終えて</a></li>
+        <li><a href="#reference">参考サイト</a></li>
+      </ul>
+    </div>
+    <div class="works-list-link">
+      <a href="index.html#works">制作物一覧へ</a>
+    </div>
+  </div>
+  <footer id="footer">
+    <div class="footer-inner wrapper">
+      <p class="copyright"><i class="fa-solid fa-copyright"></i>YOSHITAKA NAGAI</p>
+    </div>
+    <button id="scroll-to-top-btn"></button>
+  </footer>
+</body>
+
+</html>

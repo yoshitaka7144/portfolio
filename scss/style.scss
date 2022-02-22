@@ -899,13 +899,16 @@ $link-color: rgb(58, 160, 211);
       }
 
       .heading-sub-sub-section {
-        display: inline-block;
-        text-align: left;
-        font-size: 1rem;
-        font-weight: bold;
-        padding: 8px 0px;
-        margin: 10px 0px;
-        border-bottom: 2px dotted #6d6f70;
+        display: block;
+        span {
+          display: inline-block;
+          text-align: left;
+          font-size: 1rem;
+          font-weight: bold;
+          padding: 8px 0px;
+          margin: 10px 0px;
+          border-bottom: 2px dotted #6d6f70;
+        }
       }
 
       .list {
@@ -936,10 +939,30 @@ $link-color: rgb(58, 160, 211);
           }
         }
 
+        &.number-list {
+          padding: 0px 10px 0px 40px;
+          counter-reset: my-counter;
+          li::before {
+            content: counter(my-counter);
+            counter-increment: my-counter;
+            background-color: #6fbcbf;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            height: 18px;
+            width: 18px;
+            color: #ffffff;
+            font-size: 0.7rem;
+            position: absolute;
+            top: 50%;
+            left: -25px;
+          }
+        }
+
         &.purpose-list {
           padding: 0px 10px 0px 40px;
           border-radius: 10px;
-          background: repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px,#e9f4ff 3px, #e9f4ff 7px);
+          background: repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px, #e9f4ff 3px, #e9f4ff 7px);
           li::before {
             left: -25px;
             font-family: "Font Awesome 6 Free";
@@ -1198,7 +1221,7 @@ keyframes
   .introduction-container {
     padding: 0;
 
-    .bread-crumb-list{
+    .bread-crumb-list {
       margin-left: 15px;
     }
 
