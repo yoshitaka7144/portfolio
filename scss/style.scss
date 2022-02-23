@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+$box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+
 html {
   font-size: 100%;
   font-family: "Noto Sans JP", sans-serif;
@@ -82,6 +84,7 @@ $hamburger-menu-color: #6fbcbf;
   position: fixed;
   top: 0;
   z-index: 5;
+  box-shadow: $box-shadow;
 
   .header-inner {
     display: flex;
@@ -323,13 +326,10 @@ $icon-img-height: 140px;
         height: 38px;
         border-radius: 50%;
         margin-right: 20px;
+        box-shadow: $box-shadow;
 
         &:last-of-type {
           margin-right: 0;
-        }
-
-        &:hover {
-          opacity: 0.7;
         }
 
         &.mail {
@@ -388,6 +388,7 @@ $icon-img-height: 140px;
         background-color: white;
         border-left: 10px solid #6fbcbf;
         border-radius: 0 10px 10px 0;
+        box-shadow: $box-shadow;
 
         &:last-of-type {
           margin-bottom: 0;
@@ -422,6 +423,7 @@ $skills-item-margin: 2.5%;
         width: calc((100% - #{$skills-item-margin} * 2 * 4) / 4);
         margin: $skills-item-margin;
         border-radius: 15px;
+        box-shadow: $box-shadow;
         background-color: white;
         position: relative;
 
@@ -583,6 +585,7 @@ $works-item-img-ratio: 250 / 300;
         border-radius: 5px;
         margin: $works-item-margin;
         background-color: white;
+        box-shadow: $box-shadow;
         position: relative;
         overflow: hidden;
 
@@ -595,10 +598,11 @@ $works-item-img-ratio: 250 / 300;
         .link {
           display: block;
           position: absolute;
-          top: 0;
-          left: 0;
+          top: 0%;
+          left: 0%;
           width: 100%;
           height: 100%;
+          transition: 0.3s;
 
           &::before {
             content: "";
@@ -684,6 +688,7 @@ $footer-height: 70px;
     height: 50px;
     border-radius: 50%;
     background-color: #6fbcbf;
+    box-shadow: $box-shadow;
     visibility: hidden;
     &:hover {
       background-color: #6fbcbfc4;
@@ -821,8 +826,9 @@ $link-color: rgb(58, 160, 211);
   main {
     width: 75%;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 20px 40px;
+    box-shadow: $box-shadow;
     .article {
       section {
         margin-bottom: 15px;
@@ -840,7 +846,7 @@ $link-color: rgb(58, 160, 211);
       }
 
       img {
-        margin: 5px 0;
+        margin: 10px 0;
       }
 
       .top-img {
@@ -866,7 +872,7 @@ $link-color: rgb(58, 160, 211);
         text-align: center;
         font-size: 1.6rem;
         font-weight: bold;
-        margin-bottom: 25px;
+        margin-bottom: 20px;
       }
 
       .heading-section {
@@ -884,7 +890,7 @@ $link-color: rgb(58, 160, 211);
         font-size: 1.2rem;
         font-weight: bold;
         padding: 6px 12px;
-        margin: 15px 0px;
+        margin: 20px 0px;
         position: relative;
         &::before {
           content: "";
@@ -906,7 +912,7 @@ $link-color: rgb(58, 160, 211);
           font-size: 1rem;
           font-weight: bold;
           padding: 8px 0px;
-          margin: 10px 0px;
+          margin: 15px 0px;
           border-bottom: 2px dotted #6d6f70;
         }
       }
@@ -926,10 +932,6 @@ $link-color: rgb(58, 160, 211);
           }
         }
 
-        &.sub-list {
-          margin-left: 5px;
-        }
-
         &.normal-list {
           li::before {
             font-family: "Font Awesome 6 Free";
@@ -939,9 +941,22 @@ $link-color: rgb(58, 160, 211);
           }
         }
 
+        &.sub-list {
+          margin-left: 5px;
+          li::before {
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            content: "\f0da";
+            color: #00adee;
+          }
+        }
+
         &.number-list {
           padding: 0px 10px 0px 40px;
           counter-reset: my-counter;
+          background: #f0f7ff;
+          border: 2px dashed #5b8bd0;
+          border-radius: 10px;
           li::before {
             content: counter(my-counter);
             counter-increment: my-counter;
@@ -960,7 +975,7 @@ $link-color: rgb(58, 160, 211);
         }
 
         &.purpose-list {
-          padding: 0px 10px 0px 40px;
+          padding: 0px 20px 0px 40px;
           border-radius: 10px;
           background: repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px, #e9f4ff 3px, #e9f4ff 7px);
           li::before {
@@ -969,6 +984,35 @@ $link-color: rgb(58, 160, 211);
             font-weight: 900;
             content: "\f058";
             color: #6fbcbf;
+          }
+        }
+      }
+
+      #reference {
+        .link-box {
+          display: block;
+          padding: 15px;
+          margin-bottom: 20px;
+          border-radius: 5px;
+          box-shadow: $box-shadow;
+          transition: transform 0.3s, box-shadow 0.3s;
+
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+
+          span {
+            display: block;
+            &:last-of-type {
+              color: #6d6f70;
+              margin-top: 10px;
+            }
+          }
+
+          &:hover {
+            opacity: 1;
+            transform: translateY(-4px);
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
           }
         }
       }
@@ -983,10 +1027,23 @@ $link-color: rgb(58, 160, 211);
     margin: 15px 0;
 
     a {
-      padding: 10px 15px;
+      padding: 10px 15px 10px 35px;
       background-color: #00adee;
       color: white;
       border-radius: 10px;
+      box-shadow: $box-shadow;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: 12px;
+        transform: translateY(-50%);
+        font-family: "Font Awesome 6 Free";
+        font-weight: 900;
+        content: "\f064";
+        color: white;
+      }
     }
   }
 }

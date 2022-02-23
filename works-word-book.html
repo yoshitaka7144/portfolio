@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <meta name="description" content="">
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <link rel="stylesheet" href="fontawesome/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@800&family=Noto+Sans+JP&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/common.js"></script>
+  <script src="js/worksIntroductionPage.js"></script>
+</head>
+
+<body>
+  <header id="header">
+    <div class="header-inner wrapper">
+      <h1 class="logo">
+        <a href="index.html">YOSHITAKA NAGAI</a>
+      </h1>
+      <nav id="pc-nav">
+        <ul class="menu-list">
+          <li><a href="index.html#profile">profile</a></li>
+          <li><a href="index.html#certification">certification</a></li>
+          <li><a href="index.html#skills">skills</a></li>
+          <li><a href="index.html#works">works</a></li>
+        </ul>
+      </nav>
+      <nav id="sp-nav">
+        <input type="checkbox" id="hamburger-menu">
+        <label for="hamburger-menu" id="hamburger-menu-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <ul class="menu-list">
+          <li><a href="index.html#profile">profile</a></li>
+          <li><a href="index.html#certification">certification</a></li>
+          <li><a href="index.html#skills">skills</a></li>
+          <li><a href="index.html#works">works</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="introduction-container wrapper">
+    <div class="bread-crumb-list">
+      <ul itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a itemprop="item" href="index.html">
+            <span itemprop="name">HOME</span>
+          </a>
+          <meta itemprop="position" content="1" />
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+          <a itemprop="item" href="#">
+            <span itemprop="name">単語帳アプリ</span>
+          </a>
+          <meta itemprop="position" content="2" />
+        </li>
+      </ul>
+    </div>
+    <main>
+      <article class="article">
+        <h2 id="article-top" class="heading-top">単語帳アプリ</h2>
+        <div class="article-header">
+          <time class="modified-time" datetime="2021-09-15"><i
+              class="fa-solid fa-clock-rotate-left"></i>2021.09.15</time>
+        </div>
+        <img class="top-img" src="img/works/wordbook/quiz_demo.gif" alt="">
+        <section id="summary">
+          <h3 class="heading-section">概要</h3>
+          <p>日本語と英語の単語帳アプリケーションです。</p>
+          <p>和訳と英訳の問題作成、クイズができます。</p>
+          <p>スマートフォンからも実行可能です。</p>
+        </section>
+        <section id="public-url">
+          <h3 class="heading-section">公開URL</h3>
+          <p><a href="https://wordbook.mikanbako.jp/" target="_blank"
+              rel="noopener noreferrer">https://wordbook.mikanbako.jp/</a>
+          </p>
+          <p><a href="https://github.com/yoshitaka7144/WordBook" target="_blank"
+              rel="noopener noreferrer">Githubリポジトリ</a>
+          </p>
+        </section>
+        <section id="purpose">
+          <h3 class="heading-section">目的</h3>
+          <ul class="list purpose-list">
+            <li><span class="highlight-y">PHP</span>を使用して<span class="highlight-y">ログイン機能、CRUD機能</span>があるwebアプリケーションの作成
+            </li>
+            <li><span class="highlight-y">クリック（タップ）のみ</span>で遊べること</li>
+            <li>遊んでるうちに多少なりとも<span class="highlight-y">知識が身につくこと</span></li>
+          </ul>
+        </section>
+        <section id="language">
+          <h3 class="heading-section">使用言語</h3>
+          <ul class="list normal-list">
+            <li>PHP</li>
+            <li>JavaScript(jQueryも含む)</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>MySQL</li>
+          </ul>
+        </section>
+        <section id="development-environment">
+          <h3 class="heading-section">開発環境</h3>
+          <ul class="list normal-list">
+            <li>Windows10</li>
+            <li>XAMPP</li>
+            <li>Visual Studio Code</li>
+            <li>git(SourceTree使用)</li>
+          </ul>
+        </section>
+        <section id="function">
+          <h3 class="heading-section">機能一覧</h3>
+          <ul class="list normal-list">
+            <li>トップ画面</li>
+            <li>ログイン画面</li>
+            <ul class="list sub-list">
+              <li>ログイン</li>
+              <li>ユーザー登録</li>
+            </ul>
+            <li>問題編集画面</li>
+            <ul class="list sub-list">
+              <li>登録</li>
+              <li>更新</li>
+              <li>削除</li>
+              <li>データ一覧表示</li>
+            </ul>
+            <li>クイズ画面</li>
+            <ul class="list sub-list">
+              <li>出題設定</li>
+              <li>クイズ解答</li>
+              <li>結果表示</li>
+            </ul>
+          </ul>
+        </section>
+        <section id="table-definition">
+          <h3 class="heading-section">テーブル定義書</h3>
+          <p><a
+              href="https://docs.google.com/spreadsheets/d/1kAnCUVVjwLSICFZMSjreRandVdp8pJWhO918HXTGdZw/edit?usp=sharing"
+              target="_blank" rel="noopener noreferrer">テーブル定義書（Googleスプレッドシート）</a></p>
+          <p>ユーザーテーブル（users）と単語テーブル（words）のテーブル定義書です。</p>
+        </section>
+        <section id="test">
+          <h3 class="heading-section">テスト</h3>
+          <p><a
+              href="https://docs.google.com/spreadsheets/d/1NxQPDQ28mIoBi_U8K8_BsIVLgF6n-kF7VXJyqp0OEfI/edit?usp=sharing"
+              target="_blank" rel="noopener noreferrer">機能単体テスト（Googleスプレッドシート）</a></p>
+          <p>大雑把ですがテストを行いました。</p>
+          <p>テスト環境</p>
+          <ul class="list normal-list">
+            <li>PC</li>
+            <ul class="list sub-list">
+              <li>OS：Windows10</li>
+              <li>ブラウザ：Chrome 91.0.4472.164</li>
+            </ul>
+            <li>スマートフォン</li>
+            <ul class="list sub-list">
+              <li>OS：Android 11</li>
+              <li>ブラウザ：Chrome 92.0.4515.131</li>
+            </ul>
+          </ul>
+        </section>
+        <section id="how-to-use">
+          <h3 class="heading-section">使用方法</h3>
+          <h4 id="top-window" class="heading-sub-section">トップ画面</h4>
+          <p>非ログイン時はログイン、クイズが利用できます。ログイン時はログイン情報が表示され、クイズと問題編集機能が利用できます。</p>
+          <img src="img/works/wordbook/top.PNG" alt="">
+          <img src="img/works/wordbook/top2.PNG" alt="">
+          <h5 id="top-login" class="heading-sub-sub-section"><span>ログイン情報</span></h5>
+          <ul class="list normal-list">
+            <li>
+              ユーザー名
+              <p>登録されたユーザー名です。</p>
+            </li>
+            <li>
+              レベル
+              <p>累計正解数に対応した数値です。</p>
+            </li>
+            <li>
+              累計正解数
+              <p>これまでに正解したクイズの数です。</p>
+            </li>
+            <li>
+              編集可能回数
+              <p>問題編集を行うことができる回数です。レベルアップ時や最終アクセス日から1日以上経過後のログインなどで回数を増やすことができます。</p>
+            </li>
+          </ul>
+          <h5 id="top-quiz" class="heading-sub-sub-section"><span>クイズ</span></h5>
+          <p>和訳 or 英訳クイズを選択できます。</p>
+          <h5 id="top-edit" class="heading-sub-sub-section"><span>編集</span></h5>
+          <p>問題編集画面へ遷移します。</p>
+          <h4 id="login" class="heading-sub-section">ログイン画面</h4>
+          <p>ログインまたは新規ユーザー登録を行いログインできます。</p>
+          <img src="img/works/wordbook/login.gif" alt="">
+          <h5 id="login-login" class="heading-sub-sub-section"><span>ログイン</span></h5>
+          <p>ユーザー名とパスワードを入力してログインします。</p>
+          <h5 id="login-register" class="heading-sub-sub-section"><span>新規ユーザー登録</span></h5>
+          <p>ユーザー名とパスワードを入力して新規登録します。パスワードは半角英数字4文字以上の制限があります。既に存在しているユーザー名の場合は登録できません。</p>
+          <h4 id="question" class="heading-sub-section">問題編集画面</h4>
+          <p>ログインしているユーザーのみアクセス可能なページです。</p>
+          <h5 id="question-edit" class="heading-sub-sub-section"><span>編集</span></h5>
+          <p>ログインしている且つ編集可能回数がある場合、問題の登録、更新、削除ができます。(画像は登録処理です)</p>
+          <img src="img/works/wordbook/regist.gif" alt="">
+          <h5 id="question-view" class="heading-sub-sub-section"><span>一覧表示</span></h5>
+          <p>登録されているデータを確認できます。データ表示対象を選択することで表示するデータの種類を変更できます。</p>
+          <img src="img/works/wordbook/view.gif" alt="">
+          <h4 id="quiz" class="heading-sub-section">クイズ画面</h4>
+          <h5 id="quiz-setting" class="heading-sub-sub-section"><span>設定</span></h5>
+          <p>出題される問題種類、問題数、音声の有無を設定できます。スタートボタンを押すとクイズが始まります。</p>
+          <img src="img/works/wordbook/setting.PNG" alt="">
+          <h5 id="quiz-answer" class="heading-sub-sub-section"><span>解答</span></h5>
+          <p>設定画面にて設定した種類、問題数のクイズが出題されます。4つの選択肢から1つ選択し解答していきます。クイズは登録データからランダムに選出され、選択肢は正解1つと他の問題データの答え3つから作成されます。</p>
+          <img src="img/works/wordbook/quiz_demo.gif" alt="">
+          <h5 id="quiz-result" class="heading-sub-sub-section"><span>結果表示</span></h5>
+          <p>設定された問題数のクイズを解答すると最後に結果画面が表示されます。ログインユーザーは累計正解数が更新され、レベルアップした場合は編集可能回数が増加します。</p>
+          <img src="img/works/wordbook/quiz_result.gif" alt="">
+        </section>
+        <section id="after">
+          <h3 class="heading-section">作り終えて</h3>
+          <ul class="list normal-list">
+            <li>問題編集機能の登録時に和訳と英訳の問題を同時に登録できる機能があれば便利</li>
+            <li>問題編集機能の一覧表示にてデータの検索機能もあったほうが便利</li>
+            <li>問題編集機能の登録部分と一覧表示をそれぞれ別ページに分けたほうが見やすくなるかも</li>
+            <li>クイズに英単語の音声読み上げ機能があればより勉強になるかも</li>
+            <li>フレームワーク（Laravel等）を使用してもう一度作成してみたい</li>
+          </ul>
+        </section>
+      </article>
+    </main>
+    <div class="side-nav">
+      <ul class="nav-link-list">
+        <li><a href="#article-top">TOP</a></li>
+        <li><a href="#summary">概要</a></li>
+        <li><a href="#public-url">公開URL</a></li>
+        <li><a href="#purpose">目的</a></li>
+        <li><a href="#language">使用言語</a></li>
+        <li><a href="#development-environment">開発環境</a></li>
+        <li><a href="#function">機能一覧</a></li>
+        <li><a href="#table-definition">テーブル定義書</a></li>
+        <li><a href="#test">テスト</a></li>
+        <li><a href="#how-to-use">使用方法</a></li>
+        <li><a href="#top-window" class="sub">トップ画面</a></li>
+        <li><a href="#top-login" class="sub-sub">ログイン情報</a></li>
+        <li><a href="#top-quiz" class="sub-sub">クイズ</a></li>
+        <li><a href="#top-edit" class="sub-sub">編集</a></li>
+        <li><a href="#login" class="sub">ログイン画面</a></li>
+        <li><a href="#login-login" class="sub-sub">ログイン</a></li>
+        <li><a href="#login-register" class="sub-sub">新規ユーザー登録</a></li>
+        <li><a href="#question" class="sub">問題編集画面</a></li>
+        <li><a href="#question-edit" class="sub-sub">編集</a></li>
+        <li><a href="#question-view" class="sub-sub">一覧表示</a></li>
+        <li><a href="#quiz" class="sub">クイズ画面</a></li>
+        <li><a href="#quiz-setting" class="sub-sub">設定</a></li>
+        <li><a href="#quiz-answer" class="sub-sub">解答</a></li>
+        <li><a href="#quiz-result" class="sub-sub">結果表示</a></li>
+        <li><a href="#after">作り終えて</a></li>
+      </ul>
+    </div>
+    <div class="works-list-link">
+      <a href="index.html#works">制作物一覧へ</a>
+    </div>
+  </div>
+  <footer id="footer">
+    <div class="footer-inner wrapper">
+      <p class="copyright"><i class="fa-solid fa-copyright"></i>YOSHITAKA NAGAI</p>
+    </div>
+    <button id="scroll-to-top-btn"></button>
+  </footer>
+</body>
+
+</html>
