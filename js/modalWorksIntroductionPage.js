@@ -1,17 +1,19 @@
-// 
+// 制作物紹介ページのモーダル用js
+
 window.addEventListener("load", () => {
   const modal = document.getElementById("modal-container");
-  const imgElement = document.getElementById("popup-img");
+  const modalImgElement = document.getElementById("popup-img");
 
   // モーダルクリック時に解除
   modal.addEventListener("click", () => {
+    modalImgElement.src = "";
     modal.style.display = "none";
   });
 
-  // popup対象の要素にclickイベント設定
-  document.querySelectorAll('.popup').forEach(item => {
+  // popup対象の要素クリック時にモーダル表示
+  document.querySelectorAll(".popup").forEach(item => {
     item.addEventListener("click", () => {
-      imgElement.src = item.src;
+      modalImgElement.src = item.src;
       modal.style.display = "block";
     });
   });

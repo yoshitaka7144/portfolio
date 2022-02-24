@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+$link-color: rgb(58, 160, 211);
 $box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
 
 html {
@@ -429,6 +430,13 @@ $skills-item-margin: 2.5%;
         box-shadow: $box-shadow;
         background-color: white;
         position: relative;
+        cursor: pointer;
+        transition: transform 0.3s, box-shadow 0.3s;
+
+        &:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+        }
 
         &::before {
           content: "";
@@ -539,6 +547,12 @@ $skills-item-margin: 2.5%;
               animation-name: rotate-circle-right-25;
             }
           }
+
+          .circle-12 {
+            &::after {
+              animation-name: rotate-circle-right-12;
+            }
+          }
         }
 
         .skill-name {
@@ -547,14 +561,19 @@ $skills-item-margin: 2.5%;
           width: 100%;
           text-align: center;
           font-size: 1.2rem;
+          font-weight: bold;
         }
 
         .skill-remarks {
           position: absolute;
-          top: 80%;
+          top: 82%;
           width: 100%;
           text-align: center;
           font-size: 1rem;
+        }
+
+        .skill-details {
+          display: none;
         }
       }
     }
@@ -734,14 +753,160 @@ $footer-height: 70px;
   right: 0;
   z-index: 100;
 
-  div {
+  .img-wrapper {
     display: flex;
     height: 100vh;
     justify-content: center;
     align-items: center;
     img {
-      max-width: calc(100vw - 50px);
-      max-height: calc(100vh - 50px);
+      max-width: calc(100vw - 40px);
+      max-height: calc(100vh - 40px);
+    }
+  }
+
+  .info-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    max-width: calc(100vw - 40px);
+    max-height: calc(100vh - 40px);
+    width: 550px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+
+    .skill-info {
+      width: calc(100% - 230px - 20px);
+      margin-left: 20px;
+
+      .name {
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      .remarks {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+        color: #6fbcbf;
+      }
+
+      .details {
+        font-size: 1rem;
+        a {
+          color: $link-color;
+        }
+      }
+    }
+
+    .skill-circle {
+      width: 220px;
+      height: 220px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .circle {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: #6fbcbf;
+        border-radius: 50%;
+        overflow: hidden;
+        z-index: 1;
+
+        &::before,
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgb(214, 214, 214);
+          animation-duration: 1.8s;
+          animation-timing-function: linear;
+          animation-fill-mode: forwards;
+        }
+
+        &::before {
+          left: -50%;
+          transform-origin: right 50%;
+          z-index: 2;
+        }
+
+        &::after {
+          left: 50%;
+          transform-origin: left 50%;
+          z-index: 3;
+        }
+
+        .circle-inner {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 80%;
+          height: 80%;
+          background: white;
+          border-radius: 50%;
+          z-index: 4;
+
+          img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 55%;
+            height: 55%;
+          }
+        }
+      }
+
+      .circle-75 {
+        &::before {
+          animation-name: rotate-circle-left-25;
+        }
+        &::after {
+          animation-name: rotate-circle-right-50;
+        }
+      }
+
+      .circle-62 {
+        &::before {
+          animation-name: rotate-circle-left-12;
+        }
+        &::after {
+          animation-name: rotate-circle-right-50;
+        }
+      }
+
+      .circle-50 {
+        &::after {
+          animation-name: rotate-circle-right-50;
+        }
+      }
+
+      .circle-37 {
+        &::after {
+          animation-name: rotate-circle-right-37;
+        }
+      }
+
+      .circle-25 {
+        &::after {
+          animation-name: rotate-circle-right-25;
+        }
+      }
+
+      .circle-12 {
+        &::after {
+          animation-name: rotate-circle-right-12;
+        }
+      }
     }
   }
 }
@@ -749,7 +914,6 @@ $footer-height: 70px;
 /************************************************
 紹介ページ introduction-container
 ************************************************/
-$link-color: rgb(58, 160, 211);
 .introduction-container {
   margin-top: $header-height;
   display: flex;
@@ -1079,6 +1243,18 @@ $link-color: rgb(58, 160, 211);
 /************************************************
 keyframes
 ************************************************/
+@keyframes rotate-circle-right-12 {
+  0% {
+    transform: rotate(0deg);
+    background: rgb(214, 214, 214);
+  }
+  12.5%,
+  100% {
+    transform: rotate(45deg);
+    background: rgb(214, 214, 214);
+  }
+}
+
 @keyframes rotate-circle-right-25 {
   0% {
     transform: rotate(0deg);
@@ -1296,6 +1472,42 @@ keyframes
       #back-btn {
         width: 40px;
         height: 40px;
+      }
+    }
+  }
+
+  /************************************************
+  モーダル modal-container
+  ************************************************/
+  #modal-container {
+    .info-wrapper {
+      flex-direction: column;
+      width: calc(100vw - 50px);
+      padding: 20px 30px;
+
+      .skill-info {
+        width: 100%;
+        margin-left: 0px;
+        margin-top: 15px;
+
+        .name {
+          font-size: 1.3rem;
+          margin-bottom: 15px;
+        }
+
+        .during {
+          font-size: 1rem;
+          margin-bottom: 15px;
+        }
+
+        .details {
+          font-size: 0.9rem;
+        }
+      }
+
+      .skill-circle {
+        width: 130px;
+        height: 130px;
       }
     }
   }

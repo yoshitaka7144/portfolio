@@ -476,6 +476,18 @@ img.popup {
           box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
   background-color: white;
   position: relative;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.3s, -webkit-box-shadow 0.3s;
+  transition: -webkit-transform 0.3s, -webkit-box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s, -webkit-transform 0.3s, -webkit-box-shadow 0.3s;
+}
+
+#skills .skills-inner .item-list .item:hover {
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
 }
 
 #skills .skills-inner .item-list .item::before {
@@ -601,20 +613,30 @@ img.popup {
           animation-name: rotate-circle-right-25;
 }
 
+#skills .skills-inner .item-list .item .skill-circle .circle-12::after {
+  -webkit-animation-name: rotate-circle-right-12;
+          animation-name: rotate-circle-right-12;
+}
+
 #skills .skills-inner .item-list .item .skill-name {
   position: absolute;
   top: 62%;
   width: 100%;
   text-align: center;
   font-size: 1.2rem;
+  font-weight: bold;
 }
 
 #skills .skills-inner .item-list .item .skill-remarks {
   position: absolute;
-  top: 80%;
+  top: 82%;
   width: 100%;
   text-align: center;
   font-size: 1rem;
+}
+
+#skills .skills-inner .item-list .item .skill-details {
+  display: none;
 }
 
 /************************************************
@@ -812,7 +834,7 @@ img.popup {
   z-index: 100;
 }
 
-#modal-container div {
+#modal-container .img-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -825,9 +847,171 @@ img.popup {
           align-items: center;
 }
 
-#modal-container div img {
-  max-width: calc(100vw - 50px);
-  max-height: calc(100vh - 50px);
+#modal-container .img-wrapper img {
+  max-width: calc(100vw - 40px);
+  max-height: calc(100vh - 40px);
+}
+
+#modal-container .info-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: calc(100vw - 40px);
+  max-height: calc(100vh - 40px);
+  width: 550px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+#modal-container .info-wrapper .skill-info {
+  width: calc(100% - 230px - 20px);
+  margin-left: 20px;
+}
+
+#modal-container .info-wrapper .skill-info .name {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#modal-container .info-wrapper .skill-info .remarks {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #6fbcbf;
+}
+
+#modal-container .info-wrapper .skill-info .details {
+  font-size: 1rem;
+}
+
+#modal-container .info-wrapper .skill-info .details a {
+  color: #3aa0d3;
+}
+
+#modal-container .info-wrapper .skill-circle {
+  width: 220px;
+  height: 220px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#modal-container .info-wrapper .skill-circle .circle {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #6fbcbf;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#modal-container .info-wrapper .skill-circle .circle::before, #modal-container .info-wrapper .skill-circle .circle::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #d6d6d6;
+  -webkit-animation-duration: 1.8s;
+          animation-duration: 1.8s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#modal-container .info-wrapper .skill-circle .circle::before {
+  left: -50%;
+  -webkit-transform-origin: right 50%;
+          transform-origin: right 50%;
+  z-index: 2;
+}
+
+#modal-container .info-wrapper .skill-circle .circle::after {
+  left: 50%;
+  -webkit-transform-origin: left 50%;
+          transform-origin: left 50%;
+  z-index: 3;
+}
+
+#modal-container .info-wrapper .skill-circle .circle .circle-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  background: white;
+  border-radius: 50%;
+  z-index: 4;
+}
+
+#modal-container .info-wrapper .skill-circle .circle .circle-inner img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 55%;
+  height: 55%;
+}
+
+#modal-container .info-wrapper .skill-circle .circle-75::before {
+  -webkit-animation-name: rotate-circle-left-25;
+          animation-name: rotate-circle-left-25;
+}
+
+#modal-container .info-wrapper .skill-circle .circle-75::after {
+  -webkit-animation-name: rotate-circle-right-50;
+          animation-name: rotate-circle-right-50;
+}
+
+#modal-container .info-wrapper .skill-circle .circle-62::before {
+  -webkit-animation-name: rotate-circle-left-12;
+          animation-name: rotate-circle-left-12;
+}
+
+#modal-container .info-wrapper .skill-circle .circle-62::after {
+  -webkit-animation-name: rotate-circle-right-50;
+          animation-name: rotate-circle-right-50;
+}
+
+#modal-container .info-wrapper .skill-circle .circle-50::after {
+  -webkit-animation-name: rotate-circle-right-50;
+          animation-name: rotate-circle-right-50;
+}
+
+#modal-container .info-wrapper .skill-circle .circle-37::after {
+  -webkit-animation-name: rotate-circle-right-37;
+          animation-name: rotate-circle-right-37;
+}
+
+#modal-container .info-wrapper .skill-circle .circle-25::after {
+  -webkit-animation-name: rotate-circle-right-25;
+          animation-name: rotate-circle-right-25;
+}
+
+#modal-container .info-wrapper .skill-circle .circle-12::after {
+  -webkit-animation-name: rotate-circle-right-12;
+          animation-name: rotate-circle-right-12;
 }
 
 /************************************************
@@ -1202,6 +1386,33 @@ img.popup {
 /************************************************
 keyframes
 ************************************************/
+@-webkit-keyframes rotate-circle-right-12 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    background: #d6d6d6;
+  }
+  12.5%,
+  100% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    background: #d6d6d6;
+  }
+}
+@keyframes rotate-circle-right-12 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    background: #d6d6d6;
+  }
+  12.5%,
+  100% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    background: #d6d6d6;
+  }
+}
+
 @-webkit-keyframes rotate-circle-right-25 {
   0% {
     -webkit-transform: rotate(0deg);
@@ -1215,6 +1426,7 @@ keyframes
     background: #d6d6d6;
   }
 }
+
 @keyframes rotate-circle-right-25 {
   0% {
     -webkit-transform: rotate(0deg);
@@ -1473,6 +1685,37 @@ keyframes
   #footer .footer-inner #back-btn {
     width: 40px;
     height: 40px;
+  }
+  /************************************************
+  モーダル modal-container
+  ************************************************/
+  #modal-container .info-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: calc(100vw - 50px);
+    padding: 20px 30px;
+  }
+  #modal-container .info-wrapper .skill-info {
+    width: 100%;
+    margin-left: 0px;
+    margin-top: 15px;
+  }
+  #modal-container .info-wrapper .skill-info .name {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+  #modal-container .info-wrapper .skill-info .during {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  #modal-container .info-wrapper .skill-info .details {
+    font-size: 0.9rem;
+  }
+  #modal-container .info-wrapper .skill-circle {
+    width: 130px;
+    height: 130px;
   }
   /************************************************
   紹介ページ introduction-container
