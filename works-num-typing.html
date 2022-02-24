@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="js/common.js"></script>
   <script src="js/worksIntroductionPage.js"></script>
+  <script src="js/modal.js"></script>
 </head>
 
 <body>
@@ -72,7 +73,7 @@
           <time class="modified-time" datetime="2022-02-12"><i
               class="fa-solid fa-clock-rotate-left"></i>2022.02.12</time>
         </div>
-        <img class="top-img" src="img/works/numTyping/demo.gif" alt="">
+        <img class="top-img popup" src="img/works/numTyping/demo.gif" alt="">
         <section id="summary">
           <h3 class="heading-section">概要</h3>
           <p>数字キーのタイピング練習アプリケーションです。</p>
@@ -128,11 +129,11 @@
         <section id="how-to-use">
           <h3 class="heading-section">使用方法</h3>
           <h4 id="top-window" class="heading-sub-section">トップ画面</h4>
-          <img src="img/works/numTyping/top_pc.PNG" alt="">
+          <img class="popup" src="img/works/numTyping/top_pc.PNG" alt="">
           <p>数値、計算、もぐらたたきの3つのモードへの切替、各モードの説明テキスト、キーボードと対応指が表示されます。</p>
 
           <h4 id="setting" class="heading-sub-section">設定画面</h4>
-          <img src="img/works/numTyping/setting.PNG" alt="">
+          <img class="popup" src="img/works/numTyping/setting.PNG" alt="">
           <h5 id="setting-common" class="heading-sub-sub-section"><span>共通</span></h5>
           <p>
             各モード共通の設定項目として「サウンド」、「時間制限(秒)」があります。サウンドはミスタイプ時の音、もぐらたたきモードの叩く音の有無を設定できます。時間制限は全モードでの時間制限タイマーの有無、時間の秒数を設定できます。
@@ -148,17 +149,17 @@
 
           <h4 id="question" class="heading-sub-section">問題画面</h4>
           <h5 id="question-num" class="heading-sub-sub-section"><span>数値モード</span></h5>
-          <img src="img/works/numTyping/question-1.gif" alt="">
+          <img class="popup" src="img/works/numTyping/question-1.gif" alt="">
           <p>6桁までの正 or 負の整数が表示されます。表示された通りに数字キーまたはマイナスキーをタイピングして下さい。設定した問題数が終了すると結果画面が表示されます</p>
           <p>タイピングナビが設定されている場合はタイピングキーと対応指がオレンジ色になります。</p>
           <p>時間制限が設定されている場合はタイマーが表示され、タイマーの数値が0になると強制的に結果画面が表示されます。</p>
           <h5 id="question-calc" class="heading-sub-sub-section"><span>計算モード</span></h5>
-          <img src="img/works/numTyping/question-2.gif" alt="">
+          <img class="popup" src="img/works/numTyping/question-2.gif" alt="">
           <p>3桁までの足し算と引き算、2桁までの掛け算の計算問題が表示されます。計算結果をタイピングして下さい。設定した問題数が終了すると結果画面が表示されます。</p>
           <p>タイピングナビが設定されている場合はタイピングキーと対応指がオレンジ色になります。</p>
           <p>時間制限が設定されている場合はタイマーが表示され、タイマーの数値が0になると強制的に結果画面が表示されます。</p>
           <h5 id="question-mole" class="heading-sub-sub-section"><span>もぐらたたきモード</span></h5>
-          <img src="img/works/numTyping/question-3.gif" alt="">
+          <img class="popup" src="img/works/numTyping/question-3.gif" alt="">
           <p>
             0~9までの数値がもぐらたたきのように出現します。出現している時にタイピングすることでもぐらたたき成功判定となります。別のキーをタイピングまたは数値が消えてしまったら失敗判定となります。叩いた回数が設定したクリア回数に達すると結果画面が表示されます。
           </p>
@@ -166,7 +167,7 @@
 
           <h4 id="result" class="heading-sub-section">結果画面</h4>
           <h5 id="result-num" class="heading-sub-sub-section"><span>数値 計算モード</span></h5>
-          <img src="img/works/numTyping/result-12.png" alt="">
+          <img class="popup" src="img/works/numTyping/result-12.png" alt="">
           <ul class="list number-list">
             <li>WPM：1分間あたりの正解タイプ数 </li>
             <li>正解タイプ数/総数：正しくタイピングした数と出題された問題の総タイピング数</li>
@@ -180,7 +181,7 @@
             <li>ミスキー：ミスした回数が多いほど濃く、少ないと薄い赤色で表示</li>
           </ul>
           <h5 id="result-mole" class="heading-sub-sub-section"><span>もぐらたたきモード</span></h5>
-          <img src="img/works/numTyping/result-3.png" alt="">
+          <img class="popup" src="img/works/numTyping/result-3.png" alt="">
           <ul class="list number-list">
             <li>もぐら出現数：もぐらが出現した数</li>
             <li>叩けた数：もぐら出現時に正しくタイピングした数</li>
@@ -264,6 +265,11 @@
       <p class="copyright"><i class="fa-solid fa-copyright"></i>YOSHITAKA NAGAI</p>
     </div>
     <button id="scroll-to-top-btn"></button>
+    <div id="modal-container">
+      <div>
+        <img id="popup-img" src="">
+      </div>
+    </div>
   </footer>
 </body>
 

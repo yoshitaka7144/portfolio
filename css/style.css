@@ -28,6 +28,10 @@ img {
   vertical-align: bottom;
 }
 
+img.popup {
+  cursor: pointer;
+}
+
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
@@ -792,6 +796,38 @@ img {
   height: 25%;
   border-top: 3px solid white;
   border-left: 3px solid white;
+}
+
+/************************************************
+モーダル modal-container
+************************************************/
+#modal-container {
+  display: none;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.6);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+#modal-container div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#modal-container div img {
+  max-width: calc(100vw - 50px);
+  max-height: calc(100vh - 50px);
 }
 
 /************************************************

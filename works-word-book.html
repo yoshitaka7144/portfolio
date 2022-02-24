@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="js/common.js"></script>
   <script src="js/worksIntroductionPage.js"></script>
+  <script src="js/modal.js"></script>
 </head>
 
 <body>
@@ -72,7 +73,7 @@
           <time class="modified-time" datetime="2021-09-15"><i
               class="fa-solid fa-clock-rotate-left"></i>2021.09.15</time>
         </div>
-        <img class="top-img" src="img/works/wordbook/quiz_demo.gif" alt="">
+        <img class="top-img popup" src="img/works/wordbook/quiz_demo.gif" alt="">
         <section id="summary">
           <h3 class="heading-section">概要</h3>
           <p>日本語と英語の単語帳アプリケーションです。</p>
@@ -152,7 +153,6 @@
           <p><a
               href="https://docs.google.com/spreadsheets/d/1NxQPDQ28mIoBi_U8K8_BsIVLgF6n-kF7VXJyqp0OEfI/edit?usp=sharing"
               target="_blank" rel="noopener noreferrer">機能単体テスト（Googleスプレッドシート）</a></p>
-          <p>大雑把ですがテストを行いました。</p>
           <p>テスト環境</p>
           <ul class="list normal-list">
             <li>PC</li>
@@ -171,8 +171,8 @@
           <h3 class="heading-section">使用方法</h3>
           <h4 id="top-window" class="heading-sub-section">トップ画面</h4>
           <p>非ログイン時はログイン、クイズが利用できます。ログイン時はログイン情報が表示され、クイズと問題編集機能が利用できます。</p>
-          <img src="img/works/wordbook/top.PNG" alt="">
-          <img src="img/works/wordbook/top2.PNG" alt="">
+          <img class="popup" src="img/works/wordbook/top.PNG" alt="">
+          <img class="popup" src="img/works/wordbook/top2.PNG" alt="">
           <h5 id="top-login" class="heading-sub-sub-section"><span>ログイン情報</span></h5>
           <ul class="list normal-list">
             <li>
@@ -198,7 +198,7 @@
           <p>問題編集画面へ遷移します。</p>
           <h4 id="login" class="heading-sub-section">ログイン画面</h4>
           <p>ログインまたは新規ユーザー登録を行いログインできます。</p>
-          <img src="img/works/wordbook/login.gif" alt="">
+          <img class="popup" src="img/works/wordbook/login.gif" alt="">
           <h5 id="login-login" class="heading-sub-sub-section"><span>ログイン</span></h5>
           <p>ユーザー名とパスワードを入力してログインします。</p>
           <h5 id="login-register" class="heading-sub-sub-section"><span>新規ユーザー登録</span></h5>
@@ -207,20 +207,20 @@
           <p>ログインしているユーザーのみアクセス可能なページです。</p>
           <h5 id="question-edit" class="heading-sub-sub-section"><span>編集</span></h5>
           <p>ログインしている且つ編集可能回数がある場合、問題の登録、更新、削除ができます。(画像は登録処理です)</p>
-          <img src="img/works/wordbook/regist.gif" alt="">
+          <img class="popup" src="img/works/wordbook/regist.gif" alt="">
           <h5 id="question-view" class="heading-sub-sub-section"><span>一覧表示</span></h5>
           <p>登録されているデータを確認できます。データ表示対象を選択することで表示するデータの種類を変更できます。</p>
-          <img src="img/works/wordbook/view.gif" alt="">
+          <img class="popup" src="img/works/wordbook/view.gif" alt="">
           <h4 id="quiz" class="heading-sub-section">クイズ画面</h4>
           <h5 id="quiz-setting" class="heading-sub-sub-section"><span>設定</span></h5>
           <p>出題される問題種類、問題数、音声の有無を設定できます。スタートボタンを押すとクイズが始まります。</p>
-          <img src="img/works/wordbook/setting.PNG" alt="">
+          <img class="popup" src="img/works/wordbook/setting.PNG" alt="">
           <h5 id="quiz-answer" class="heading-sub-sub-section"><span>解答</span></h5>
           <p>設定画面にて設定した種類、問題数のクイズが出題されます。4つの選択肢から1つ選択し解答していきます。クイズは登録データからランダムに選出され、選択肢は正解1つと他の問題データの答え3つから作成されます。</p>
-          <img src="img/works/wordbook/quiz_demo.gif" alt="">
+          <img class="popup" src="img/works/wordbook/quiz_demo.gif" alt="">
           <h5 id="quiz-result" class="heading-sub-sub-section"><span>結果表示</span></h5>
           <p>設定された問題数のクイズを解答すると最後に結果画面が表示されます。ログインユーザーは累計正解数が更新され、レベルアップした場合は編集可能回数が増加します。</p>
-          <img src="img/works/wordbook/quiz_result.gif" alt="">
+          <img class="popup" src="img/works/wordbook/quiz_result.gif" alt="">
         </section>
         <section id="after">
           <h3 class="heading-section">作り終えて</h3>
@@ -272,6 +272,11 @@
       <p class="copyright"><i class="fa-solid fa-copyright"></i>YOSHITAKA NAGAI</p>
     </div>
     <button id="scroll-to-top-btn"></button>
+    <div id="modal-container">
+      <div>
+        <img id="popup-img" src="">
+      </div>
+    </div>
   </footer>
 </body>
 

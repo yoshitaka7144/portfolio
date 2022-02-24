@@ -28,6 +28,9 @@ a {
 img {
   max-width: 100%;
   vertical-align: bottom;
+  &.popup {
+    cursor: pointer;
+  }
 }
 
 .wrapper {
@@ -714,6 +717,31 @@ $footer-height: 70px;
       height: 25%;
       border-top: 3px solid white;
       border-left: 3px solid white;
+    }
+  }
+}
+
+/************************************************
+モーダル modal-container
+************************************************/
+#modal-container {
+  display: none;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.6);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  div {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    img {
+      max-width: calc(100vw - 50px);
+      max-height: calc(100vh - 50px);
     }
   }
 }
