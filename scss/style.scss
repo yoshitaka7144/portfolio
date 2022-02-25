@@ -41,6 +41,14 @@ img {
 
 .section-inner {
   padding: 60px 15px;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: transform 1s ease-out, opacity 1s ease-out;
+
+  &.is-active {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 
   .heading {
     margin-bottom: 40px;
@@ -51,13 +59,39 @@ img {
       font-family: "Dosis", sans-serif;
       font-size: 3.3rem;
       letter-spacing: 0.3rem;
-      border-bottom-width: 1px;
-      border-bottom-style: solid;
       margin-bottom: 5px;
+      position: relative;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        display: block;
+        width: 0;
+        height: 2px;
+        transition: width 1.3s ease-out;
+      }
+      &::before {
+        left: 0;
+      }
+      &::after {
+        right: 0;
+      }
+      &.is-active::before,
+      &.is-active::after {
+        width: 50%;
+      }
+      &.is-active::before {
+        left: 50%;
+      }
+      &.is-active::after {
+        right: 50%;
+      }
     }
 
     .sub {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
     }
   }
 }
@@ -265,10 +299,13 @@ $hamburger-menu-color: #6fbcbf;
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: "Dosis", sans-serif;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     font-weight: bold;
+    letter-spacing: 0.4rem;
     color: white;
     white-space: nowrap;
+    opacity: 0;
+    animation: fade-up 0.8s 0.2s ease-out forwards;
   }
 
   .sub-title {
@@ -277,9 +314,12 @@ $hamburger-menu-color: #6fbcbf;
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: "Dosis", sans-serif;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: bold;
+    letter-spacing: 0.2rem;
     color: white;
+    opacity: 0;
+    animation: fade-up 0.8s 0.8s ease-out forwards;
   }
 }
 
@@ -298,7 +338,10 @@ $icon-img-height: 140px;
 
     .heading {
       .title {
-        border-bottom-color: #6d6f70;
+        &::before,
+        &::after {
+          background-color: #6d6f70;
+        }
       }
     }
 
@@ -369,7 +412,10 @@ $icon-img-height: 140px;
     .heading {
       .title {
         color: white;
-        border-bottom-color: white;
+        &::before,
+        &::after {
+          background-color: white;
+        }
       }
       .sub {
         color: white;
@@ -397,6 +443,19 @@ $icon-img-height: 140px;
         &:last-of-type {
           margin-bottom: 0;
         }
+
+        p {
+          span {
+            display: inline-block;
+            background-image: linear-gradient(to bottom, transparent 60%, #ffe653 40%);
+            background-position: 0% 0%;
+            background-size: 0% auto;
+            transition: background-size 1.2s ease-out;
+            &.is-active {
+              background-size: 100% auto;
+            }
+          }
+        }
       }
     }
   }
@@ -413,7 +472,10 @@ $skills-item-margin: 2.5%;
       margin-bottom: 30px;
       .title {
         color: #00adee;
-        border-bottom-color: #00adee;
+        &::before,
+        &::after {
+          background-color: #00adee;
+        }
       }
       .sub {
         color: #00adee;
@@ -473,7 +535,8 @@ $skills-item-margin: 2.5%;
               width: 100%;
               height: 100%;
               background-color: rgb(214, 214, 214);
-              animation-duration: 1.8s;
+              animation-duration: 2s;
+              animation-delay: 0.2s;
               animation-timing-function: linear;
               animation-fill-mode: forwards;
             }
@@ -512,7 +575,7 @@ $skills-item-margin: 2.5%;
             }
           }
 
-          .circle-75 {
+          .circle-75.is-active {
             &::before {
               animation-name: rotate-circle-left-25;
             }
@@ -521,7 +584,7 @@ $skills-item-margin: 2.5%;
             }
           }
 
-          .circle-62 {
+          .circle-62.is-active {
             &::before {
               animation-name: rotate-circle-left-12;
             }
@@ -530,25 +593,25 @@ $skills-item-margin: 2.5%;
             }
           }
 
-          .circle-50 {
+          .circle-50.is-active {
             &::after {
               animation-name: rotate-circle-right-50;
             }
           }
 
-          .circle-37 {
+          .circle-37.is-active {
             &::after {
               animation-name: rotate-circle-right-37;
             }
           }
 
-          .circle-25 {
+          .circle-25.is-active {
             &::after {
               animation-name: rotate-circle-right-25;
             }
           }
 
-          .circle-12 {
+          .circle-12.is-active {
             &::after {
               animation-name: rotate-circle-right-12;
             }
@@ -592,7 +655,10 @@ $works-item-img-ratio: 250 / 300;
       margin-bottom: 30px;
       .title {
         color: white;
-        border-bottom-color: white;
+        &::before,
+        &::after {
+          background-color: white;
+        }
       }
       .sub {
         color: white;
@@ -758,6 +824,7 @@ $footer-height: 70px;
     height: 100vh;
     justify-content: center;
     align-items: center;
+    animation: modal-img-popup 0.3s ease-out forwards;
     img {
       max-width: calc(100vw - 40px);
       max-height: calc(100vh - 40px);
@@ -777,6 +844,7 @@ $footer-height: 70px;
     background-color: white;
     border-radius: 10px;
     padding: 30px;
+    animation: modal-info-popup 0.3s ease-out forwards;
 
     .skill-info {
       width: calc(100% - 230px - 20px);
@@ -1243,6 +1311,45 @@ $footer-height: 70px;
 /************************************************
 keyframes
 ************************************************/
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, calc(-50% + 50px));
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes modal-img-popup {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes modal-info-popup {
+  0% {
+    transform: translate(-50%, calc(-50% + 30px)) scale(0.7);
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
 @keyframes rotate-circle-right-12 {
   0% {
     transform: rotate(0deg);
@@ -1329,6 +1436,18 @@ keyframes
 ************************************************/
 @media screen and (max-width: 1024px) {
   /************************************************
+  トップ top
+  ************************************************/
+  #top {
+    .title {
+      font-size: 3rem;
+    }
+
+    .sub-title {
+      font-size: 2rem;
+    }
+  }
+  /************************************************
   資格 certification
   ************************************************/
   #certification {
@@ -1393,11 +1512,12 @@ keyframes
   #top {
     .title {
       font-size: 2rem;
+      letter-spacing: 0.1rem;
     }
 
     .sub-title {
-      top: 55%;
-      font-size: 1rem;
+      font-size: 1.4rem;
+      letter-spacing: 0.1rem;
     }
   }
 

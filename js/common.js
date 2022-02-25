@@ -1,21 +1,23 @@
 // 全ページ共通js
-window.addEventListener("load", function () {
 
-  // ページ内リンク遷移処理
+window.addEventListener("DOMContentLoaded", function () {
+
+});
+
+window.addEventListener("load", function () {
+  // ページ外アンカーリンク遷移処理
+  const urlHash = location.hash;
+  if (urlHash) {
+    smoothScroll(urlHash);
+  }
+
+  // ページ内アンカーリンク遷移処理
   const anchorLinks = document.querySelectorAll('a[href^="#"]');
   const anchorLinksArr = Array.prototype.slice.call(anchorLinks);
   anchorLinksArr.forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault();
-      const targetId = link.hash;
-      const targetElement = document.querySelector(targetId);
-      const targetOffsetTop = window.pageYOffset + targetElement.getBoundingClientRect().top;
-      const headerHeight = document.querySelector('#header').offsetHeight;
-      const totalScrollAmount = targetOffsetTop - headerHeight;
-      window.scroll({
-        top: totalScrollAmount,
-        behavior: "smooth"
-      });
+      smoothScroll(link.hash);
     });
   });
 
@@ -54,6 +56,33 @@ window.addEventListener("load", function () {
       hideScrollToTopBtn();
     }
   });
+
+  const addClassTargetElements = document.querySelectorAll(".js-scroll");
+  window.addEventListener("scroll", function () {
+    addClassTargetElements.forEach(item => {
+      const position = window.pageYOffset + item.getBoundingClientRect().top;
+      const scroll = window.scrollY;
+      const windowHeight = window.innerHeight;
+
+      if (scroll > position - windowHeight + 200) {
+        item.classList.add("is-active");
+      }
+    });
+  });
+
+  window.dispatchEvent(new Event("scroll"));
+
+  function smoothScroll(targetHash) {
+    const targetElement = document.querySelector(targetHash);
+    const targetOffsetTop = window.pageYOffset + targetElement.getBoundingClientRect().top;
+    const headerHeight = document.querySelector('#header').offsetHeight;
+    const totalScrollAmount = targetOffsetTop - headerHeight;
+
+    window.scroll({
+      top: totalScrollAmount,
+      behavior: "smooth",
+    });
+  }
 
   /**
    * ナビメニューを閉じる

@@ -39,6 +39,19 @@ img.popup {
 
 .section-inner {
   padding: 60px 15px;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  opacity: 0;
+  -webkit-transition: opacity 1s ease-out, -webkit-transform 1s ease-out;
+  transition: opacity 1s ease-out, -webkit-transform 1s ease-out;
+  transition: transform 1s ease-out, opacity 1s ease-out;
+  transition: transform 1s ease-out, opacity 1s ease-out, -webkit-transform 1s ease-out;
+}
+
+.section-inner.is-active {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  opacity: 1;
 }
 
 .section-inner .heading {
@@ -51,13 +64,43 @@ img.popup {
   font-family: "Dosis", sans-serif;
   font-size: 3.3rem;
   letter-spacing: 0.3rem;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
   margin-bottom: 5px;
+  position: relative;
+}
+
+.section-inner .heading .title::before, .section-inner .heading .title::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  display: block;
+  width: 0;
+  height: 2px;
+  -webkit-transition: width 1.3s ease-out;
+  transition: width 1.3s ease-out;
+}
+
+.section-inner .heading .title::before {
+  left: 0;
+}
+
+.section-inner .heading .title::after {
+  right: 0;
+}
+
+.section-inner .heading .title.is-active::before, .section-inner .heading .title.is-active::after {
+  width: 50%;
+}
+
+.section-inner .heading .title.is-active::before {
+  left: 50%;
+}
+
+.section-inner .heading .title.is-active::after {
+  right: 50%;
 }
 
 .section-inner .heading .sub {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 .highlight-y {
@@ -281,10 +324,14 @@ img.popup {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   font-family: "Dosis", sans-serif;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-weight: bold;
+  letter-spacing: 0.4rem;
   color: white;
   white-space: nowrap;
+  opacity: 0;
+  -webkit-animation: fade-up 0.8s 0.2s ease-out forwards;
+          animation: fade-up 0.8s 0.2s ease-out forwards;
 }
 
 #top .sub-title {
@@ -294,9 +341,13 @@ img.popup {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   font-family: "Dosis", sans-serif;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   font-weight: bold;
+  letter-spacing: 0.2rem;
   color: white;
+  opacity: 0;
+  -webkit-animation: fade-up 0.8s 0.8s ease-out forwards;
+          animation: fade-up 0.8s 0.8s ease-out forwards;
 }
 
 /************************************************
@@ -320,8 +371,8 @@ img.popup {
           align-items: center;
 }
 
-#profile .profile-inner .heading .title {
-  border-bottom-color: #6d6f70;
+#profile .profile-inner .heading .title::before, #profile .profile-inner .heading .title::after {
+  background-color: #6d6f70;
 }
 
 #profile .profile-inner .icon-img {
@@ -397,7 +448,10 @@ img.popup {
 
 #certification .certification-inner .heading .title {
   color: white;
-  border-bottom-color: white;
+}
+
+#certification .certification-inner .heading .title::before, #certification .certification-inner .heading .title::after {
+  background-color: white;
 }
 
 #certification .certification-inner .heading .sub {
@@ -440,6 +494,20 @@ img.popup {
   margin-bottom: 0;
 }
 
+#certification .certification-inner .item-list .item p span {
+  display: inline-block;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(60%, transparent), color-stop(40%, #ffe653));
+  background-image: linear-gradient(to bottom, transparent 60%, #ffe653 40%);
+  background-position: 0% 0%;
+  background-size: 0% auto;
+  -webkit-transition: background-size 1.2s ease-out;
+  transition: background-size 1.2s ease-out;
+}
+
+#certification .certification-inner .item-list .item p span.is-active {
+  background-size: 100% auto;
+}
+
 /************************************************
 スキル skills
 ************************************************/
@@ -453,7 +521,10 @@ img.popup {
 
 #skills .skills-inner .heading .title {
   color: #00adee;
-  border-bottom-color: #00adee;
+}
+
+#skills .skills-inner .heading .title::before, #skills .skills-inner .heading .title::after {
+  background-color: #00adee;
 }
 
 #skills .skills-inner .heading .sub {
@@ -533,8 +604,10 @@ img.popup {
   width: 100%;
   height: 100%;
   background-color: #d6d6d6;
-  -webkit-animation-duration: 1.8s;
-          animation-duration: 1.8s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
   -webkit-animation-fill-mode: forwards;
@@ -578,42 +651,42 @@ img.popup {
   height: 55%;
 }
 
-#skills .skills-inner .item-list .item .skill-circle .circle-75::before {
+#skills .skills-inner .item-list .item .skill-circle .circle-75.is-active::before {
   -webkit-animation-name: rotate-circle-left-25;
           animation-name: rotate-circle-left-25;
 }
 
-#skills .skills-inner .item-list .item .skill-circle .circle-75::after {
+#skills .skills-inner .item-list .item .skill-circle .circle-75.is-active::after {
   -webkit-animation-name: rotate-circle-right-50;
           animation-name: rotate-circle-right-50;
 }
 
-#skills .skills-inner .item-list .item .skill-circle .circle-62::before {
+#skills .skills-inner .item-list .item .skill-circle .circle-62.is-active::before {
   -webkit-animation-name: rotate-circle-left-12;
           animation-name: rotate-circle-left-12;
 }
 
-#skills .skills-inner .item-list .item .skill-circle .circle-62::after {
+#skills .skills-inner .item-list .item .skill-circle .circle-62.is-active::after {
   -webkit-animation-name: rotate-circle-right-50;
           animation-name: rotate-circle-right-50;
 }
 
-#skills .skills-inner .item-list .item .skill-circle .circle-50::after {
+#skills .skills-inner .item-list .item .skill-circle .circle-50.is-active::after {
   -webkit-animation-name: rotate-circle-right-50;
           animation-name: rotate-circle-right-50;
 }
 
-#skills .skills-inner .item-list .item .skill-circle .circle-37::after {
+#skills .skills-inner .item-list .item .skill-circle .circle-37.is-active::after {
   -webkit-animation-name: rotate-circle-right-37;
           animation-name: rotate-circle-right-37;
 }
 
-#skills .skills-inner .item-list .item .skill-circle .circle-25::after {
+#skills .skills-inner .item-list .item .skill-circle .circle-25.is-active::after {
   -webkit-animation-name: rotate-circle-right-25;
           animation-name: rotate-circle-right-25;
 }
 
-#skills .skills-inner .item-list .item .skill-circle .circle-12::after {
+#skills .skills-inner .item-list .item .skill-circle .circle-12.is-active::after {
   -webkit-animation-name: rotate-circle-right-12;
           animation-name: rotate-circle-right-12;
 }
@@ -652,7 +725,10 @@ img.popup {
 
 #works .works-inner .heading .title {
   color: white;
-  border-bottom-color: white;
+}
+
+#works .works-inner .heading .title::before, #works .works-inner .heading .title::after {
+  background-color: white;
 }
 
 #works .works-inner .heading .sub {
@@ -845,6 +921,8 @@ img.popup {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-animation: modal-img-popup 0.3s ease-out forwards;
+          animation: modal-img-popup 0.3s ease-out forwards;
 }
 
 #modal-container .img-wrapper img {
@@ -870,6 +948,8 @@ img.popup {
   background-color: white;
   border-radius: 10px;
   padding: 30px;
+  -webkit-animation: modal-info-popup 0.3s ease-out forwards;
+          animation: modal-info-popup 0.3s ease-out forwards;
 }
 
 #modal-container .info-wrapper .skill-info {
@@ -1386,6 +1466,95 @@ img.popup {
 /************************************************
 keyframes
 ************************************************/
+@-webkit-keyframes fade-up {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, calc(-50% + 50px));
+            transform: translate(-50%, calc(-50% + 50px));
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, calc(-50% + 50px));
+            transform: translate(-50%, calc(-50% + 50px));
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+@-webkit-keyframes modal-img-popup {
+  0% {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes modal-img-popup {
+  0% {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes modal-info-popup {
+  0% {
+    -webkit-transform: translate(-50%, calc(-50% + 30px)) scale(0.7);
+            transform: translate(-50%, calc(-50% + 30px)) scale(0.7);
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes modal-info-popup {
+  0% {
+    -webkit-transform: translate(-50%, calc(-50% + 30px)) scale(0.7);
+            transform: translate(-50%, calc(-50% + 30px)) scale(0.7);
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) scale(1);
+            transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
 @-webkit-keyframes rotate-circle-right-12 {
   0% {
     -webkit-transform: rotate(0deg);
@@ -1399,6 +1568,7 @@ keyframes
     background: #d6d6d6;
   }
 }
+
 @keyframes rotate-circle-right-12 {
   0% {
     -webkit-transform: rotate(0deg);
@@ -1584,6 +1754,15 @@ keyframes
 ************************************************/
 @media screen and (max-width: 1024px) {
   /************************************************
+  トップ top
+  ************************************************/
+  #top .title {
+    font-size: 3rem;
+  }
+  #top .sub-title {
+    font-size: 2rem;
+  }
+  /************************************************
   資格 certification
   ************************************************/
   #certification .certification-inner .item-list {
@@ -1629,10 +1808,11 @@ keyframes
   ************************************************/
   #top .title {
     font-size: 2rem;
+    letter-spacing: 0.1rem;
   }
   #top .sub-title {
-    top: 55%;
-    font-size: 1rem;
+    font-size: 1.4rem;
+    letter-spacing: 0.1rem;
   }
   /************************************************
   資格 certification
