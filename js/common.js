@@ -64,7 +64,7 @@ window.addEventListener("load", function () {
       const scroll = window.scrollY;
       const windowHeight = window.innerHeight;
 
-      if (scroll > position - windowHeight + 200) {
+      if (scroll > position - windowHeight + 180) {
         item.classList.add("is-active");
       }
     });
@@ -72,6 +72,10 @@ window.addEventListener("load", function () {
 
   window.dispatchEvent(new Event("scroll"));
 
+  /**
+   * 対象の要素までスクロール
+   * @param {String} targetHash 要素id
+   */
   function smoothScroll(targetHash) {
     const targetElement = document.querySelector(targetHash);
     const targetOffsetTop = window.pageYOffset + targetElement.getBoundingClientRect().top;

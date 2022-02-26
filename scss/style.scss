@@ -354,13 +354,60 @@ $icon-img-height: 140px;
     }
 
     .name-text {
-      font-size: 1.4rem;
+      font-size: 1.5rem;
+      font-weight: bold;
       margin: 15px 0;
     }
 
+    .birth-text {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+
     .info-text {
-      font-size: 1rem;
-      margin-bottom: 15px;
+      font-size: 1.1rem;
+      line-height: 2.2;
+      margin-bottom: 20px;
+      a {
+        color: $link-color;
+      }
+
+      span {
+        display: inline-block;
+        background-image: linear-gradient(to bottom, transparent 60%, #ffe653 40%);
+        background-position: 0% 50%;
+        background-size: 0% 50%;
+        transition: background-size 1.2s ease-out;
+        &.is-active {
+          background-size: 100% 50%;
+        }
+      }
+    }
+
+    .works-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 15px 8%;
+      margin-bottom: 20px;
+      border: 4px dotted #6fbcbf;
+      border-radius: 10px;
+      background-color: #ebf8fa;
+
+      li {
+        font-size: 1.2rem;
+        white-space: nowrap;
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(5),
+        &:nth-child(6) {
+          margin-bottom: 10px;
+        }
+
+        i{
+          color: #00adee;
+        }
+      }
     }
 
     .sns-icon {
@@ -1518,6 +1565,33 @@ keyframes
     .sub-title {
       font-size: 1.4rem;
       letter-spacing: 0.1rem;
+    }
+  }
+
+  /************************************************
+  プロフィール profile
+  ************************************************/
+  #profile {
+    .profile-inner {
+      .name-text {
+        font-size: 1.4rem;
+      }
+
+      .birth-text {
+        font-size: 1rem;
+      }
+
+      .info-text {
+        font-size: 1rem;
+      }
+
+      .works-list {
+        padding: 15px 5px;
+
+        li {
+          font-size: 1rem;
+        }
+      }
     }
   }
 

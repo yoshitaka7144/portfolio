@@ -385,13 +385,69 @@ img.popup {
 }
 
 #profile .profile-inner .name-text {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
+  font-weight: bold;
   margin: 15px 0;
 }
 
+#profile .profile-inner .birth-text {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
 #profile .profile-inner .info-text {
-  font-size: 1rem;
-  margin-bottom: 15px;
+  font-size: 1.1rem;
+  line-height: 2.2;
+  margin-bottom: 20px;
+}
+
+#profile .profile-inner .info-text a {
+  color: #3aa0d3;
+}
+
+#profile .profile-inner .info-text span {
+  display: inline-block;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(60%, transparent), color-stop(40%, #ffe653));
+  background-image: linear-gradient(to bottom, transparent 60%, #ffe653 40%);
+  background-position: 0% 50%;
+  background-size: 0% 50%;
+  -webkit-transition: background-size 1.2s ease-out;
+  transition: background-size 1.2s ease-out;
+}
+
+#profile .profile-inner .info-text span.is-active {
+  background-size: 100% 50%;
+}
+
+#profile .profile-inner .works-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 8%;
+  margin-bottom: 20px;
+  border: 4px dotted #6fbcbf;
+  border-radius: 10px;
+  background-color: #ebf8fa;
+}
+
+#profile .profile-inner .works-list li {
+  font-size: 1.2rem;
+  white-space: nowrap;
+}
+
+#profile .profile-inner .works-list li:nth-child(2), #profile .profile-inner .works-list li:nth-child(3), #profile .profile-inner .works-list li:nth-child(5), #profile .profile-inner .works-list li:nth-child(6) {
+  margin-bottom: 10px;
+}
+
+#profile .profile-inner .works-list li i {
+  color: #00adee;
 }
 
 #profile .profile-inner .sns-icon {
@@ -1813,6 +1869,24 @@ keyframes
   #top .sub-title {
     font-size: 1.4rem;
     letter-spacing: 0.1rem;
+  }
+  /************************************************
+  プロフィール profile
+  ************************************************/
+  #profile .profile-inner .name-text {
+    font-size: 1.4rem;
+  }
+  #profile .profile-inner .birth-text {
+    font-size: 1rem;
+  }
+  #profile .profile-inner .info-text {
+    font-size: 1rem;
+  }
+  #profile .profile-inner .works-list {
+    padding: 15px 5px;
+  }
+  #profile .profile-inner .works-list li {
+    font-size: 1rem;
   }
   /************************************************
   資格 certification
