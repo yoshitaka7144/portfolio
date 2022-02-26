@@ -368,6 +368,15 @@ $icon-img-height: 140px;
       font-size: 1.1rem;
       line-height: 2.2;
       margin-bottom: 20px;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: 1s ease-out;
+
+      &.is-active {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+
       a {
         color: $link-color;
       }
@@ -377,7 +386,7 @@ $icon-img-height: 140px;
         background-image: linear-gradient(to bottom, transparent 60%, #ffe653 40%);
         background-position: 0% 50%;
         background-size: 0% 50%;
-        transition: background-size 1.2s ease-out;
+        transition: background-size 1.2s 0.8s ease-out;
         &.is-active {
           background-size: 100% 50%;
         }
@@ -397,6 +406,12 @@ $icon-img-height: 140px;
       li {
         font-size: 1.2rem;
         white-space: nowrap;
+        opacity: 0;
+        transition: 1s ease-out;
+        &.is-active {
+          opacity: 1;
+        }
+
         &:nth-child(2),
         &:nth-child(3),
         &:nth-child(5),
@@ -404,7 +419,7 @@ $icon-img-height: 140px;
           margin-bottom: 10px;
         }
 
-        i{
+        i {
           color: #00adee;
         }
       }
@@ -412,6 +427,15 @@ $icon-img-height: 140px;
 
     .sns-icon {
       display: flex;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: 1s ease-out;
+
+      &.is-active {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+
       a {
         display: block;
         cursor: pointer;
@@ -486,9 +510,17 @@ $icon-img-height: 140px;
         border-left: 10px solid #6fbcbf;
         border-radius: 0 10px 10px 0;
         box-shadow: $box-shadow;
+        opacity: 0;
+        transform: translateY(50px);
+        transition: 0.8s ease-out;
 
         &:last-of-type {
           margin-bottom: 0;
+        }
+
+        &.is-active {
+          opacity: 1;
+          transform: translateY(0px);
         }
 
         p {
@@ -497,7 +529,7 @@ $icon-img-height: 140px;
             background-image: linear-gradient(to bottom, transparent 60%, #ffe653 40%);
             background-position: 0% 0%;
             background-size: 0% auto;
-            transition: background-size 1.2s ease-out;
+            transition: background-size 1.2s 0.8s ease-out;
             &.is-active {
               background-size: 100% auto;
             }

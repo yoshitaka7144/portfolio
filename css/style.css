@@ -399,6 +399,17 @@ img.popup {
   font-size: 1.1rem;
   line-height: 2.2;
   margin-bottom: 20px;
+  opacity: 0;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  -webkit-transition: 1s ease-out;
+  transition: 1s ease-out;
+}
+
+#profile .profile-inner .info-text.is-active {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
 }
 
 #profile .profile-inner .info-text a {
@@ -411,8 +422,8 @@ img.popup {
   background-image: linear-gradient(to bottom, transparent 60%, #ffe653 40%);
   background-position: 0% 50%;
   background-size: 0% 50%;
-  -webkit-transition: background-size 1.2s ease-out;
-  transition: background-size 1.2s ease-out;
+  -webkit-transition: background-size 1.2s 0.8s ease-out;
+  transition: background-size 1.2s 0.8s ease-out;
 }
 
 #profile .profile-inner .info-text span.is-active {
@@ -440,6 +451,13 @@ img.popup {
 #profile .profile-inner .works-list li {
   font-size: 1.2rem;
   white-space: nowrap;
+  opacity: 0;
+  -webkit-transition: 1s ease-out;
+  transition: 1s ease-out;
+}
+
+#profile .profile-inner .works-list li.is-active {
+  opacity: 1;
 }
 
 #profile .profile-inner .works-list li:nth-child(2), #profile .profile-inner .works-list li:nth-child(3), #profile .profile-inner .works-list li:nth-child(5), #profile .profile-inner .works-list li:nth-child(6) {
@@ -454,6 +472,17 @@ img.popup {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  opacity: 0;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  -webkit-transition: 1s ease-out;
+  transition: 1s ease-out;
+}
+
+#profile .profile-inner .sns-icon.is-active {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
 }
 
 #profile .profile-inner .sns-icon a {
@@ -544,10 +573,21 @@ img.popup {
   border-radius: 0 10px 10px 0;
   -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
           box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  -webkit-transition: 0.8s ease-out;
+  transition: 0.8s ease-out;
 }
 
 #certification .certification-inner .item-list .item:last-of-type {
   margin-bottom: 0;
+}
+
+#certification .certification-inner .item-list .item.is-active {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
 }
 
 #certification .certification-inner .item-list .item p span {
@@ -556,8 +596,8 @@ img.popup {
   background-image: linear-gradient(to bottom, transparent 60%, #ffe653 40%);
   background-position: 0% 0%;
   background-size: 0% auto;
-  -webkit-transition: background-size 1.2s ease-out;
-  transition: background-size 1.2s ease-out;
+  -webkit-transition: background-size 1.2s 0.8s ease-out;
+  transition: background-size 1.2s 0.8s ease-out;
 }
 
 #certification .certification-inner .item-list .item p span.is-active {
