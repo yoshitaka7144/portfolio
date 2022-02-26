@@ -40,7 +40,7 @@ img {
 }
 
 .section-inner {
-  padding: 60px 15px;
+  padding: 70px 15px;
   transform: translateY(50px);
   opacity: 0;
   transition: transform 1s ease-out, opacity 1s ease-out;
@@ -248,9 +248,8 @@ $hamburger-menu-color: #6fbcbf;
       .menu-list {
         position: fixed;
         width: 200px;
-        height: 100vh;
-        padding-top: 80px;
-        top: 0;
+        height: calc(100vh - #{$header-height});
+        top: $header-height;
         right: -200px;
         background-color: $hamburger-menu-color;
         transition: right 0.5s;
@@ -305,7 +304,7 @@ $hamburger-menu-color: #6fbcbf;
     color: white;
     white-space: nowrap;
     opacity: 0;
-    animation: fade-up-center 0.8s 0.2s ease-out forwards;
+    animation: fade-up-center 0.8s 0.5s ease-out forwards;
   }
 
   .sub-title {
@@ -319,7 +318,7 @@ $hamburger-menu-color: #6fbcbf;
     letter-spacing: 0.2rem;
     color: white;
     opacity: 0;
-    animation: fade-up-center 0.8s 0.8s ease-out forwards;
+    animation: fade-up-center 0.8s 1s ease-out forwards;
   }
 }
 
@@ -329,7 +328,6 @@ $hamburger-menu-color: #6fbcbf;
 $icon-img-width: 140px;
 $icon-img-height: 140px;
 #profile {
-  min-height: calc(50vh - #{$header-height});
   background-color: white;
   .profile-inner {
     display: flex;
@@ -411,18 +409,27 @@ $icon-img-height: 140px;
       }
 
       li {
-        font-size: 1.2rem;
         white-space: nowrap;
         opacity: 0;
         transition: 1s ease-out;
+
         &.is-active {
           opacity: 1;
         }
 
-        &:nth-child(2),
-        &:nth-child(3),
-        &:nth-child(5),
-        &:nth-child(6) {
+        &.main {
+          font-size: 1.3rem;
+          font-weight: bold;
+        }
+
+        &.sub {
+          font-size: 1rem;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+
+        &.icon {
+          font-size: 1.1rem;
           margin-bottom: 10px;
         }
 
@@ -510,7 +517,7 @@ $icon-img-height: 140px;
         max-width: 550px;
         height: 80px;
         padding: 20px;
-        margin-bottom: 40px;
+        margin-bottom: 60px;
         font-size: 1.3rem;
         font-weight: bold;
         background-color: white;
@@ -835,10 +842,10 @@ $footer-height: 70px;
   height: $footer-height;
   .footer-inner {
     .copyright {
-      font-size: 0.8rem;
+      font-size: 0.9rem;
       color: white;
       .fa-copyright {
-        margin-right: 5px;
+        margin-right: 7px;
       }
     }
   }
@@ -848,7 +855,7 @@ $footer-height: 70px;
     display: block;
     position: fixed;
     bottom: 10px;
-    right: 10px;
+    right: 15px;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -1631,7 +1638,17 @@ keyframes
         padding: 15px 5px;
 
         li {
-          font-size: 1rem;
+          &.main {
+            font-size: 1.1rem;
+          }
+
+          &.sub {
+            font-size: 0.9rem;
+          }
+
+          &.icon {
+            font-size: 1.0rem;
+          }
         }
       }
     }
@@ -1652,7 +1669,7 @@ keyframes
         .item {
           height: 60px;
           font-size: 0.9rem;
-          margin-bottom: 30px;
+          margin-bottom: 40px;
         }
       }
     }
