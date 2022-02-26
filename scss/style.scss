@@ -564,6 +564,15 @@ $skills-item-margin: 2.5%;
     .item-list {
       display: flex;
       flex-wrap: wrap;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: 1s ease-out;
+
+      &.is-active{
+        opacity: 1;
+        transform: translateY(0px);
+      }
+
       .item {
         width: calc((100% - #{$skills-item-margin} * 2 * 4) / 4);
         margin: $skills-item-margin;
@@ -699,7 +708,7 @@ $skills-item-margin: 2.5%;
 
         .skill-name {
           position: absolute;
-          top: 62%;
+          top: 60%;
           width: 100%;
           text-align: center;
           font-size: 1.2rem;
@@ -711,7 +720,8 @@ $skills-item-margin: 2.5%;
           top: 82%;
           width: 100%;
           text-align: center;
-          font-size: 1rem;
+          font-size: 1.1rem;
+          color: #6fbcbf;
         }
 
         .skill-details {
@@ -943,6 +953,7 @@ $footer-height: 70px;
 
       .details {
         font-size: 1rem;
+        line-height: 1.7;
         a {
           color: $link-color;
         }
@@ -1657,7 +1668,7 @@ keyframes
         .item {
           width: calc((100% - #{$skills-item-margin} * 2 * 2) / 2);
           .skill-name {
-            font-size: 1rem;
+            font-size: 0.9rem;
           }
           .skill-remarks {
             font-size: 0.8rem;

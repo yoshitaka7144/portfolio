@@ -633,6 +633,17 @@ img.popup {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  opacity: 0;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  -webkit-transition: 1s ease-out;
+  transition: 1s ease-out;
+}
+
+#skills .skills-inner .item-list.is-active {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
 }
 
 #skills .skills-inner .item-list .item {
@@ -789,7 +800,7 @@ img.popup {
 
 #skills .skills-inner .item-list .item .skill-name {
   position: absolute;
-  top: 62%;
+  top: 60%;
   width: 100%;
   text-align: center;
   font-size: 1.2rem;
@@ -801,7 +812,8 @@ img.popup {
   top: 82%;
   width: 100%;
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  color: #6fbcbf;
 }
 
 #skills .skills-inner .item-list .item .skill-details {
@@ -1067,6 +1079,7 @@ img.popup {
 
 #modal-container .info-wrapper .skill-info .details {
   font-size: 1rem;
+  line-height: 1.7;
 }
 
 #modal-container .info-wrapper .skill-info .details a {
@@ -1946,7 +1959,7 @@ keyframes
     width: calc((100% - 2.5% * 2 * 2) / 2);
   }
   #skills .skills-inner .item-list .item .skill-name {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   #skills .skills-inner .item-list .item .skill-remarks {
     font-size: 0.8rem;
