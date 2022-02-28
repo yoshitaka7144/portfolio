@@ -1,21 +1,18 @@
 // 全ページ共通js
 
-window.addEventListener("DOMContentLoaded", function () {
-
-});
-
 window.addEventListener("load", function () {
   // ページ外アンカーリンク遷移処理
   const urlHash = location.hash;
   if (urlHash) {
+    window.scroll({ top: 0 });
     smoothScroll(urlHash);
   }
 
   // ページ内アンカーリンク遷移処理
-  const anchorLinks = document.querySelectorAll('a[href^="#"]');
+  const anchorLinks = document.querySelectorAll("a[href^='#']");
   const anchorLinksArr = Array.prototype.slice.call(anchorLinks);
   anchorLinksArr.forEach(link => {
-    link.addEventListener('click', e => {
+    link.addEventListener("click", e => {
       e.preventDefault();
       smoothScroll(link.hash);
     });
@@ -57,6 +54,7 @@ window.addEventListener("load", function () {
     }
   });
 
+  // スクロールでアニメーションさせる要素にクラス付与
   const addClassTargetElements = document.querySelectorAll(".js-scroll");
   window.addEventListener("scroll", function () {
     addClassTargetElements.forEach(item => {
@@ -70,6 +68,7 @@ window.addEventListener("load", function () {
     });
   });
 
+  // ページ更新時にスクロールイベントを発生させる
   window.dispatchEvent(new Event("scroll"));
 
   /**
