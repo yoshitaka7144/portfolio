@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
+  <title>制作物紹介 -数字タイピング-</title>
   <meta name="description" content="">
   <link rel="shortcut icon" href="img/favicon.ico">
   <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
@@ -113,6 +113,16 @@
             <li>git(SourceTree使用)</li>
           </ul>
         </section>
+        <section id="web-font-icon">
+          <h3 class="heading-section">Webアイコン、フォント</h3>
+          <ul class="list normal-list">
+            <li>アイコン</li>
+            <ul class="list sub-list">
+              <li><a href="https://fontawesome.com/download" target="_blank" rel="noopener noreferrer">Font Awesome Free
+                  6.0.0</a></li>
+            </ul>
+          </ul>
+        </section>
         <section id="function">
           <h3 class="heading-section">機能一覧</h3>
           <ul class="list normal-list">
@@ -127,7 +137,7 @@
             <li>結果画面</li>
         </section>
         <section id="how-to-use">
-          <h3 class="heading-section">使用方法</h3>
+          <h3 class="heading-section">機能紹介</h3>
           <h4 id="top-window" class="heading-sub-section">トップ画面</h4>
           <img class="popup" src="img/works/numTyping/top_pc.PNG" alt="">
           <p>数値、計算、もぐらたたきの3つのモードへの切替、各モードの説明テキスト、キーボードと対応指が表示されます。</p>
@@ -196,10 +206,11 @@
         </section>
         <section id="after">
           <h3 class="heading-section">作り終えて</h3>
-          <ul class="list normal-list">
-            <li></li>
-            <li></li>
-            <li></li>
+          <ul class="list after-list">
+            <li>キーボード部分の画面割合が大きすぎた。数字キーのみ使用するのでそこを考慮したデザインにすべきでした。</li>
+            <li>数字もぐらたたきモードにて、画像（0~9とピコピコハンマー）が出現する度にJSでimg要素を作成、DOMに追加という処理を行っているので無駄が多かった。予め用意しておいてその画像を使いまわすという処理を作成すべきでした。</li>
+            <li>自分のタイピング速度が遅い為、適切な難易度設定が行えなかった。</li>
+            <li>Vue.jsを使用して同じような処理を作成できるようにしたい。</li>
           </ul>
         </section>
         <section id="reference">
@@ -238,8 +249,9 @@
         <li><a href="#purpose">目的</a></li>
         <li><a href="#language">使用言語</a></li>
         <li><a href="#development-environment">開発環境</a></li>
+        <li><a href="#web-font-icon">Webアイコン、フォント</a></li>
         <li><a href="#function">機能一覧</a></li>
-        <li><a href="#how-to-use">使用方法</a></li>
+        <li><a href="#how-to-use">機能紹介</a></li>
         <li><a href="#top-window" class="sub">トップ画面</a></li>
         <li><a href="#setting" class="sub">設定画面</a></li>
         <li><a href="#setting-common" class="sub-sub">共通</a></li>

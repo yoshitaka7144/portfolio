@@ -1358,7 +1358,7 @@ img.popup {
 }
 
 .introduction-container main .article img.sp-img {
-  max-width: 280px;
+  max-width: 300px;
   width: 100%;
 }
 
@@ -1370,6 +1370,9 @@ img.popup {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-bottom: 10px;
@@ -1395,6 +1398,8 @@ img.popup {
   border: 2px solid #00adee;
   color: #00adee;
   background-color: white;
+  width: 115px;
+  text-align: center;
   font-size: 1.0rem;
   border-radius: 5px;
   -webkit-box-ordinal-group: 0;
@@ -1575,6 +1580,20 @@ img.popup {
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
   content: "\f058";
+  color: #6fbcbf;
+}
+
+.introduction-container main .article .list.after-list {
+  padding: 0px 20px 0px 40px;
+  border-radius: 10px;
+  background: repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px, #e9f4ff 3px, #e9f4ff 7px);
+}
+
+.introduction-container main .article .list.after-list li::before {
+  left: -25px;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f304";
   color: #6fbcbf;
 }
 

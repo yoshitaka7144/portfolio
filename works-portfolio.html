@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
+  <title>制作物紹介 -ポートフォリオ-</title>
   <meta name="description" content="">
   <link rel="shortcut icon" href="img/favicon.ico">
   <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
@@ -70,8 +70,8 @@
       <article class="article">
         <h2 id="article-top" class="heading-top">ポートフォリオ </h2>
         <div class="article-header">
-          <time class="modified-time" datetime="2022-02-24"><i
-              class="fa-solid fa-clock-rotate-left"></i>2022.02.24</time>
+          <time class="modified-time" datetime="2022-03-01"><i
+              class="fa-solid fa-clock-rotate-left"></i>2022.03.01</time>
         </div>
         <img class="top-img popup" src="img/works/portfolio/portfolio_top_pc.png" alt="">
         <section id="summary">
@@ -113,6 +113,23 @@
             <li>git(SourceTree使用)</li>
           </ul>
         </section>
+        <section id="web-font-icon">
+          <h3 class="heading-section">Webアイコン、フォント</h3>
+          <ul class="list normal-list">
+            <li>フォント</li>
+            <ul class="list sub-list">
+              <li><a href="https://fonts.google.com/specimen/Dosis" target="_blank" rel="noopener noreferrer">Dosis</a>
+              </li>
+              <li><a href="https://fonts.google.com/noto/specimen/Noto+Sans+JP" target="_blank"
+                  rel="noopener noreferrer">Noto Sans Japanese</a></li>
+            </ul>
+            <li>アイコン</li>
+            <ul class="list sub-list">
+              <li><a href="https://fontawesome.com/download" target="_blank" rel="noopener noreferrer">Font Awesome Free
+                  6.0.0</a></li>
+            </ul>
+          </ul>
+        </section>
         <section id="function">
           <h3 class="heading-section">機能一覧</h3>
           <ul class="list normal-list">
@@ -141,7 +158,7 @@
               <img class="sp-img popup js-scroll" src="img/works/portfolio/portfolio_top_sp.png" alt="トップ画像sp">
             </div>
           </div>
-          <p>トップ画像、ヘッダーが表示されます。</p>
+          <p>トップ画像、ヘッダーが表示されます。ヘッダーは上部に固定で表示しています。</p>
           <h4 id="detail-profile" class="heading-sub-section">プロフィール</h4>
           <div class="img-tab">
             <input type="radio" name="tab-2" id="tab-2-pc" checked>
@@ -200,24 +217,72 @@
           </div>
           <p>制作物を紹介しています。対象をクリックすると詳細ページへ遷移します。</p>
           <h5 id="detail-works-page" class="heading-sub-sub-section"><span>詳細ページ</span></h5>
+          <div class="img-tab">
+            <input type="radio" name="tab-6" id="tab-6-pc" checked>
+            <label class="tab-label" for="tab-6-pc">PC表示</label>
+            <div class="img-wrapper">
+              <img class="popup js-scroll" src="img/works/portfolio/portfolio_works_details_pc.PNG" alt="詳細ページ画像pc">
+            </div>
+            <input type="radio" name="tab-6" id="tab-6-sp">
+            <label class="tab-label" for="tab-6-sp">スマホ表示</label>
+            <div class="img-wrapper">
+              <img class="sp-img popup js-scroll" src="img/works/portfolio/portfolio_works_details_sp.PNG"
+                alt="詳細ページ画像sp">
+            </div>
+          </div>
+          <p>
+            制作物の詳細を紹介しています。PC表示では画面右側にサイドナビゲーションが表示され、スクロールに連動しています。<br>
+            各制作物ページにて共通してる紹介項目は以下の通りです。
+          </p>
+          <ul class="list normal-list">
+            <li>概要</li>
+            <li>公開URL</li>
+            <li>目的</li>
+            <li>使用言語</li>
+            <li>開発環境</li>
+            <li>機能一覧</li>
+            <li>機能紹介</li>
+            <li>作り終えて</li>
+            <li>参考サイト</li>
+          </ul>
         </section>
         <section id="after">
           <h3 class="heading-section">作り終えて</h3>
-          <ul class="list normal-list">
-            <li></li>
-            <li></li>
-            <li></li>
+          <ul class="list after-list">
+            <li>紹介する制作物のクオリティを向上させたい。</li>
+            <li>jQueryを使用せず、素のJavaScriptのみで動作の処理を作成することができて良かった。</li>
+            <li>より見やすいデザイン、適切なアニメーション設定を心掛けたい。</li>
+            <li>今後、ポートフォリオサイトを更新、管理しやすいようにWordPress化したい。</li>
           </ul>
         </section>
         <section id="reference">
           <h3 class="heading-section">参考サイト</h3>
-          <a class="link-box" href="" target="_blank" rel="noopener noreferrer">
-            <span>aaaaa</span>
-            <span>bbbbb</span>
+          <a class="link-box" href="https://moshashugyo.com/media/animate-on-scroll" target="_blank"
+            rel="noopener noreferrer">
+            <span>JavaScript(jQuery)でスクロールアニメーションを自作する方法を解説！</span>
+            <span>対象の要素までスクロールした時にアニメーションを動作させる処理にて参考にさせていただきました。</span>
           </a>
-          <a class="link-box" href="" target="_blank" rel="noopener noreferrer">
-            <span>ccccc</span>
-            <span>ddddd</span>
+          <a class="link-box" href="https://web-dev.tech/front-end/javascript/anchor-link-smooth-scroll/"
+            target="_blank" rel="noopener noreferrer">
+            <span>【jQuery無し】素のJSでページ内リンクをスムーススクロールさせる方法</span>
+            <span>JavaScriptを使用したスムーススクロール処理にて参考にさせていただきました。</span>
+          </a>
+          <a class="link-box" href="https://kouhekikyozou.com/css_square" target="_blank" rel="noopener noreferrer">
+            <span>CSSで正方形を作る方法！レスポンシブに対応させるには？</span>
+            <span>レスポンシブ対応した正方形の作成方法です。paddingを使用した作成方法を参考にさせていただきました。</span>
+          </a>
+          <a class="link-box" href="https://qiita.com/Keita_I/items/72f302b6470a2ccdd9f4" target="_blank"
+            rel="noopener noreferrer">
+            <span>CSSアニメーションで円形プログレスバーを作る方法</span>
+            <span>CSSのみで円形のプログレスバーを作成する方法を参考にさせていただきました。</span>
+          </a>
+          <a class="link-box" href="https://www.irasutoya.com/" target="_blank" rel="noopener noreferrer">
+            <span>いらすとや</span>
+            <span>favicon用画像を利用させていただきました。</span>
+          </a>
+          <a class="link-box" href="https://o-dan.net/ja/" target="_blank" rel="noopener noreferrer">
+            <span>O-DAN</span>
+            <span>著作権フリーの画像を検索する為に利用させていただきました。</span>
           </a>
         </section>
       </article>
@@ -230,6 +295,7 @@
         <li><a href="#purpose">目的</a></li>
         <li><a href="#language">使用言語</a></li>
         <li><a href="#development-environment">開発環境</a></li>
+        <li><a href="#web-font-icon">Webアイコン、フォント</a></li>
         <li><a href="#function">機能一覧</a></li>
         <li><a href="#how-to-use">機能紹介</a></li>
         <li><a href="#detail-top" class="sub">トップ</a></li>

@@ -1194,7 +1194,7 @@ $footer-height: 70px;
         margin: 10px 0;
 
         &.sp-img {
-          max-width: 280px;
+          max-width: 300px;
           width: 100%;
         }
       }
@@ -1205,6 +1205,7 @@ $footer-height: 70px;
 
       .img-tab {
         display: flex;
+        justify-content: center;
         flex-wrap: wrap;
         margin-bottom: 10px;
 
@@ -1230,6 +1231,8 @@ $footer-height: 70px;
           border: 2px solid #00adee;
           color: #00adee;
           background-color: white;
+          width: 115px;
+          text-align: center;
           font-size: 1.0rem;
           border-radius: 5px;
           order: -1;
@@ -1385,6 +1388,19 @@ $footer-height: 70px;
             font-family: "Font Awesome 6 Free";
             font-weight: 900;
             content: "\f058";
+            color: #6fbcbf;
+          }
+        }
+
+        &.after-list {
+          padding: 0px 20px 0px 40px;
+          border-radius: 10px;
+          background: repeating-linear-gradient(-45deg, #f0f8ff, #f0f8ff 3px, #e9f4ff 3px, #e9f4ff 7px);
+          li::before {
+            left: -25px;
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            content: "\f304";
             color: #6fbcbf;
           }
         }
