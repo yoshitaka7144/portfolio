@@ -73,10 +73,11 @@
           <time class="modified-time" datetime="2022-02-24"><i
               class="fa-solid fa-clock-rotate-left"></i>2022.02.24</time>
         </div>
-        <img class="top-img popup" src="" alt="">
+        <img class="top-img popup" src="img/works/portfolio/portfolio_top_pc.png" alt="">
         <section id="summary">
           <h3 class="heading-section">概要</h3>
           <p>自己紹介、保有スキル、制作物紹介の為のページです。</p>
+          <p>pc、スマートフォンの両方からの閲覧に対応しています。</p>
         </section>
         <section id="public-url">
           <h3 class="heading-section">公開URL</h3>
@@ -89,11 +90,11 @@
         </section>
         <section id="purpose">
           <h3 class="heading-section">目的</h3>
-          <p>テキストテキストテキストテキストテキストテキスト</p>
           <ul class="list purpose-list">
+            <li>スキル、制作物の紹介ページ作成</li>
             <li><span class="highlight-y">HTML、CSS</span>の勉強</li>
-            <li></li>
-            <li></li>
+            <li><span class="highlight-y">JavaScript</span>の勉強（jQuery不使用）</li>
+            <li>デザインの勉強</li>
           </ul>
         </section>
         <section id="language">
@@ -126,12 +127,78 @@
           </ul>
         </section>
         <section id="how-to-use">
-          <h3 class="heading-section">使用方法</h3>
+          <h3 class="heading-section">機能紹介</h3>
           <h4 id="detail-top" class="heading-sub-section">トップ</h4>
+          <div class="img-tab">
+            <input type="radio" name="tab-1" id="tab-1-pc" checked>
+            <label class="tab-label" for="tab-1-pc">PC表示</label>
+            <div class="img-wrapper">
+              <img class="popup js-scroll" src="img/works/portfolio/portfolio_top_pc.png" alt="トップ画像pc">
+            </div>
+            <input type="radio" name="tab-1" id="tab-1-sp">
+            <label class="tab-label" for="tab-1-sp">スマホ表示</label>
+            <div class="img-wrapper">
+              <img class="sp-img popup js-scroll" src="img/works/portfolio/portfolio_top_sp.png" alt="トップ画像sp">
+            </div>
+          </div>
+          <p>トップ画像、ヘッダーが表示されます。</p>
           <h4 id="detail-profile" class="heading-sub-section">プロフィール</h4>
+          <div class="img-tab">
+            <input type="radio" name="tab-2" id="tab-2-pc" checked>
+            <label class="tab-label" for="tab-2-pc">PC表示</label>
+            <div class="img-wrapper">
+              <img class="popup js-scroll" src="img/works/portfolio/portfolio_profile_pc.PNG" alt="プロフィール画像pc">
+            </div>
+            <input type="radio" name="tab-2" id="tab-2-sp">
+            <label class="tab-label" for="tab-2-sp">スマホ表示</label>
+            <div class="img-wrapper">
+              <img class="sp-img popup js-scroll" src="img/works/portfolio/portfolio_profile_sp.png" alt="プロフィール画像sp">
+            </div>
+          </div>
+          <p>自身の名前、生年月日、経歴等の情報を紹介しています。</p>
           <h4 id="detail-certification" class="heading-sub-section">資格</h4>
+          <div class="img-tab">
+            <input type="radio" name="tab-3" id="tab-3-pc" checked>
+            <label class="tab-label" for="tab-3-pc">PC表示</label>
+            <div class="img-wrapper">
+              <img class="popup js-scroll" src="img/works/portfolio/portfolio_certification_pc.PNG" alt="取得資格画像pc">
+            </div>
+            <input type="radio" name="tab-3" id="tab-3-sp">
+            <label class="tab-label" for="tab-3-sp">スマホ表示</label>
+            <div class="img-wrapper">
+              <img class="sp-img popup js-scroll" src="img/works/portfolio/portfolio_certification_sp.PNG"
+                alt="取得資格画像sp">
+            </div>
+          </div>
+          <p>取得資格を紹介しています。</p>
           <h4 id="detail-skills" class="heading-sub-section">スキル</h4>
+          <div class="img-tab">
+            <input type="radio" name="tab-4" id="tab-4-pc" checked>
+            <label class="tab-label" for="tab-4-pc">PC表示</label>
+            <div class="img-wrapper">
+              <img class="popup js-scroll" src="img/works/portfolio/portfolio_skills_pc.gif" alt="スキル画像pc">
+            </div>
+            <input type="radio" name="tab-4" id="tab-4-sp">
+            <label class="tab-label" for="tab-4-sp">スマホ表示</label>
+            <div class="img-wrapper">
+              <img class="sp-img popup js-scroll" src="img/works/portfolio/portfolio_skills_sp.gif" alt="スキル画像sp">
+            </div>
+          </div>
+          <p>スキルの紹介です。対象をクリックすると詳細のモーダルウィンドウが開かれます。</p>
           <h4 id="detail-works" class="heading-sub-section">制作物</h4>
+          <div class="img-tab">
+            <input type="radio" name="tab-5" id="tab-5-pc" checked>
+            <label class="tab-label" for="tab-5-pc">PC表示</label>
+            <div class="img-wrapper">
+              <img class="popup js-scroll" src="img/works/portfolio/portfolio_works_pc.png" alt="制作物画像pc">
+            </div>
+            <input type="radio" name="tab-5" id="tab-5-sp">
+            <label class="tab-label" for="tab-5-sp">スマホ表示</label>
+            <div class="img-wrapper">
+              <img class="sp-img popup js-scroll" src="img/works/portfolio/portfolio_works_sp.png" alt="制作物画像sp">
+            </div>
+          </div>
+          <p>制作物を紹介しています。対象をクリックすると詳細ページへ遷移します。</p>
           <h5 id="detail-works-page" class="heading-sub-sub-section"><span>詳細ページ</span></h5>
         </section>
         <section id="after">
@@ -164,7 +231,7 @@
         <li><a href="#language">使用言語</a></li>
         <li><a href="#development-environment">開発環境</a></li>
         <li><a href="#function">機能一覧</a></li>
-        <li><a href="#how-to-use">使用方法</a></li>
+        <li><a href="#how-to-use">機能紹介</a></li>
         <li><a href="#detail-top" class="sub">トップ</a></li>
         <li><a href="#detail-profile" class="sub">プロフィール</a></li>
         <li><a href="#detail-certification" class="sub">資格</a></li>
@@ -192,4 +259,4 @@
   </footer>
 </body>
 
-</html>
+</html。
