@@ -108,16 +108,6 @@ img.popup {
   background: linear-gradient(transparent 40%, yellow 40%);
 }
 
-.highlight-b {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(40%, transparent), color-stop(40%, #6cf));
-  background: linear-gradient(transparent 40%, #6cf 40%);
-}
-
-.highlight-g {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(40%, transparent), color-stop(40%, #6f6));
-  background: linear-gradient(transparent 40%, #6f6 40%);
-}
-
 /************************************************
 ヘッダー header
 ************************************************/
@@ -378,8 +368,9 @@ img.popup {
   width: 140px;
   height: 140px;
   border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-color: #f1f1f1;
 }
 
 #profile .profile-inner .name-text {

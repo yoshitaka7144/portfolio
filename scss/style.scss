@@ -340,7 +340,8 @@ $icon-img-height: 140px;
       width: $icon-img-width;
       height: $icon-img-height;
       border-radius: 50%;
-      object-fit: cover;
+      object-fit: contain;
+      background-color: #f1f1f1;;
     }
 
     .name-text {
