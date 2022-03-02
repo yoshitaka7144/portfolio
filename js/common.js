@@ -29,7 +29,7 @@ window.addEventListener("load", function () {
 
 
   // スクロールトップボタンの表示処理
-  if (window.scrollY >= 100) {
+  if (window.scrollY > 0) {
     showScrollToTopBtn();
   }
 
@@ -47,7 +47,7 @@ window.addEventListener("load", function () {
 
   // スクロール時にスクロールトップボタンの表示処理
   window.addEventListener("scroll", () => {
-    if (window.scrollY >= 100) {
+    if (window.scrollY > 0) {
       showScrollToTopBtn();
     } else {
       hideScrollToTopBtn();
