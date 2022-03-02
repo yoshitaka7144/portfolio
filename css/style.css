@@ -1205,6 +1205,67 @@ img.popup {
 }
 
 /************************************************
+404ページ not-found
+************************************************/
+#not-found {
+  background-color: #00adee;
+  min-height: calc(100vh - 70px - 70px);
+}
+
+#not-found .not-found-inner .heading .title {
+  color: white;
+}
+
+#not-found .not-found-inner .heading .title::before, #not-found .not-found-inner .heading .title::after {
+  background-color: white;
+}
+
+#not-found .not-found-inner .heading .sub {
+  color: white;
+}
+
+#not-found .not-found-inner .description {
+  color: white;
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#not-found .not-found-inner .btn-wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 40px;
+}
+
+#not-found .not-found-inner .btn-wrapper a {
+  padding: 15px 15px 15px 35px;
+  background-color: #6fbcbf;
+  color: white;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+#not-found .not-found-inner .btn-wrapper a::before {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  content: "\f064";
+  color: white;
+}
+
+/************************************************
 紹介ページ introduction-container
 ************************************************/
 .introduction-container {
@@ -1391,7 +1452,7 @@ img.popup {
   background-color: white;
   width: 115px;
   text-align: center;
-  font-size: 1.0rem;
+  font-size: 1rem;
   border-radius: 5px;
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;

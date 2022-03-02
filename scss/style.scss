@@ -341,7 +341,7 @@ $icon-img-height: 140px;
       height: $icon-img-height;
       border-radius: 50%;
       object-fit: contain;
-      background-color: #f1f1f1;;
+      background-color: #f1f1f1;
     }
 
     .name-text {
@@ -1058,6 +1058,63 @@ $footer-height: 70px;
 }
 
 /************************************************
+404ページ not-found
+************************************************/
+#not-found {
+  background-color: #00adee;
+  min-height: calc(100vh - #{$header-height} - #{$footer-height});
+  .not-found-inner {
+    .heading {
+      .title {
+        color: white;
+        &::before,
+        &::after {
+          background-color: white;
+        }
+      }
+      .sub {
+        color: white;
+      }
+    }
+
+    .description {
+      color: white;
+      font-size: 1.1rem;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .btn-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 40px;
+
+      a {
+        padding: 15px 15px 15px 35px;
+        background-color: #6fbcbf;
+        color: white;
+        font-size: 1.1rem;
+        border-radius: 10px;
+        box-shadow: $box-shadow;
+        position: relative;
+
+        &::before {
+          position: absolute;
+          top: 50%;
+          left: 12px;
+          transform: translateY(-50%);
+          font-family: "Font Awesome 6 Free";
+          font-weight: 900;
+          content: "\f064";
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+/************************************************
 紹介ページ introduction-container
 ************************************************/
 .introduction-container {
@@ -1226,7 +1283,7 @@ $footer-height: 70px;
           background-color: white;
           width: 115px;
           text-align: center;
-          font-size: 1.0rem;
+          font-size: 1rem;
           border-radius: 5px;
           order: -1;
           transition: 0.5s;
