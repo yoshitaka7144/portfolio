@@ -1209,7 +1209,7 @@ img.popup {
 ************************************************/
 #not-found {
   background-color: #00adee;
-  min-height: calc(100vh - 70px - 70px);
+  height: calc(100vh - 70px - 70px);
 }
 
 #not-found .not-found-inner .heading .title {
@@ -1239,7 +1239,6 @@ img.popup {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 40px;
 }
 
 #not-found .not-found-inner .btn-wrapper a {
@@ -2205,6 +2204,23 @@ keyframes
   #modal-container .info-wrapper .skill-circle {
     width: 130px;
     height: 130px;
+  }
+  /************************************************
+  404ページ not-found
+  ************************************************/
+  #not-found .not-found-inner {
+    padding: 30px 15px;
+  }
+  #not-found .not-found-inner .heading .title {
+    font-size: 2rem;
+  }
+  #not-found .not-found-inner .description {
+    font-size: 0.9rem;
+    margin-bottom: 35px;
+  }
+  #not-found .not-found-inner .btn-wrapper a {
+    padding: 10px 15px 10px 35px;
+    font-size: 1rem;
   }
   /************************************************
   紹介ページ introduction-container

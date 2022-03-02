@@ -1062,7 +1062,7 @@ $footer-height: 70px;
 ************************************************/
 #not-found {
   background-color: #00adee;
-  min-height: calc(100vh - #{$header-height} - #{$footer-height});
+  height: calc(100vh - #{$header-height} - #{$footer-height});
   .not-found-inner {
     .heading {
       .title {
@@ -1088,7 +1088,6 @@ $footer-height: 70px;
       width: 100%;
       display: flex;
       justify-content: center;
-      margin-bottom: 40px;
 
       a {
         padding: 15px 15px 15px 35px;
@@ -1888,6 +1887,32 @@ keyframes
       .skill-circle {
         width: 130px;
         height: 130px;
+      }
+    }
+  }
+
+  /************************************************
+  404ページ not-found
+  ************************************************/
+  #not-found {
+    .not-found-inner {
+      padding: 30px 15px;
+      .heading {
+        .title {
+          font-size: 2rem;
+        }
+      }
+
+      .description {
+        font-size: 0.9rem;
+        margin-bottom: 35px;
+      }
+
+      .btn-wrapper {
+        a {
+          padding: 10px 15px 10px 35px;
+          font-size: 1rem;
+        }
       }
     }
   }
