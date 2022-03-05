@@ -240,7 +240,7 @@ $hamburger-menu-color: #6fbcbf;
       .menu-list {
         position: fixed;
         width: 200px;
-        height: calc(100vh - #{$header-height});
+        height: calc(var(--vh) * 100 - #{$header-height});
         top: $header-height;
         right: -200px;
         background-color: $hamburger-menu-color;
@@ -278,7 +278,7 @@ $hamburger-menu-color: #6fbcbf;
 ************************************************/
 #top {
   width: 100%;
-  height: calc(100vh - #{$header-height});
+  height: calc(var(--vh) * 100 - #{$header-height});
   background-image: url("../img/top/top.jpg");
   background-size: cover;
   background-position: center;
@@ -898,13 +898,13 @@ $footer-height: 70px;
 
   .img-wrapper {
     display: flex;
-    height: 100vh;
+    height: calc(var(--vh) * 100);
     justify-content: center;
     align-items: center;
     animation: modal-img-popup 0.3s ease-out forwards;
     img {
       max-width: calc(100vw - 40px);
-      max-height: calc(100vh - 40px);
+      max-height: calc(var(--vh) * 100 - 40px);
     }
   }
 
@@ -916,7 +916,7 @@ $footer-height: 70px;
     display: flex;
     align-items: center;
     max-width: calc(100vw - 40px);
-    max-height: calc(100vh - 40px);
+    max-height: calc(var(--vh) * 100 - 40px);
     width: 550px;
     background-color: white;
     border-radius: 10px;
@@ -1062,7 +1062,7 @@ $footer-height: 70px;
 ************************************************/
 #not-found {
   background-color: #00adee;
-  height: calc(100vh - #{$header-height} - #{$footer-height});
+  height: calc(var(--vh) * 100 - #{$header-height} - #{$footer-height});
   .not-found-inner {
     .heading {
       .title {

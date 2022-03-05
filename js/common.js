@@ -1,6 +1,10 @@
 // 全ページ共通js
 
 window.addEventListener("load", function () {
+  // vh設定
+  const height = window.innerHeight;
+  document.documentElement.style.setProperty("--vh", height / 100 + "px");
+
   // ページ外アンカーリンク遷移処理
   const urlHash = location.hash;
   if (urlHash) {

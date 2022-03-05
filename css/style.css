@@ -264,7 +264,7 @@ img.popup {
 #header .header-inner #sp-nav .menu-list {
   position: fixed;
   width: 200px;
-  height: calc(100vh - 70px);
+  height: calc(var(--vh) * 100 - 70px);
   top: 70px;
   right: -200px;
   background-color: #6fbcbf;
@@ -299,7 +299,7 @@ img.popup {
 ************************************************/
 #top {
   width: 100%;
-  height: calc(100vh - 70px);
+  height: calc(var(--vh) * 100 - 70px);
   background-image: url("../img/top/top.jpg");
   background-size: cover;
   background-position: center;
@@ -1023,7 +1023,7 @@ img.popup {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100vh;
+  height: calc(var(--vh) * 100);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1036,7 +1036,7 @@ img.popup {
 
 #modal-container .img-wrapper img {
   max-width: calc(100vw - 40px);
-  max-height: calc(100vh - 40px);
+  max-height: calc(var(--vh) * 100 - 40px);
 }
 
 #modal-container .info-wrapper {
@@ -1052,7 +1052,7 @@ img.popup {
       -ms-flex-align: center;
           align-items: center;
   max-width: calc(100vw - 40px);
-  max-height: calc(100vh - 40px);
+  max-height: calc(var(--vh) * 100 - 40px);
   width: 550px;
   background-color: white;
   border-radius: 10px;
@@ -1209,7 +1209,7 @@ img.popup {
 ************************************************/
 #not-found {
   background-color: #00adee;
-  height: calc(100vh - 70px - 70px);
+  height: calc(var(--vh) * 100 - 70px - 70px);
 }
 
 #not-found .not-found-inner .heading .title {
