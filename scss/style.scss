@@ -240,7 +240,7 @@ $hamburger-menu-color: #6fbcbf;
       .menu-list {
         position: fixed;
         width: 200px;
-        height: calc(var(--vh) * 100 - #{$header-height});
+        height: calc(100vh - #{$header-height});
         top: $header-height;
         right: -200px;
         background-color: $hamburger-menu-color;
@@ -898,13 +898,13 @@ $footer-height: 70px;
 
   .img-wrapper {
     display: flex;
-    height: calc(var(--vh) * 100);
+    height: 100vh;
     justify-content: center;
     align-items: center;
     animation: modal-img-popup 0.3s ease-out forwards;
     img {
       max-width: calc(100vw - 40px);
-      max-height: calc(var(--vh) * 100 - 40px);
+      max-height: calc(100vh - 40px);
     }
   }
 
@@ -916,7 +916,7 @@ $footer-height: 70px;
     display: flex;
     align-items: center;
     max-width: calc(100vw - 40px);
-    max-height: calc(var(--vh) * 100 - 40px);
+    max-height: calc(100vh - 40px);
     width: 550px;
     background-color: white;
     border-radius: 10px;

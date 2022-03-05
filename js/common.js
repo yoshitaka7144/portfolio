@@ -1,7 +1,7 @@
 // 全ページ共通js
 
 window.addEventListener("load", function () {
-  // vh設定
+  // トップページ、404ページ用カスタムvh設定
   const height = window.innerHeight;
   document.documentElement.style.setProperty("--vh", height / 100 + "px");
 
