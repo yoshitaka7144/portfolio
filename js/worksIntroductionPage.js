@@ -27,7 +27,7 @@ window.addEventListener("load", function () {
     const headerHeight = document.querySelector('#header').offsetHeight;
     const listLength = targetLinkList.length;
     for (let i = 0; i < listLength; i++) {
-      if (window.scrollY >= targetLinkList[i].offset - headerHeight) {
+      if (window.scrollY >= targetLinkList[i].offset - headerHeight - 10) {
         navLinkList.forEach(item => {
           item.classList.remove("scroll");
         });
