@@ -240,7 +240,10 @@
           <p class="bold">出題対象地方</p>
           <p>解答する対象の地方を選択できます。1つ以上の選択が必須です。</p>
           <p class="bold">解答タイプ</p>
-          <p>都道府県名を自分で入力する or 選択肢から選択するかを選ぶことができます。</p>
+          <ul class="list normal-list">
+            <li>選択：都道府県名を選択肢から選択</li>
+            <li>記述：都道府県名を自分で入力</li>
+          </ul>
           <p class="bold">スタートボタン</p>
           <p>ゲームを開始します。<br>出題対象地方が1つ以上選択されていない場合、警告のモーダルウィンドウが表示されます。</p>
           <p class="bold">戻るボタン</p>
@@ -274,7 +277,6 @@
           <p class="bold">都道府県名入力</p>
           <p>地図をクリックすると県名入力用のモーダルウィンドウが表示されます。設定画面の解答タイプで設定した方法で県名を入力し、OKボタンをクリックすることで解答が確定します。
           </p>
-          <p>例：岩手県の地図に解答を入力</p>
           <img class="popup" src="img/works/japanMapQuiz/fill_game_input.gif" alt="都道府県名入力デモ画像">
           <p class="bold">解答終了ボタン</p>
           <p>結果画面が表示されます。未入力があると終了確認のモーダルウィンドウが表示されます。</p>
@@ -297,61 +299,84 @@
           <p>設定画面へ戻ります。</p>
 
           <h4 id="map-quiz" class="heading-sub-section">地図クイズ</h4>
-
-
-
-
-
-          <p>取得資格を紹介しています。</p>
-          <h4 id="detail-skills" class="heading-sub-section">スキル</h4>
-
-          <p>スキルの紹介です。対象をクリックすると詳細のモーダルウィンドウが開かれます。</p>
-          <h4 id="detail-works" class="heading-sub-section">制作物</h4>
-
-          <p>制作物を紹介しています。対象をクリックすると詳細ページへ遷移します。</p>
-          <h5 id="detail-works-page" class="heading-sub-sub-section"><span>詳細ページ</span></h5>
+          <h5 id="map-quiz-setting" class="heading-sub-sub-section"><span>設定画面</span></h5>
+          <div class="img-tab">
+            <input type="radio" name="tab-5" id="tab-5-pc" checked>
+            <label class="tab-label" for="tab-5-pc">PC表示</label>
+            <div class="img-wrapper">
+              <img class="popup js-scroll" src="img/works/japanMapQuiz/quiz_setting_pc.png" alt="地図クイズ設定画面画像pc">
+            </div>
+            <input type="radio" name="tab-5" id="tab-5-sp">
+            <label class="tab-label" for="tab-5-sp">スマホ表示</label>
+            <div class="img-wrapper">
+              <img class="sp-img popup js-scroll" src="img/works/japanMapQuiz/quiz_setting_sp.png" alt="地図クイズ設定画面画像sp">
+            </div>
+          </div>
+          <p class="bold">出題対象地方</p>
+          <p>クイズが出題される対象の地方を選択できます。1つ以上の選択が必須です。</p>
+          <p class="bold">選択肢タイプ</p>
+          <p>選択肢の内容を選択します。</p>
+          <ul class="list normal-list">
+            <li>全都道府県：全都道府県からランダムに選択肢を作成</li>
+            <li>同地方区分：正解と同じ地方区分からランダムに選択肢を作成</li>
+          </ul>
+          <p class="bold">スタートボタン</p>
+          <p>ゲームを開始します。<br>出題対象地方が1つ以上選択されていない場合、警告のモーダルウィンドウが表示されます。</p>
+          <p class="bold">戻るボタン</p>
+          <p>メニュー画面へ戻ります。</p>
+          <h5 id="map-quiz-game" class="heading-sub-sub-section"><span>ゲーム画面</span></h5>
           <div class="img-tab">
             <input type="radio" name="tab-6" id="tab-6-pc" checked>
             <label class="tab-label" for="tab-6-pc">PC表示</label>
             <div class="img-wrapper">
-              <img class="popup js-scroll" src="img/works/portfolio/portfolio_works_details_pc.PNG" alt="詳細ページ画像pc">
+              <img class="popup js-scroll" src="img/works/japanMapQuiz/quiz_game_pc.png" alt="地図クイズゲーム画面画像pc">
             </div>
             <input type="radio" name="tab-6" id="tab-6-sp">
             <label class="tab-label" for="tab-6-sp">スマホ表示</label>
             <div class="img-wrapper">
-              <img class="sp-img popup js-scroll" src="img/works/portfolio/portfolio_works_details_sp.PNG"
-                alt="詳細ページ画像sp">
+              <img class="sp-img popup js-scroll" src="img/works/japanMapQuiz/quiz_game_sp.png" alt="地図クイズゲーム画面画像sp">
             </div>
           </div>
-          <p>
-            制作物の詳細を紹介しています。PC表示では画面右側にサイドナビゲーションが表示され、スクロールに連動しています。<br>
-            各制作物ページにて共通してる紹介項目は以下の通りです。
-          </p>
+          <p class="bold">地図</p>
+          <p>クイズ対象の地図が表示されます。</p>
+          <p class="bold">ヒント</p>
+          <p>ボタンをクリックするとヒントが表示されます。</p>
           <ul class="list normal-list">
-            <li>概要</li>
-            <li>公開URL</li>
-            <li>目的</li>
-            <li>使用言語</li>
-            <li>開発環境</li>
-            <li>機能一覧</li>
-            <li>機能紹介</li>
-            <li>作り終えて</li>
-            <li>参考サイト</li>
+            <li>緑色ボタン：土地や名所に関するヒント表示</li>
+            <li>橙色ボタン：食べ物に関するヒント表示</li>
           </ul>
-          <h4 id="detail-404" class="heading-sub-section">404 Not Found ページ</h4>
+          <p class="bold">選択肢</p>
+          <p>設定画面で選ばれた選択肢タイプの選択肢が表示されます。クリックすると選択状態になります。</p>
+          <p class="bold">解答するボタン、次へボタン、結果へボタン</p>
+          <p>解答するボタンをクリックすると判定が行われ、正解 or
+            不正解のテキストが表示されます。次の問題がある場合は次へボタンが表示され、最終問題の場合は結果へボタンが表示されます。選択肢が選択されていない場合は警告のモーダルウィンドウが表示されます。</p>
+          <img class="popup" src="img/works/japanMapQuiz/quiz_game_demo.gif" alt="地図クイズデモ画像">
+          <h5 id="map-quiz-result" class="heading-sub-sub-section"><span>結果画面</span></h5>
           <div class="img-tab">
             <input type="radio" name="tab-7" id="tab-7-pc" checked>
             <label class="tab-label" for="tab-7-pc">PC表示</label>
             <div class="img-wrapper">
-              <img class="popup js-scroll" src="img/works/portfolio/portfolio_404_pc.png" alt="404ページ画像pc">
+              <img class="popup js-scroll" src="img/works/japanMapQuiz/quiz_result_pc.png" alt="地図クイズ結果画面画像pc">
             </div>
             <input type="radio" name="tab-7" id="tab-7-sp">
             <label class="tab-label" for="tab-7-sp">スマホ表示</label>
             <div class="img-wrapper">
-              <img class="sp-img popup js-scroll" src="img/works/portfolio/portfolio_404_sp.png" alt="404ページ画像sp">
+              <img class="sp-img popup js-scroll" src="img/works/japanMapQuiz/quiz_result_sp.png" alt="地図クイズ結果画面画像sp">
             </div>
           </div>
-          <p>複数ページがある為、404 Not Foundページを作成しました。リダイレクトの処理は.htaccessファイルにて制御しています。</p>
+          <p class="bold">問題数</p>
+          <p>出題された問題数が表示されます。</p>
+          <p class="bold">正解数</p>
+          <p>クイズに正解した数が表示されます。</p>
+          <p class="bold">ミス問題</p>
+          <p>クイズが不正解だった問題が表示されます。クリックするとモーダルウィンドウが表示され、自分の解答と正解が確認できます。</p>
+          <img class="popup" src="img/works/japanMapQuiz/quiz_result_confirm.gif" alt="地図クイズミス問題確認画像">
+          <p class="bold">評価</p>
+          <p>正答率に応じて評価のテキストが表示されます。</p>
+          <p class="bold">メニューへボタン</p>
+          <p>メニュー画面へ戻ります。</p>
+          <p class="bold">設定画面へボタン</p>
+          <p>設定画面へ戻ります。</p>
         </section>
         <section id="after">
           <h3 class="heading-section">作り終えて</h3>
@@ -397,9 +422,9 @@
         <li><a href="#map-fill-game" class="sub-sub">ゲーム画面</a></li>
         <li><a href="#map-fill-result" class="sub-sub">結果画面</a></li>
         <li><a href="#map-quiz" class="sub">地図クイズ</a></li>
-        <li><a href="#" class="sub-sub">設定画面</a></li>
-        <li><a href="#" class="sub-sub">ゲーム画面</a></li>
-        <li><a href="#" class="sub-sub">結果画面</a></li>
+        <li><a href="#map-quiz-setting" class="sub-sub">設定画面</a></li>
+        <li><a href="#map-quiz-game" class="sub-sub">ゲーム画面</a></li>
+        <li><a href="#map-quiz-result" class="sub-sub">結果画面</a></li>
         <li><a href="#" class="sub">地図タイピング</a></li>
         <li><a href="#" class="sub-sub">設定画面</a></li>
         <li><a href="#" class="sub-sub">ゲーム画面</a></li>
