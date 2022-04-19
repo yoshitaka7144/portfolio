@@ -1400,6 +1400,11 @@ img.popup {
   line-height: 2.2;
 }
 
+.introduction-container main .article p.bold {
+  color: #5b8bd0;
+  font-weight: bold;
+}
+
 .introduction-container main .article a {
   color: #3aa0d3;
 }

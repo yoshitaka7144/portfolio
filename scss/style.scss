@@ -1233,6 +1233,10 @@ $footer-height: 70px;
 
       p {
         line-height: 2.2;
+        &.bold{
+          color: #5b8bd0;
+          font-weight: bold;
+        }
       }
 
       a {
