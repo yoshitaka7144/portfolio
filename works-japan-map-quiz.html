@@ -70,8 +70,8 @@
       <article class="article">
         <h2 id="article-top" class="heading-top">都道府県クイズ</h2>
         <div class="article-header">
-          <time class="modified-time" datetime="2022-04-19"><i
-              class="fa-solid fa-clock-rotate-left"></i>2022.04.19</time>
+          <time class="modified-time" datetime="2022-04-21"><i
+              class="fa-solid fa-clock-rotate-left"></i>2022.04.21</time>
         </div>
         <img class="top-img popup" src="img/works/japanMapQuiz/top_pc.png" alt="">
         <section id="summary">
@@ -173,6 +173,43 @@
             <li>System Error画面</li>
           </ul>
         </section>
+        <section id="routing">
+          <h3 class="heading-section">URL一覧</h3>
+          <dl class="routing-table">
+            <dt class="heading">URL</dt>
+            <dd class="heading">内容</dd>
+            <dt>/</dt>
+            <dd><a href="#home">ホーム画面</a></dd>
+            <dt>/menu</dt>
+            <dd><a href="#menu">メニュー画面</a></dd>
+            <dt>/fill</dt>
+            <dd><a href="#map-fill">地図埋め</a></dd>
+            <dt>/quiz</dt>
+            <dd><a href="#map-quiz">地図クイズ</a></dd>
+            <dt>/typing</dt>
+            <dd><a href="#map-typing">地図タイピング</a></dd>
+            <dt>/system-error</dt>
+            <dd><a href="#system-error">System Error画面</a></dd>
+            <dt>該当URL無し</dt>
+            <dd><a href="#not-found-error">Not Found画面</a></dd>
+            <dt>/api/maps</dt>
+            <dd>地図マスタ取得</dd>
+            <dt>/api/maps/names</dt>
+            <dd>地図名一覧取得</dd>
+            <dt>/api/classifications</dt>
+            <dd>地方区分マスタ取得</dd>
+            <dt>/api/time_limit_values</dt>
+            <dd>制限時間マスタ取得</dd>
+            <dt>/api/quiz_count_values</dt>
+            <dd>問題数マスタ取得</dd>
+          </dl>
+        </section>
+        <section id="table-definition">
+          <h3 class="heading-section">テーブル定義書</h3>
+          <p><a
+              href="https://docs.google.com/spreadsheets/d/1qRK8z6oY5cymp37oBqunSILltPq86BsIJAynrMcVS6Y/edit?usp=sharing"
+              target="_blank" rel="noopener noreferrer">テーブル定義書（Googleスプレッドシート）</a></p>
+        </section>
         <section id="test">
           <h3 class="heading-section">テスト</h3>
           <p><a
@@ -183,12 +220,12 @@
             <li>PC</li>
             <ul class="list sub-list">
               <li>OS：Windows10</li>
-              <li>ブラウザ：Chrome -versionほにゃらら</li>
+              <li>ブラウザ：Chrome 100.0.4896.127</li>
             </ul>
             <li>スマートフォン</li>
             <ul class="list sub-list">
               <li>OS：Android 11</li>
-              <li>ブラウザ：Chrome -versionほにゃらら</li>
+              <li>ブラウザ：Chrome 100.0.4896.88</li>
             </ul>
           </ul>
         </section>
@@ -237,16 +274,16 @@
               <img class="sp-img popup js-scroll" src="img/works/japanMapQuiz/fill_setting_sp.png" alt="地図埋め設定画像sp">
             </div>
           </div>
-          <p class="bold">出題対象地方</p>
+          <p class="bold">①出題対象地方</p>
           <p>解答する対象の地方を選択できます。1つ以上の選択が必須です。</p>
-          <p class="bold">解答タイプ</p>
+          <p class="bold">②解答タイプ</p>
           <ul class="list normal-list">
             <li>選択：都道府県名を選択肢から選択</li>
             <li>記述：都道府県名を自分で入力</li>
           </ul>
-          <p class="bold">スタートボタン</p>
+          <p class="bold">③スタートボタン</p>
           <p>ゲームを開始します。<br>出題対象地方が1つ以上選択されていない場合、警告のモーダルウィンドウが表示されます。</p>
-          <p class="bold">戻るボタン</p>
+          <p class="bold">④戻るボタン</p>
           <p>メニュー画面へ戻ります。</p>
           <h5 id="map-fill-game" class="heading-sub-sub-section"><span>ゲーム画面</span></h5>
           <div class="img-tab">
@@ -261,41 +298,54 @@
               <img class="sp-img popup js-scroll" src="img/works/japanMapQuiz/fill_game_sp.png" alt="地図埋めゲーム画像sp">
             </div>
           </div>
-          <p class="bold">対象外数</p>
+          <p class="bold">①対象外数</p>
           <p>解答対象ではない都道府県の数。<br>（上の画像では北海道と関東地方が対象外です。）</p>
-          <p class="bold">未入力数</p>
+          <p class="bold">②未入力数</p>
           <p>解答対象の都道府県の未入力数。</p>
-          <p class="bold">入力済み数</p>
+          <p class="bold">③入力済み数</p>
           <p>解答対象の都道府県の既に解答を入力 or 選択している数。</p>
-          <p class="bold">地図上での操作</p>
+          <p class="bold">④拡大縮小スライダー</p>
+          <p>スライダー操作で地図の拡大縮小ができます。プラスボタンとマイナスボタンで一定間隔で拡大縮小できます。</p>
+          <p class="bold">⑤地図上での操作</p>
           <ul class="list normal-list">
             <li>都道府県をクリックすると入力用のモーダルウィンドウが表示されます。</li>
             <li>任意の方向へドラッグすると地図が移動します。</li>
             <li>マウスホイールを上下すると地図が拡大縮小します。</li>
             <li>（スマートフォン）ピンチアウト、ピンチイン操作で地図が拡大縮小します。</li>
           </ul>
-          <p class="bold">都道府県名入力</p>
+          <p class="bold">⑥都道府県名入力</p>
           <p>地図をクリックすると県名入力用のモーダルウィンドウが表示されます。設定画面の解答タイプで設定した方法で県名を入力し、OKボタンをクリックすることで解答が確定します。
           </p>
           <img class="popup" src="img/works/japanMapQuiz/fill_game_input.gif" alt="都道府県名入力デモ画像">
-          <p class="bold">解答終了ボタン</p>
+          <p class="bold">⑦解答終了ボタン</p>
           <p>結果画面が表示されます。未入力があると終了確認のモーダルウィンドウが表示されます。</p>
-          <p class="bold">操作方法ボタン</p>
+          <p class="bold">⑧操作方法ボタン</p>
           <p>操作方法を説明するモーダルウィンドウが表示されます。</p>
           <h5 id="map-fill-result" class="heading-sub-sub-section"><span>結果画面</span></h5>
-          <img class="popup" src="img/works/japanMapQuiz/fill_result.png" alt="地図埋め結果画像">
-          <p class="bold">正解数</p>
+          <div class="img-tab">
+            <input type="radio" name="tab-13" id="tab-13-pc" checked>
+            <label class="tab-label" for="tab-13-pc">PC表示</label>
+            <div class="img-wrapper">
+              <img class="popup js-scroll" src="img/works/japanMapQuiz/fill_result_pc.png" alt="地図埋め結果画面画像pc">
+            </div>
+            <input type="radio" name="tab-13" id="tab-13-sp">
+            <label class="tab-label" for="tab-13-sp">スマホ表示</label>
+            <div class="img-wrapper">
+              <img class="sp-img popup js-scroll" src="img/works/japanMapQuiz/fill_result_sp.png" alt="地図埋め結果画面画像sp">
+            </div>
+          </div>
+          <p class="bold">①正解数</p>
           <p>正解の解答の数。</p>
-          <p class="bold">不正解数</p>
+          <p class="bold">②不正解数</p>
           <p>不正解の解答の数。</p>
-          <p class="bold">評価</p>
+          <p class="bold">③評価</p>
           <p>正答率に応じて評価のテキストが表示されます。</p>
-          <p class="bold">地図</p>
+          <p class="bold">④地図</p>
           <p>解答の正解 or 不正解毎に色分けされて表示されます。対象の都道府県をクリックすると自分の解答や正解等の詳細が確認できます。</p>
           <img class="popup" src="img/works/japanMapQuiz/fill_result_confirm.gif" alt="地図埋め解答確認画像">
-          <p class="bold">メニューへボタン</p>
+          <p class="bold">⑤メニューへボタン</p>
           <p>メニュー画面へ戻ります。</p>
-          <p class="bold">設定画面へボタン</p>
+          <p class="bold">⑥設定画面へボタン</p>
           <p>設定画面へ戻ります。</p>
 
           <h4 id="map-quiz" class="heading-sub-section">地図クイズ</h4>
@@ -312,17 +362,21 @@
               <img class="sp-img popup js-scroll" src="img/works/japanMapQuiz/quiz_setting_sp.png" alt="地図クイズ設定画面画像sp">
             </div>
           </div>
-          <p class="bold">出題対象地方</p>
+          <p class="bold">①出題対象地方</p>
           <p>クイズが出題される対象の地方を選択できます。1つ以上の選択が必須です。</p>
-          <p class="bold">選択肢タイプ</p>
+          <p class="bold">②選択肢タイプ</p>
           <p>選択肢の内容を選択します。</p>
           <ul class="list normal-list">
             <li>全都道府県：全都道府県からランダムに選択肢を作成</li>
             <li>同地方区分：正解と同じ地方区分からランダムに選択肢を作成</li>
           </ul>
-          <p class="bold">スタートボタン</p>
+          <p class="bold">③音声有無</p>
+          <p>クイズ正解 or 不正解時の効果音の有無を設定できます。</p>
+          <p class="bold">④問題数</p>
+          <p>出題されるクイズの数を設定できます。</p>
+          <p class="bold">⑤スタートボタン</p>
           <p>ゲームを開始します。<br>出題対象地方が1つ以上選択されていない場合、警告のモーダルウィンドウが表示されます。</p>
-          <p class="bold">戻るボタン</p>
+          <p class="bold">⑥戻るボタン</p>
           <p>メニュー画面へ戻ります。</p>
           <h5 id="map-quiz-game" class="heading-sub-sub-section"><span>ゲーム画面</span></h5>
           <div class="img-tab">
@@ -337,17 +391,17 @@
               <img class="sp-img popup js-scroll" src="img/works/japanMapQuiz/quiz_game_sp.png" alt="地図クイズゲーム画面画像sp">
             </div>
           </div>
-          <p class="bold">地図</p>
+          <p class="bold">①地図</p>
           <p>クイズ対象の地図が表示されます。</p>
-          <p class="bold">ヒント</p>
+          <p class="bold">②ヒント</p>
           <p>ボタンをクリックするとヒントが表示されます。</p>
           <ul class="list normal-list">
             <li>緑色ボタン：土地や名所に関するヒント表示</li>
             <li>橙色ボタン：食べ物に関するヒント表示</li>
           </ul>
-          <p class="bold">選択肢</p>
+          <p class="bold">③選択肢</p>
           <p>設定画面で選ばれた選択肢タイプの選択肢が表示されます。クリックすると選択状態になります。</p>
-          <p class="bold">解答するボタン、次へボタン、結果へボタン</p>
+          <p class="bold">④解答するボタン、次へボタン、結果へボタン</p>
           <p>解答するボタンをクリックすると判定が行われ、正解 or
             不正解のテキストが表示されます。次の問題がある場合は次へボタンが表示され、最終問題の場合は結果へボタンが表示されます。選択肢が選択されていない場合は警告のモーダルウィンドウが表示されます。</p>
           <img class="popup" src="img/works/japanMapQuiz/quiz_game_demo.gif" alt="地図クイズデモ画像">
@@ -364,39 +418,220 @@
               <img class="sp-img popup js-scroll" src="img/works/japanMapQuiz/quiz_result_sp.png" alt="地図クイズ結果画面画像sp">
             </div>
           </div>
-          <p class="bold">問題数</p>
+          <p class="bold">①問題数</p>
           <p>出題された問題数が表示されます。</p>
-          <p class="bold">正解数</p>
+          <p class="bold">②正解数</p>
           <p>クイズに正解した数が表示されます。</p>
-          <p class="bold">ミス問題</p>
+          <p class="bold">③ミス問題</p>
           <p>クイズが不正解だった問題が表示されます。クリックするとモーダルウィンドウが表示され、自分の解答と正解が確認できます。</p>
           <img class="popup" src="img/works/japanMapQuiz/quiz_result_confirm.gif" alt="地図クイズミス問題確認画像">
-          <p class="bold">評価</p>
+          <p class="bold">④評価</p>
           <p>正答率に応じて評価のテキストが表示されます。</p>
-          <p class="bold">メニューへボタン</p>
+          <p class="bold">⑤メニューへボタン</p>
           <p>メニュー画面へ戻ります。</p>
-          <p class="bold">設定画面へボタン</p>
+          <p class="bold">⑥設定画面へボタン</p>
           <p>設定画面へ戻ります。</p>
+
+          <h4 id="map-typing" class="heading-sub-section">地図タイピング</h4>
+          <h5 id="map-typing-setting" class="heading-sub-sub-section"><span>設定画面</span></h5>
+          <div class="img-tab">
+            <input type="radio" name="tab-8" id="tab-8-pc" checked>
+            <label class="tab-label" for="tab-8-pc">PC表示</label>
+            <div class="img-wrapper">
+              <img class="popup js-scroll" src="img/works/japanMapQuiz/typing_setting_pc.png" alt="地図タイピング設定画面画像pc">
+            </div>
+            <input type="radio" name="tab-8" id="tab-8-sp">
+            <label class="tab-label" for="tab-8-sp">スマホ表示</label>
+            <div class="img-wrapper">
+              <img class="sp-img popup js-scroll" src="img/works/japanMapQuiz/typing_setting_sp.png"
+                alt="地図タイピング設定画面画像sp">
+            </div>
+          </div>
+          <p class="bold">①出題対象地方</p>
+          <p>問題が出題される対象の地方を選択できます。1つ以上の選択が必須です。</p>
+          <p class="bold">②音声有無</p>
+          <p>タイプミス時の効果音のON/OFFを設定できます。</p>
+          <p class="bold">③問題数</p>
+          <p>出題される問題数を設定できます。</p>
+          <p class="bold">④時間制限（秒）</p>
+          <p>タイピングの時間制限のON/OFFを設定できます。ONにするとセレクトボックスが表示され秒数を選択できます。</p>
+          <p class="bold">⑤スタートボタン</p>
+          <p>ゲームを開始します。<br>出題対象地方が1つ以上選択されていない場合、警告のモーダルウィンドウが表示されます。</p>
+          <p class="bold">⑥戻るボタン</p>
+          <p>メニュー画面へ戻ります。</p>
+          <h5 id="map-typing-game" class="heading-sub-sub-section"><span>ゲーム画面</span></h5>
+          <div class="img-tab">
+            <input type="radio" name="tab-9" id="tab-9-pc" checked>
+            <label class="tab-label" for="tab-9-pc">PC表示</label>
+            <div class="img-wrapper">
+              <img class="popup js-scroll" src="img/works/japanMapQuiz/typing_game_pc.png" alt="地図タイピングゲーム画面画像pc">
+            </div>
+            <input type="radio" name="tab-9" id="tab-9-sp">
+            <label class="tab-label" for="tab-9-sp">スマホ表示</label>
+            <div class="img-wrapper">
+              <img class="sp-img popup js-scroll" src="img/works/japanMapQuiz/typing_game_sp.png"
+                alt="地図タイピングゲーム画面画像sp">
+            </div>
+          </div>
+          <p class="bold">①地図</p>
+          <p>問題の地図が表示されます。</p>
+          <p class="bold">②タイプ数</p>
+          <p>正しくタイピングできた数が表示されます。</p>
+          <p class="bold">③ミス数</p>
+          <p>間違ったタイピングをした数が表示されます。</p>
+          <p class="bold">④残り時間</p>
+          <p>設定画面で時間制限をONにした場合に表示されます。残り時間の割合に応じて色が緑、黄、赤へと変化していきます。残り時間がなくなると結果画面が表示されます。</p>
+          <p class="bold">⑤ヒント</p>
+          <p>1回タイプミスすると表示されます。土地や名所に関するヒント or 食べ物に関するヒントがランダムに表示されます。</p>
+          <p class="bold">⑥テキスト表示エリア</p>
+          <p>2回タイプミスすると全てのテキストが表示されます。</p>
+          <ul class="list normal-list">
+            <li>タイピングテキスト：入力済みテキストはオレンジ色で表示されます。</li>
+            <li>かなテキスト：問題のかな表記の県名が表示されます。</li>
+            <li>県名テキスト：問題の漢字の県名が表示されます。</li>
+          </ul>
+          <img class="popup" src="img/works/japanMapQuiz/typing_game_demo.gif" alt="地図タイピングデモ画像">
+          <p class="bold">※タイピング判定処理</p>
+          <p>
+            キー入力判定アルゴリズムは<a
+              href="https://crieit.net/posts/dc0eb0f0a74f6e15e362e1f384d28f0d#%E6%9F%94%E8%BB%9F%E3%81%AA%E5%85%A5%E5%8A%9B%E6%96%B9%E6%B3%95%E3%81%AB%E5%AF%BE%E5%BF%9C%E3%81%99%E3%82%8B%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0"
+              target="_blank" rel="noopener noreferrer">柔軟な入力方法に対応したタイピングゲームの作り方</a>で紹介されているものを参考、改変させていただきました。
+          </p>
+          <h5 id="map-typing-result" class="heading-sub-sub-section"><span>結果画面</span></h5>
+          <div class="img-tab">
+            <input type="radio" name="tab-10" id="tab-10-pc" checked>
+            <label class="tab-label" for="tab-10-pc">PC表示</label>
+            <div class="img-wrapper">
+              <img class="popup js-scroll" src="img/works/japanMapQuiz/typing_result_pc.png" alt="地図タイピング結果画面画像pc">
+            </div>
+            <input type="radio" name="tab-10" id="tab-10-sp">
+            <label class="tab-label" for="tab-10-sp">スマホ表示</label>
+            <div class="img-wrapper">
+              <img class="sp-img popup js-scroll" src="img/works/japanMapQuiz/typing_result_sp.png"
+                alt="地図タイピング結果画面画像sp">
+            </div>
+          </div>
+          <p class="bold">①クリア数/問題数</p>
+          <p>タイピングが完了した問題数と出題された問題数が表示されます。</p>
+          <p class="bold">②正解タイプ数</p>
+          <p>正しくタイピングできた数が表示されます。</p>
+          <p class="bold">③ミスタイプ数</p>
+          <p>間違ったタイピングをした数が表示されます。</p>
+          <p class="bold">④WPM</p>
+          <p>1分間当たりの正しくタイピングできた数が表示されます。</p>
+          <p class="bold">⑤ミス問題</p>
+          <p>タイプミスした問題が表示されます。クリックするとモーダルウィンドウが表示され、解答を確認できます。</p>
+          <img class="popup" src="img/works/japanMapQuiz/typing_result_confirm.gif" alt="地図タイピングミス問題確認画像">
+          <p class="bold">⑥評価</p>
+          <p>クリア数、ミスタイプ数に応じて評価のテキストが表示されます。</p>
+          <p class="bold">⑦メニューへボタン</p>
+          <p>メニュー画面へ戻ります。</p>
+          <p class="bold">⑧設定画面へボタン</p>
+          <p>設定画面へ戻ります。</p>
+
+          <h4 id="not-found-error" class="heading-sub-section">Not Found画面</h4>
+          <div class="img-tab">
+            <input type="radio" name="tab-11" id="tab-11-pc" checked>
+            <label class="tab-label" for="tab-11-pc">PC表示</label>
+            <div class="img-wrapper">
+              <img class="popup js-scroll" src="img/works/japanMapQuiz/not_found_pc.png" alt="NotFound画面画像pc">
+            </div>
+            <input type="radio" name="tab-11" id="tab-11-sp">
+            <label class="tab-label" for="tab-11-sp">スマホ表示</label>
+            <div class="img-wrapper">
+              <img class="sp-img popup js-scroll" src="img/works/japanMapQuiz/not_found_sp.png" alt="NotFound画面画像sp">
+            </div>
+          </div>
+          <p>該当するURLが存在しない場合に表示される画面です。</p>
+          <p class="bold">①トップ画面へボタン</p>
+          <p>ホーム画面へ遷移します。</p>
+          <p class="bold">②メニュー画面へボタン</p>
+          <p>メニュー画面へ遷移します。</p>
+
+          <h4 id="system-error" class="heading-sub-section">System Error画面</h4>
+          <div class="img-tab">
+            <input type="radio" name="tab-12" id="tab-12-pc" checked>
+            <label class="tab-label" for="tab-12-pc">PC表示</label>
+            <div class="img-wrapper">
+              <img class="popup js-scroll" src="img/works/japanMapQuiz/system_error_pc.png" alt="SystemError画面画像pc">
+            </div>
+            <input type="radio" name="tab-12" id="tab-12-sp">
+            <label class="tab-label" for="tab-12-sp">スマホ表示</label>
+            <div class="img-wrapper">
+              <img class="sp-img popup js-scroll" src="img/works/japanMapQuiz/system_error_sp.png"
+                alt="SystemError画面画像sp">
+            </div>
+          </div>
+          <p>システムエラーが発生している場合に表示される画面です。主にApi関連の処理のエラーを想定しています。</p>
+          <p class="bold">①エラー内容</p>
+          <p>エラーメッセージが表示されます。</p>
+          <p class="bold">②対象ファイル名</p>
+          <p>エラーレスポンスにファイル名のメッセージがあれば表示されます。</p>
+          <p class="bold">③トップ画面へボタン</p>
+          <p>ホーム画面へ遷移します。</p>
+          <p class="bold">④メニュー画面へボタン</p>
+          <p>メニュー画面へ遷移します。</p>
         </section>
         <section id="after">
           <h3 class="heading-section">作り終えて</h3>
           <ul class="list after-list">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>Vue.jsを使用してゲームを作成するという目的が達成できて良かった。</li>
+            <li>Laravelの勉強という点ではあまり新しいことができなかった。</li>
+            <li>スマートフォンでの操作の処理（地図の移動、拡大縮小）が正直うまく作成できなかった。</li>
+            <li>Vue.jsでのSVGファイルの扱い方を適切なものにしたい。</li>
+            <li>デザイン力の向上が今後の課題。</li>
           </ul>
         </section>
         <section id="reference">
           <h3 class="heading-section">参考サイト</h3>
-          <a class="link-box" href="" target="_blank" rel="noopener noreferrer">
-            <span>タイトル</span>
-            <span>説明文</span>
-          </a>
-
           <a class="link-box" href="https://www.sozai-library.com/sozai/2525" target="_blank" rel="noopener noreferrer">
             <span>素材Library.com</span>
             <span>日本地図のベクターデータを利用させて頂きました。</span>
+          </a>
+          <a class="link-box" href="https://crieit.net/posts/dc0eb0f0a74f6e15e362e1f384d28f0d" target="_blank"
+            rel="noopener noreferrer">
+            <span>柔軟な入力方法に対応したタイピングゲームの作り方</span>
+            <span>キー入力判定アルゴリズムを参考、改変させていただきました。</span>
+          </a>
+          <a class="link-box" href="https://soundeffect-lab.info/" target="_blank" rel="noopener noreferrer">
+            <span>効果音ラボ</span>
+            <span>ミスタイプ音、クイズ正解音、クイズ不正解音を利用させていただきました。</span>
+          </a>
+          <a class="link-box" href="https://waterfalls.hatenablog.com/entry/2020/01/16/001722" target="_blank"
+            rel="noopener noreferrer">
+            <span>[vue.js] routerでpropsに値を渡してURL遷移する</span>
+            <span>routerのpushでURL遷移する際にpropsにデータを渡す方法を参考にさせていただきました。</span>
+          </a>
+          <a class="link-box" href="https://ara-web.net/blog/android/post-3265/" target="_blank"
+            rel="noopener noreferrer">
+            <span>画像の拡大縮小を javascript の touch イベントでやってみる</span>
+            <span>地図埋めゲームにて地図の拡大縮小処理の作成のため参考にさせていただきました。</span>
+          </a>
+          <a class="link-box" href="https://qiita.com/yumiya_yumigon/items/6e7548e14f11dd8a86f0" target="_blank"
+            rel="noopener noreferrer">
+            <span>[JavaScript]タッチイベントからoffsetXとoffsetXを取得する</span>
+            <span>スマートフォンでのタッチイベント処理作成に参考にさせていただきました。</span>
+          </a>
+          <a class="link-box" href="https://mamewaza.com/tools/loading.html" target="_blank" rel="noopener noreferrer">
+            <span>CSSだけで作るloadingアイコンメーカー(無料)</span>
+            <span>ローディングのアイコンの作成のため利用させていただきました。</span>
+          </a>
+          <a class="link-box" href="https://mmtomitomimm.blogspot.com/2019/03/vuejsfont-awesome.html" target="_blank"
+            rel="noopener noreferrer">
+            <span>Vue.jsでFont Awesomeを使ったアイコンを表示させてみました</span>
+            <span>Vue.jsでFont Awesomeを使用する方法を参考にさせていただきました。</span>
+          </a>
+          <a class="link-box" href="https://senooken.jp/post/2021/01/15/" target="_blank" rel="noopener noreferrer">
+            <span>Vue.jsでの外側クリックでのドロップダウンのクローズ</span>
+            <span>ヘッダーのハンバーガーメニューの閉じる処理に参考にさせていただきました。</span>
+          </a>
+          <a class="link-box" href="https://tsuchippo.com/htmlcss-svgcolor" target="_blank" rel="noopener noreferrer">
+            <span>SVG ファイルを外部読み込みして CSS で色を変更する方法</span>
+            <span>svgファイルの表示処理に参考にさせていただきました。</span>
+          </a>
+          <a class="link-box" href="https://dev83.com/vue-spa-transition/" target="_blank" rel="noopener noreferrer">
+            <span>【VueによるSPA構築】ページ遷移アニメを実装する方法</span>
+            <span>transition要素の使用方法を参考にさせていただきました。</span>
           </a>
         </section>
       </article>
@@ -413,6 +648,8 @@
         <li><a href="#development-environment">開発環境</a></li>
         <li><a href="#web-font-icon">Webアイコン、フォント</a></li>
         <li><a href="#function">機能一覧</a></li>
+        <li><a href="#routing">URL一覧</a></li>
+        <li><a href="#table-definition">テーブル定義書</a></li>
         <li><a href="#test">テスト</a></li>
         <li><a href="#how-to-use">機能紹介</a></li>
         <li><a href="#home" class="sub">ホーム画面</a></li>
@@ -425,12 +662,12 @@
         <li><a href="#map-quiz-setting" class="sub-sub">設定画面</a></li>
         <li><a href="#map-quiz-game" class="sub-sub">ゲーム画面</a></li>
         <li><a href="#map-quiz-result" class="sub-sub">結果画面</a></li>
-        <li><a href="#" class="sub">地図タイピング</a></li>
-        <li><a href="#" class="sub-sub">設定画面</a></li>
-        <li><a href="#" class="sub-sub">ゲーム画面</a></li>
-        <li><a href="#" class="sub-sub">結果画面</a></li>
-        <li><a href="#" class="sub">Not Found画面</a></li>
-        <li><a href="#" class="sub">System Error画面</a></li>
+        <li><a href="#map-typing" class="sub">地図タイピング</a></li>
+        <li><a href="#map-typing-setting" class="sub-sub">設定画面</a></li>
+        <li><a href="#map-typing-game" class="sub-sub">ゲーム画面</a></li>
+        <li><a href="#map-typing-result" class="sub-sub">結果画面</a></li>
+        <li><a href="#not-found-error" class="sub">Not Found画面</a></li>
+        <li><a href="#system-error" class="sub">System Error画面</a></li>
         <li><a href="#after">作り終えて</a></li>
         <li><a href="#reference">参考サイト</a></li>
       </ul>

@@ -1233,7 +1233,7 @@ $footer-height: 70px;
 
       p {
         line-height: 2.2;
-        &.bold{
+        &.bold {
           color: #5b8bd0;
           font-weight: bold;
         }
@@ -1456,6 +1456,36 @@ $footer-height: 70px;
             content: "\f304";
             color: #6fbcbf;
           }
+        }
+      }
+
+      .routing-table {
+        display: flex;
+        flex-wrap: wrap;
+
+        dt,dd{
+          padding: 10px 15px;
+          border-left: 2px solid #6fbcbf;
+          border-top: 2px solid #6fbcbf;
+
+          &:last-of-type{
+            border-bottom: 2px solid #6fbcbf;
+          }
+
+          &.heading{
+            text-align: center;
+            font-weight: bold;
+          }
+        }
+
+        dt {
+          width: 50%;
+          word-break: break-all;
+        }
+
+        dd {
+          width: 50%;
+          border-right: 2px solid #6fbcbf;
         }
       }
 

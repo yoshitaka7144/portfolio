@@ -1653,6 +1653,39 @@ img.popup {
   color: #6fbcbf;
 }
 
+.introduction-container main .article .routing-table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.introduction-container main .article .routing-table dt, .introduction-container main .article .routing-table dd {
+  padding: 10px 15px;
+  border-left: 2px solid #6fbcbf;
+  border-top: 2px solid #6fbcbf;
+}
+
+.introduction-container main .article .routing-table dt:last-of-type, .introduction-container main .article .routing-table dd:last-of-type {
+  border-bottom: 2px solid #6fbcbf;
+}
+
+.introduction-container main .article .routing-table dt.heading, .introduction-container main .article .routing-table dd.heading {
+  text-align: center;
+  font-weight: bold;
+}
+
+.introduction-container main .article .routing-table dt {
+  width: 50%;
+  word-break: break-all;
+}
+
+.introduction-container main .article .routing-table dd {
+  width: 50%;
+  border-right: 2px solid #6fbcbf;
+}
+
 .introduction-container main .article #reference .link-box {
   display: block;
   padding: 15px;
